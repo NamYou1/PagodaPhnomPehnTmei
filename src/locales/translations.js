@@ -83,7 +83,7 @@ which can currently support 12 monks and 12 students.`,
   km: {
     nav: {
       home: "ទំព័រដើម",
-      about: "អំពីយើងខ្ញុំ",
+      about: "អំពីយើង",
       structure: "រចនាសម្ព័ន្ធ",
       founder: "ស្ថាបនករ",
       contact: "ទាក់ទងយើង",

@@ -14,8 +14,8 @@ const orgData = {
         {
             id: 'left-vp',
             name: 'Tol SokMean',
-            nameKm: 'តល សក្មាន',
-            title: 'VP - Product',
+            nameKm: 'តុល សុខមាន',
+            title: 'Vice President',
             titleKm: 'ប្រធាននាយក - ផលិតផល',
             imgUrl: '',
             children: [
