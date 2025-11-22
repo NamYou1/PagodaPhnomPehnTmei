@@ -1,47 +1,49 @@
-﻿import React from 'react'
-import { Link } from 'react-router-dom'
-import { useTranslation } from '../../hooks/useTranslation'
-
-// Example hierarchical data. Add `imgUrl` to any node to show a picture.
+﻿
+import { useTranslation } from '../../hooks/useTranslation';
+import masterHak from '../../assets/img/masterHak.jpg';
+import lokbgmean from '../../assets/img/lokbgmean.jpg';
+import lkbgbunny from '../../assets/img/lokbgbunny.jpg';
+import tong from '../../assets/img/tong.jpg';
+import chhaiya from '../../assets/img/yaya.jpg';
 const orgData = {
     id: 'ceo',
     name: 'Yu YiHak',
     nameKm: 'យូ យីហាក់',
-    title: 'Chief Executive Officer',
-    titleKm: 'ប្រធានប្រតិបត្តិ',
-    imgUrl: '',
+    title: 'CEO',
+    titleKm: 'ប្រធានសង្ឃ',
+    imgUrl: masterHak,
     children: [
         {
             id: 'left-vp',
             name: 'Tol SokMean',
             nameKm: 'តុល សុខមាន',
-            title: 'Vice President',
-            titleKm: 'ប្រធាននាយក - ផលិតផល',
-            imgUrl: '',
+            title: 'phikkho',
+            titleKm: 'ភិក្ខុ',
+            imgUrl: lokbgmean,
             children: [
                 {
                     id: 'prod-1',
                     name: 'Sok Leng',
-                    nameKm: 'សក លេង',
-                    title: 'Product Manager',
-                    titleKm: 'អ្នកគ្រប់គ្រងផលិតផល',
-                    imgUrl: '',
+                    nameKm: 'សុខ​ ឡេង',
+                    title: 'phikkho',
+                    titleKm: 'ភិក្ខុ',
+                    imgUrl: masterHak,
                     children: [
                         {
                             id: 'ui-1',
-                            name: 'Rith',
-                            nameKm: 'រិទ្ធ',
-                            title: 'UI/UX Designer',
-                            titleKm: 'អ្នកច្នៃប្រឌិត UI/UX',
-                            imgUrl: '',
+                            name: 'Khy ChhaiYa',
+                            nameKm: 'ឃី ឆៃយ៉ា',
+                            title: 'samner',
+                            titleKm: 'សាមណេរ',
+                            imgUrl: chhaiya,
                         },
                         {
                             id: 'ui-2',
-                            name: 'Sophea',
-                            nameKm: 'សូផា',
-                            title: 'UI/UX Designer',
-                            titleKm: 'អ្នកច្នៃប្រឌិត UI/UX',
-                            imgUrl: '',
+                            name: 'Nam You',
+                            nameKm: 'ណាំ យ៉ូ',
+                            title: 'samner',
+                            titleKm: 'សាមណេរ',
+                            imgUrl: tong,
                         }
                     ]
                 },
@@ -49,36 +51,29 @@ const orgData = {
                     id: 'prod-2',
                     name: 'Pheng Chhunmeng Tong',
                     nameKm: 'ផេង ឆុនម៉ង់ ទង',
-                    title: 'UI/UX Lead',
-                    titleKm: 'ប្រធាន UI/UX',
-                    imgUrl: '',
+                    title: 'phikkho',
+                    titleKm: 'ភិក្ខុ',
+                    imgUrl: tong,
                 },
             ],
         },
         {
             id: 'right-vp',
             name: 'Von Bunny',
-            nameKm: 'វ័ន បុនិយ',
-            title: 'VP - Operations',
-            titleKm: 'ប្រធាននាយក - ប្រតិបត្តិការ',
-            imgUrl: '',
+            nameKm: 'វ៉ុន ប៊ុន្នី',
+            title: 'phikkho',
+            titleKm: 'ភិក្ខុ',
+            imgUrl: lkbgbunny,
             children: [
                 {
-                    id: 'ops-1',
+                    id: 'ops-2',
                     name: 'Den San',
                     nameKm: 'ដែន សាន',
-                    title: 'Operations Manager',
-                    titleKm: 'អ្នកគ្រប់គ្រងប្រតិបត្តិការ',
-                    imgUrl: '',
+                    title: 'phikkho',
+                    titleKm: 'ភិក្ខុ',
+                    imgUrl: masterHak,
                 },
-                {
-                    id: 'ops-2',
-                    name: 'Nam You',
-                    nameKm: 'នាម យូ',
-                    title: 'Logistics',
-                    titleKm: 'ឡូជីស្ទីក',
-                    imgUrl: '',
-                }
+
             ],
         },
     ],
@@ -151,11 +146,7 @@ const Structure = () => {
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
                         {language === 'en' ? t('structure.title') : 'រចនាសម្ព័ន្ធអង្គការ'}
                     </h1>
-                    <p className="text-gray-600 mt-2 text-sm md:text-base">
-                        {language === 'en'
-                            ? 'A simple, responsive org chart. Add `imgUrl` to any node in the data to show an image.'
-                            : 'ផែនទីលម្អិតសាមញ្ញ និងប្រតिកម្ម។ បន្ថែម `imgUrl` ទៅលើថ្នាំណាមួយដើម្បីបង្ហាញរូបភាព។'}
-                    </p>
+                
                 </header>
 
                 <section className="flex justify-center overflow-x-auto pb-6">

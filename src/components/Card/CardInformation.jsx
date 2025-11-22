@@ -90,19 +90,19 @@ const CardInformation = () => {
                 className="w-full h-48 object-cover"
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body flex justify-between">
               <h2 className="card-title text-lg font-semibold">
                 {language === 'en' ? title : titleKm}
               </h2>
-              <p className="text-xs text-primary font-semibold">{year}</p>
-              <p className="text-sm text-gray-500">
+              {/* <p className="text-xs text-primary font-semibold">{year}</p> */}
+              {/* <p className="text-sm text-gray-500">
                 {language === 'en' ? description : descriptionKm}
-              </p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-sm btn-primary">
+              </p> */}
+              {/* <div className="card-actions justify-end"> */}
+              {/* <button className="btn btn-sm btn-primary">
                   {t('home.viewDetails')}
-                </button>
-              </div>
+                </button> */}
+              {/* </div> */}
             </div>
           </div>
         ))}
