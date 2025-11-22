@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
 import LanguageToggle from "../components/LanguageToggle";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/Logo.jpg";
 const Navbar = () => {
   const { t, language } = useTranslation();
 
@@ -19,7 +19,7 @@ const Navbar = () => {
       label: t('nav.contact'),
       path: "contact",
     },
-    ,{
+    , {
       label: t('nav.purpose'),
       path: "purpose",
     }
