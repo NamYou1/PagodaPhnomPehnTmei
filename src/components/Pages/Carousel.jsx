@@ -23,7 +23,7 @@ const Carousel = () => {
   const [data, setData] = useState(slidesData);
 
   return (
-    <div className="flex justify-center items-center py-2 px-2 md:px-5">
+    <div className="flex justify-center items-center pt-20 px-2 md:px-5">
       <div className="carousel w-full md:w-[80vw] lg:w-[70vw] h-[40vh] md:h-[60vh] lg:h-[70vh] rounded-lg">
         {data.map((slide, index) => (
           <div

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import { Target, Users, Zap, Heart, ArrowRight } from 'lucide-react';
 
 const Purpose = () => {
@@ -7,6 +7,7 @@ const Purpose = () => {
       icon: Target,
       title: "Our Mission",
       description: "Building blockchain infrastructure that empowers developers to create the decentralized future."
+
     },
     {
       icon: Users,

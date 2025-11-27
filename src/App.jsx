@@ -1,32 +1,20 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
-import Home from "./components/Pages/Home";
-import About from "./components/Pages/About";
-import Contact from "./components/Pages/Contact";
-
 import RootLayout from "./Layout/RootLayout";
-import CardInformation, {
-  initialData,
-} from "./components/Card/CardInformation";
-import CardInformationDetail from "./components/Card/CardInformationDetail";
-import Purpose from "./components/Pages/Purpose";
+import { Home, About, Contact, Activities, Purpose, ErrorPage, ActivitiesDetail } from "./components/Pages";
 const routerdom = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
         element: <Home />,
       },
-      ,
       {
         path: "about",
         element: <About />,
-      },
-      {
-        path: "details/:id",
-        element: <CardInformationDetail />,
       },
       {
         path: "contact",
@@ -37,19 +25,18 @@ const routerdom = createBrowserRouter([
         element: <Purpose />,
       },
       {
-        path: "card",
-        element: <Home />,
-        children: [
-          {
-            // path : ":id",
-            index: true,
-            element: <CardInformation />,
-            // loader: initialData,
-          },
-        ],
+        path: "Activities",
+        element: <Activities />,
+        // loader: ActivitiesLoader
       },
+      {
+        path: "Activities/:id",
+        element: <ActivitiesDetail />,
+        // loader: loaderActivitiesDetail
+      }
+
     ],
-  },
+  }
 ]);
 const App = () => {
   return (

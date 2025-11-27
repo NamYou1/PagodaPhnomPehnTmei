@@ -1,0 +1,9 @@
+export {default as Home} from "./Home";
+export {default as About } from "./About";
+export {default as Founder} from "./Founder";
+export {default as Activities} from "./Activities";
+export {default as ActivitiesDetail} from "./ActivitiesDetail";
+export {default as Contact} from "./Contact";
+export {default as Purpose} from "./Purpose";
+export {default as Structure} from "./Structure";
+export {default as ErrorPage} from "./ErrorPage";
