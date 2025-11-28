@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLoaderData, useParams } from 'react-router-dom'
 import { initialData } from "./data";
+import { Download } from 'lucide-react';
 
 const ActivitiesDetail = () => {
     const { id } = useParams();
@@ -134,7 +135,8 @@ const ActivitiesDetail = () => {
                                     className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100 transition-opacity"
                                     title="Download this photo"
                                 >
-                                    📥
+                                    {/* 📥 */}
+                                    <Download />
                                 </button>
                             )}
                         </figure>
