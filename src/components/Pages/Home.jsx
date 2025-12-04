@@ -8,6 +8,7 @@ import Founder from "./Founder";
 const Home = () => {
   return (
     <div className="min-h-screen bg-base-200">
+
       <Carousel />
       {/* <CardPhoto /> */}
       <Activities />

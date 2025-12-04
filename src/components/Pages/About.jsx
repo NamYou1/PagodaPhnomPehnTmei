@@ -57,6 +57,7 @@ const About = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 mt-10">
+      
       {/* Hero Section */}
       <div className="hero  bg-base-200 rounded-box ">
         <div className="hero-content text-center">
