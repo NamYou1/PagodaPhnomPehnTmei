@@ -5,9 +5,9 @@ const Footer = () => {
   const { t, language } = useTranslation();
 
   return (
-    <footer className="bg-base-300 text-base-content py-8 mt-10">
+    <footer className="bg-base-300 text-base-content py-8 md:mt-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 items-start">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-start">
           {/* Company / description + small map */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-2">

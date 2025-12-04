@@ -141,7 +141,7 @@ const Structure = () => {
 
     return (
         <main className="min-h-screen bg-base-100">
-            <div className="container mx-auto px-2 sm:px-3 md:px-4 py-6 sm:py-8 md:py-12">
+            <div className="container mx-auto">
                 <header className="text-center mb-4 sm:mb-6 md:mb-8">
                     <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
                         {language === 'en' ? t('structure.title') : 'រចនាសម្ព័ន្ធអង្គការ'}
@@ -149,7 +149,7 @@ const Structure = () => {
 
                 </header>
 
-                <section className="flex justify-center overflow-x-auto pb-4 sm:pb-6">
+                <section className="flex justify-center overflow-x-auto ">
                     <div className="w-full max-w-5xl min-w-min scale-75 sm:scale-90 md:scale-100 origin-top">
                         <OrgNode node={orgData} language={language} />
                     </div>
