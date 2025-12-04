@@ -41,5 +41,113 @@ export const initialData = [
             { id: 8, image: child13 },
             { id: 8, image: child14 },
         ]
-    }
+    },
+    {
+        id: 1,
+        title: "Mountain Adventure",
+        titleKm: "កឋិនទាន",
+        description:
+            "Enjoy the breathtaking views and the thrill of climbing the majestic mountains.",
+        descriptionKm:
+            "រីករាយនឹងទិដ្ឋភាពដ៏អស្ចារ្យ និងភាពរំភើបក្នុងការឡើងលើភ្នំដ៏ស្ម័គ្រចឹត។",
+        imgUrl: main,
+        vdourl: "https://www.facebook.com/share/v/17SAmw2aMU/",
+        year: 2024,
+        Children: [
+            // { id: 1, image: child1 },
+            // { id: 2, image: child2 },
+            { id: 3, image: child3 },
+            { id: 4, image: child4 },
+            { id: 5, image: child5 },
+            { id: 6, image: child6 },
+            // { id: 7, image: child7 },
+            { id: 8, image: child8 },
+            { id: 9, image: child9 },
+            // { id: 10, image: child10 },
+            { id: 8, image: child12 },
+            { id: 8, image: child13 },
+            { id: 8, image: child14 },
+        ]
+    },
+    {
+        id: 1,
+        title: "Mountain Adventure",
+        titleKm: "កឋិនទាន",
+        description:
+            "Enjoy the breathtaking views and the thrill of climbing the majestic mountains.",
+        descriptionKm:
+            "រីករាយនឹងទិដ្ឋភាពដ៏អស្ចារ្យ និងភាពរំភើបក្នុងការឡើងលើភ្នំដ៏ស្ម័គ្រចឹត។",
+        imgUrl: main,
+        vdourl: "https://www.facebook.com/share/v/17SAmw2aMU/",
+        year: 2024,
+        Children: [
+            // { id: 1, image: child1 },
+            // { id: 2, image: child2 },
+            { id: 3, image: child3 },
+            { id: 4, image: child4 },
+            { id: 5, image: child5 },
+            { id: 6, image: child6 },
+            // { id: 7, image: child7 },
+            { id: 8, image: child8 },
+            { id: 9, image: child9 },
+            // { id: 10, image: child10 },
+            { id: 8, image: child12 },
+            { id: 8, image: child13 },
+            { id: 8, image: child14 },
+        ]
+    },
+    {
+        id: 1,
+        title: "Mountain Adventure",
+        titleKm: "កឋិនទាន",
+        description:
+            "Enjoy the breathtaking views and the thrill of climbing the majestic mountains.",
+        descriptionKm:
+            "រីករាយនឹងទិដ្ឋភាពដ៏អស្ចារ្យ និងភាពរំភើបក្នុងការឡើងលើភ្នំដ៏ស្ម័គ្រចឹត។",
+        imgUrl: main,
+        vdourl: "https://www.facebook.com/share/v/17SAmw2aMU/",
+        year: 2024,
+        Children: [
+            // { id: 1, image: child1 },
+            // { id: 2, image: child2 },
+            { id: 3, image: child3 },
+            { id: 4, image: child4 },
+            { id: 5, image: child5 },
+            { id: 6, image: child6 },
+            // { id: 7, image: child7 },
+            { id: 8, image: child8 },
+            { id: 9, image: child9 },
+            // { id: 10, image: child10 },
+            { id: 8, image: child12 },
+            { id: 8, image: child13 },
+            { id: 8, image: child14 },
+        ]
+    },
+    {
+        id: 1,
+        title: "Mountain Adventure",
+        titleKm: "កឋិនទាន",
+        description:
+            "Enjoy the breathtaking views and the thrill of climbing the majestic mountains.",
+        descriptionKm:
+            "រីករាយនឹងទិដ្ឋភាពដ៏អស្ចារ្យ និងភាពរំភើបក្នុងការឡើងលើភ្នំដ៏ស្ម័គ្រចឹត។",
+        imgUrl: main,
+        vdourl: "https://www.facebook.com/share/v/17SAmw2aMU/",
+        year: 2024,
+        Children: [
+            // { id: 1, image: child1 },
+            // { id: 2, image: child2 },
+            { id: 3, image: child3 },
+            { id: 4, image: child4 },
+            { id: 5, image: child5 },
+            { id: 6, image: child6 },
+            // { id: 7, image: child7 },
+            { id: 8, image: child8 },
+            { id: 9, image: child9 },
+            // { id: 10, image: child10 },
+            { id: 8, image: child12 },
+            { id: 8, image: child13 },
+            { id: 8, image: child14 },
+        ]
+    },
 ];

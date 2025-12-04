@@ -14,7 +14,7 @@ const Activities = () => {
     };
 
     return (
-        <div className="mt-25">
+        <div className="mt-10">
 
             <h2 className="text-3xl font-bold text-center mb-4 text-primary">
                 {t('home.title')}
