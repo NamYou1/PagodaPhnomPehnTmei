@@ -13,10 +13,10 @@ const translations = {
     },
     about: {
       hero: {
-        title: "Our Journey",
+        title: "New Phnom Penh City Hall operation",
         description:
           "From humble beginnings to industry innovation, discover how we've grown and evolved since 2017.",
-        learnMore: "Learn More",
+        // learnMore: "Learn More",
       },
       timeline: {
         title: "Our History",
@@ -94,13 +94,13 @@ which can currently support 12 monks and 12 students.`,
     },
     about: {
       hero: {
-        title: "ការងាររបស់យើង",
+        title: "ដំណើរការកសាងវត្តភ្នំពេញថ្មី",
         description:
-          "ពីការចាប់ផ្តើមតូចតាច ទៅការបង្កើតឧស័ហកម្ម រកឃើញពីរបៀបដែលយើងបានរីកចម្រើននិងឧរម្មាក់ចាប់តាំងពីឆ្នាំ ២០១៧។",
-        learnMore: "រៀនសូត្របន្ថែមទៀត",
+          "ពីដំណើរការចាប់ផ្តើមតូចមួយទៅការច្នៃប្រឌិតក្នុងឧស្សាហកម្ម សូមស្វែងយល់ពីរបៀបដែលយើងបានរីកចម្រើននិងអភិវឌ្ឍន៍ចាប់តាំងពីឆ្នាំ ២០១៧។",
+        // learnMore: "រៀនសូត្របន្ថែមទៀត",
       },
       timeline: {
-        title: "ប្រវត្តិសាស្ត្ររបស់យើង",
+        title: "ប្រវត្តិរបស់វត្តភ្នំពេញថ្មី",
         foundation: "ការស្ថាបនា",
         growth: "ការរីកចម្រើន",
         expansion: "ការពង្រីកលំដាប់",
@@ -132,11 +132,11 @@ which can currently support 12 monks and 12 students.`,
           ដែលមានទទឹង១០ម៉ែត្រ បណ្តោយ ១៥ម៉ែត្រ៦តឹក កម្ពស់២ជាន់។
           ដែលបច្ចុប្បន្នភាព អាចទ្រទ្រង់ព្រះសង្ឃ១២អង្គ និងនិស្សិត១២នាក់។`,
         desc2023:
-          "ទទួលបានពានរង្វាន់ឧស័ហកម្មច្រើនដងសម្រាប់ដំណោះស្រាយច្នៃប្រឌិត និងការងារប្រឹងប្រែង។",
+          "lore leading the industry with AI-powered solutions and sustainable technology practices.",
         desc2024:
-          "នាំឈានក្រុមឧស័ហកម្មដោយប្រើដំណោះស្រាយផ្អែកលើ AI និងការងារបច្ចេកវិទ្យាប្រឹងប្រែង។",
+          "lore leading the industry with AI-powered solutions and sustainable technology practices.",
         desc2025:
-          "នាំឈានក្រុមឧស័ហកម្មដោយប្រើដំណោះស្រាយផ្អែកលើ AI និងការងារបច្ចេកវិទ្យាប្រឹងប្រែង។",
+          "lore leading the industry with AI-powered solutions and sustainable technology practices.",
       },
     },
     details: {
