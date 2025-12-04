@@ -7,3 +7,4 @@ export {default as Contact} from "./Contact";
 export {default as Purpose} from "./Purpose";
 export {default as Structure} from "./Structure";
 export {default as ErrorPage} from "./ErrorPage";
+export {default as LessonDhama} from "./LessonDhama";

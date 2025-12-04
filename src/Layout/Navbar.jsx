@@ -27,6 +27,10 @@ const Navbar = () => {
       label: "Activities",
       path: "Activities",
     },
+    {
+      label: "Dharma",
+      path: "dhama-lessons",
+    }
   ];
 
   return (

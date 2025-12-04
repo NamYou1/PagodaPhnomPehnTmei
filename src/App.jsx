@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import RootLayout from "./Layout/RootLayout";
-import { Home, About, Contact, Activities, Purpose, ErrorPage, ActivitiesDetail } from "./components/Pages";
+import { Home, About, Contact, Activities, Purpose, ErrorPage, ActivitiesDetail, LessonDhama } from "./components/Pages";
 const routerdom = createBrowserRouter([
   {
     path: "/",
@@ -27,12 +27,20 @@ const routerdom = createBrowserRouter([
       {
         path: "Activities",
         element: <Activities />,
-        // loader: ActivitiesLoader
       },
       {
         path: "Activities/:id",
         element: <ActivitiesDetail />,
-        // loader: loaderActivitiesDetail
+      },
+      {
+        path: "dhama-lessons",
+        element: <LessonDhama />
+
+      }
+      ,
+      {
+        path: "*",
+        element: <ErrorPage />,
       }
 
     ],
