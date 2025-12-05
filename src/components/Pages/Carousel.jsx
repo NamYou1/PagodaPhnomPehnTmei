@@ -23,7 +23,7 @@ const Carousel = () => {
   const [data, setData] = useState(slidesData);
 
   return (
-    <div className="flex justify-center items-center mt-15 md:mt-12 px-2 md:px-5">
+    <div className="flex justify-center items-center mt-18 md:mt-19 px-2 md:px-5">
       <div className="carousel w-full md:w-[80vw] lg:w-[70vw] h-[40vh] md:h-[60vh] lg:h-[70vh] rounded-lg">
         {data.map((slide, index) => (
           <div
@@ -39,7 +39,8 @@ const Carousel = () => {
             <img
               src={slide.imgUrl}
               alt={slide.title}
-              className="w-full h-full object-contain  rounded-lg"
+              className="w-full h-full object-contain  rounded-lg" autoScroll={true}
+              interval={4000}
             />
             {/* <img
               src={slide.imgUrl}

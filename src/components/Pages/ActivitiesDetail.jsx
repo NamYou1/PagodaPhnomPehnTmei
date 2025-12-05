@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { initialData } from "./data";
 import { Download } from "lucide-react";
+import ImageCarousel from "../ImageCarousel";
 
 const ActivitiesDetail = () => {
   const { id } = useParams();
@@ -88,21 +89,30 @@ const ActivitiesDetail = () => {
 
   return (
     <>
-      <div class="grid grid-cols-1 card card-side bg-base-100 shadow-sm mt-20 mb-3.5  mx-9  md:grid-cols-2  gap-6">
-        <figure className="position-fixed">
-          <img
-            className="w-full h-full object-cover rounded-lg position-fixed"
-            src={data.imgUrl}
-            alt={data.title}
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">{data.title}</h2>
-          <p>{data.description}</p>
+      {/* Hero Section with Carousel */}
+      <div className="mt-20 mb-8 px-4">
+        <ImageCarousel
+          images={[
+            data.imgUrl,
+            ...(data.Children ? data.Children.map(child => child.image) : [])
+          ]}
+          title={data.title}
+          autoScroll={true}
+          interval={5000}
+        />
+      </div>
+
+      {/* Description Card */}
+      <div className="max-w-4xl mx-auto px-4 mb-8">
+        <div className="card bg-base-100 shadow-md">
+          <div className="card-body">
+            <h2 className="card-title text-2xl md:text-3xl">{data.title}</h2>
+            <p className="text-gray-600 leading-relaxed">{data.description}</p>
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 pb-10">
+      <div className="grid  grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-6 px-6 pb-10">
         {data.Children &&
           data.Children.map((child, index) => (
             <div
@@ -158,13 +168,13 @@ const ActivitiesDetail = () => {
         {!selectMode ? (
           <>
             <Link
-              to="/Activities"
+              to="/"
               className="btn btn-outline btn-primary mb-6 mx-6"
             >
               ← Back
             </Link>
             <button onClick={downloadAllPhotos} className="btn btn-primary">
-              📥 Download All Photos
+              <Download />Download All Photos
             </button>
             <button
               onClick={toggleSelectMode}
@@ -186,7 +196,7 @@ const ActivitiesDetail = () => {
               className="btn btn-primary"
               disabled={selectedImages.length === 0}
             >
-              📥 Download Selected ({selectedImages.length})
+              <Download /> Download Selected ({selectedImages.length})
             </button>
             <button onClick={toggleSelectMode} className="btn btn-outline">
               Cancel

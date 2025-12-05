@@ -9,7 +9,7 @@ const translations = {
       founder: "Founder",
       contact: "Contact",
       Activities: "Activities",
-      Dharma : "Dharma",
+      Dharma: "Dharma",
     },
     home: {
       title: "Featured Activities",
@@ -83,7 +83,7 @@ which can currently support 12 monks and 12 students.`,
       title: "Founder & CEO",
       bio: "Passionate about building innovative solutions that make a difference. With over 15 years of experience in technology and entrepreneurship, I'm committed to creating products that empower people and transform industries.",
       achievements: "Key Achievements",
-     
+
       team: "Leadership Team",
       testimonials: "What People Say",
       cta: "Let's Build the Future Together",
@@ -91,6 +91,9 @@ which can currently support 12 monks and 12 students.`,
     structure: {
       title: "Organization Structure",
       desc: "A simple, responsive org chart. Add `imgUrl` to any node in the data to show an image.",
+    },
+    activities: {
+      searchPlaceholder: "Search activities...",
     },
   },
   km: {
@@ -101,7 +104,7 @@ which can currently support 12 monks and 12 students.`,
       founder: "ស្ថាបនករ",
       contact: "ទាក់ទងយើង",
       Activities: "សកម្មភាពនានា",
-      Dharma : "ស្តាប់ព្រះធម៌",
+      Dharma: "ស្តាប់ព្រះធម៌",
     },
     home: {
       title: "សកម្មភាពនានា",
@@ -159,8 +162,8 @@ which can currently support 12 monks and 12 students.`,
       backButton: "ត្រឡប់ក្រោយ",
     },
     founder: {
-      name: "សូផា",
-      title: "ស្ថាបនករ & អគ្គនាយក",
+      name: "យូ យីហាក់",
+      title: "អ្នកដឹកនាំកសាង វត្តភ្នំពេញថ្មី",
       bio: "ខ្ញុំចូលចិត្តក្នុងការបង្កើតដំណោះស្រាយច្នៃប្រឌិតដែលធ្វើឱ្យប្រសើរឡើង។ ដោយមានបទពិសោធន៍ជាង ១៥ឆ្នាំក្នុងវិស័យបច្ចេកវិទ្យានិងសហការឈានដល់កម្មសិទ្ធិ ខ្ញុំប្តេជ្ញាធានាបង្កើតផលិតផលដែលផ្តល់ឱ្យមនុស្សនិងផ្លាស់ប្តូរឧស្សាហកម្ម។",
       achievements: "ការងារលម្អិតលក្ខណៈពិសេស",
       visionMission: "ចក្ខុវិស័យនិងបេសកកម្ម",
@@ -170,7 +173,7 @@ which can currently support 12 monks and 12 students.`,
       testimonials: "មតិយោបល់របស់មនុស្ស",
       cta: "តោះគ្នាបង្កើតអនាគតជាមួយគ្នា",
     },
-    contact:{
+    contact: {
       title: "ទាក់ទងយើង",
       description: "ទំនាក់ទំនងមកវត្តភ្នំពេញថ្មី និង ទីតាំងរបស់វត្តភ្នំពេញថ្មី",
       phone: "ទូរស័ព្ទ",
@@ -181,6 +184,9 @@ which can currently support 12 monks and 12 students.`,
       emailAddress: "namyou854@gmail.com",
       ourSocials: "បណ្តាញសង្គមរបស់យើង"
 
+    },
+    activities: {
+      searchPlaceholder: "ស្វែងរកសកម្មភាពនានា...",
     },
     structure: {
       title: "រចនាសម្ព័ន្ធអង្គការ",
