@@ -7,7 +7,7 @@ function Founder() {
     const { t } = useTranslation();
 
     const socialLinks = [
-        { name: 'Youtube', url: 'https://linkedin.com', icon: <Youtube /> },
+        // { name: 'Youtube', url: 'https://linkedin.com', icon: <Youtube /> },
         { name: 'Facebook', url: 'https://www.facebook.com/yi.hak.3', icon: <Facebook /> },
         { name: 'Email', url: 'mailto:founder@example.com', icon: <Mail /> },
         { name: "PhoneNumber", url: "+855 98 905 246", icon: <Phone /> }

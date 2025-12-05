@@ -61,7 +61,7 @@ export const initialData = [
     {
         id: 2,
         title: "Kathina Festival",
-        titleKm: "ពិធីចម្រើនព្រះបរិត បុណ្យកឋិន",
+        titleKm: "ពិធីចម្រើនព្រះបរិត្ត បុណ្យកឋិន",
         description:
             "Enjoy the breathtaking views and the thrill of climbing the majestic mountains.",
         descriptionKm:

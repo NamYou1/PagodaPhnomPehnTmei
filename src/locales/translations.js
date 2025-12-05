@@ -17,9 +17,9 @@ const translations = {
     },
     about: {
       hero: {
-        title: "New Phnom Penh City Hall operation",
+        title: "History of monks coming to live at Wat Phnom Thmei",
         description:
-          "From humble beginnings to industry innovation, discover how we've grown and evolved since 2017.",
+          "In response to the request of the abbot of the Samonkosal Buddhist Monastery, Phnom Penh Thmey, Samdech Preah Sakyamuni Kittbandit Ratsaroen, Preah Sub-district of Sen Sok District, Phnom Penh, the abbot of Wat Samrong Anthet has appointed the abbot of Wat Samrong Anthet, Monk Vong You Yihak Sovannsarro, to reside at the Buddhist Monastery On Friday, the 10th day of the month of Visakha, year of the Roka Nipasak, B.E. 2560, corresponding to May 5, 2017, the monks were the most important ones to manage and lead the construction.",
         // learnMore: "Learn More",
       },
       timeline: {
@@ -101,7 +101,7 @@ which can currently support 12 monks and 12 students.`,
       home: "ទំព័រដើម",
       about: "អំពីយើង",
       structure: "រចនាសម្ព័ន្ធ",
-      founder: "ស្ថាបនករ",
+      founder: "អ្នកដឹកនាំកសាង",
       contact: "ទាក់ទងយើង",
       Activities: "សកម្មភាពនានា",
       Dharma: "ស្តាប់ព្រះធម៌",
@@ -112,13 +112,15 @@ which can currently support 12 monks and 12 students.`,
     },
     about: {
       hero: {
-        title: "ដំណើរការកសាងវត្តភ្នំពេញថ្មី",
+        title: "ប្រវត្តិព្រះសង្ឃមកគង់នៅ វត្តភ្នំពេញថ្មី",
         description:
-          "ពីដំណើរការចាប់ផ្តើមតូចមួយទៅការច្នៃប្រឌិតក្នុងឧស្សាហកម្ម សូមស្វែងយល់ពីរបៀបដែលយើងបានរីកចម្រើននិងអភិវឌ្ឍន៍ចាប់តាំងពីឆ្នាំ ២០១៧។",
+          `តបទៅតាមសំណើរសូមរបស់អាចារ្យគណ:កម្មការ សាលាបុណ្យ សន្សំកុសល ភ្នំពេញថ្មី សម្តេចព្រះសក្យមុនី កិត្តិបណ្ឌិត រ័ត្នសារឿន ព្រះអនុគណ ខណ្ឌ សែនសុខ រាជធានី ភ្នំពេញ
+           ព្រះចៅអធិការវត្ត សំរោងអណ្តែត បានចាត់តាំង ព្រះគ្រូសាសនាវង្ស យូ យីហាក់ សុវណ្ណស្សរោ ឲ្យមកគង់នៅសាលាបុណ្យ  
+          នាថ្ងៃ សុក្រ ១០កើត ខែពិសាខ ឆ្នាំ រកា នព្វស័ក ព.ស ២៥៦០ ត្រូវនឹង ថ្ងៃទី០៥ ខែ ឧសភា ឆ្នាំ២០១៧ ជាព្រះសង្ឃដំបងគេបំផុត ដើម្បីគ្រប់គ្រងដឹកនាំកសាង។`,
         // learnMore: "រៀនសូត្របន្ថែមទៀត",
       },
       timeline: {
-        title: "ប្រវត្តិរបស់វត្តភ្នំពេញថ្មី",
+        title: "ដំណើរការកសាងរបស់ វត្តភ្នំពេញថ្មី",
         foundation: "ការស្ថាបនា",
         growth: "ការរីកចម្រើន",
         expansion: "ការពង្រីកលំដាប់",
@@ -162,9 +164,11 @@ which can currently support 12 monks and 12 students.`,
       backButton: "ត្រឡប់ក្រោយ",
     },
     founder: {
-      name: "យូ យីហាក់",
+      name: " ព្រះអង្គគ្រូសាសនាវង្ស យូ យីហាក់ ",
       title: "អ្នកដឹកនាំកសាង វត្តភ្នំពេញថ្មី",
-      bio: "ខ្ញុំចូលចិត្តក្នុងការបង្កើតដំណោះស្រាយច្នៃប្រឌិតដែលធ្វើឱ្យប្រសើរឡើង។ ដោយមានបទពិសោធន៍ជាង ១៥ឆ្នាំក្នុងវិស័យបច្ចេកវិទ្យានិងសហការឈានដល់កម្មសិទ្ធិ ខ្ញុំប្តេជ្ញាធានាបង្កើតផលិតផលដែលផ្តល់ឱ្យមនុស្សនិងផ្លាស់ប្តូរឧស្សាហកម្ម។",
+      bio: `តបទៅតាមសំណើរសូមរបស់អាចារ្យគណ:កម្មការ សាលាបុណ្យ សន្សំកុសល ភ្នំពេញថ្មី សម្តេចព្រះសក្យមុនី កិត្តិបណ្ឌិត រ័ត្នសារឿន ព្រះអនុគណ ខណ្ឌ សែនសុខ រាជធានី ភ្នំពេញ
+           ព្រះចៅអធិការវត្ត សំរោងអណ្តែត បានចាត់តាំង ព្រះគ្រូសាសនាវង្ស យូ យីហាក់ សុវណ្ណស្សរោ ឲ្យមកគង់នៅសាលាបុណ្យ  
+          នាថ្ងៃ សុក្រ ១០កើត ខែពិសាខ ឆ្នាំ រកា នព្វស័ក ព.ស ២៥៦០ ត្រូវនឹង ថ្ងៃទី០៥ ខែ ឧសភា ឆ្នាំ២០១៧ ជាព្រះសង្ឃដំបងគេបំផុត ដើម្បីគ្រប់គ្រងដឹកនាំកសាង។`,
       achievements: "ការងារលម្អិតលក្ខណៈពិសេស",
       visionMission: "ចក្ខុវិស័យនិងបេសកកម្ម",
       vision: "ចក្ខុវិស័យរបស់យើង",
