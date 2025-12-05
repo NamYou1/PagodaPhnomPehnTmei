@@ -53,9 +53,9 @@ export const initialData = [
             { id: 8, image: child8 },
             { id: 9, image: child9 },
             // { id: 10, image: child10 },
-            { id: 8, image: child12 },
-            { id: 8, image: child13 },
-            { id: 8, image: child14 },
+            { id: 10, image: child12 },
+            { id: 11, image: child13 },
+            { id: 12, image: child14 },
         ]
     },
     {

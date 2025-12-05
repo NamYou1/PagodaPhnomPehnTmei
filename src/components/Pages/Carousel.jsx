@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Plant from "../../assets/img/Plant.jpg";
 import ppnew from "../../assets/img/ppnew.jpg";
 import pp from "../../assets/img/pp.jpg";
-
+import { budha2 } from "../../assets/ImageCarousel";
 const slidesData = [
   {
     id: 1,
@@ -15,6 +15,10 @@ const slidesData = [
   {
     id: 3,
     imgUrl: pp,
+  }
+  , {
+    id: 4,
+    imgUrl: budha2,
   }
 
 ];
@@ -31,22 +35,12 @@ const Carousel = () => {
             id={`slide${index + 1}`}
             className="carousel-item relative w-full h-full"
           >
-            {/* <img
-              src={slide.imgUrl}
-              alt={slide.title}
-              // className="w-full h-full mask-radial-at-center object-cover  rounded-lg"
-            /> */}
+
             <img
               src={slide.imgUrl}
               alt={slide.title}
-              className="w-full h-full object-contain  rounded-lg" autoScroll={true}
-              interval={4000}
+              className="w-full h-full object-contain  rounded-lg"
             />
-            {/* <img
-              src={slide.imgUrl}
-              alt={slide.title}
-              className="w-full h-full object-contain rounded-lg"
-            /> */}
             <div className="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:left-5 md:right-5 top-1/2">
               <a
                 href={`#slide${index === 0 ? data.length : index}`}

@@ -11,7 +11,7 @@ const Activities = () => {
     const [selectedYear, setSelectedYear] = useState("all");
     const navigate = useNavigate();
     const { t, language } = useTranslation();
-    
+
     const handleCardClick = (id) => {
         navigate(`/Activities/${id}`);
     };
@@ -25,13 +25,13 @@ const Activities = () => {
 
     // Filter data based on search and year
     const filteredData = Data.filter(item => {
-        const matchesSearch = 
+        const matchesSearch =
             (language === 'en' ? item.title : item.titleKm)
                 .toLowerCase()
                 .includes(searchTerm.toLowerCase());
-        
+
         const matchesYear = selectedYear === "all" || item.year === selectedYear;
-        
+
         return matchesSearch && matchesYear;
     });
 
@@ -41,9 +41,9 @@ const Activities = () => {
                 {t('home.title')}
             </h2>
             <div className="flex justify-center items-center flex-wrap">
-                <input 
-                    type="text" 
-                    placeholder={t('activities.searchPlaceholder')} 
+                <input
+                    type="text"
+                    placeholder={t('activities.searchPlaceholder')}
                     className="input input-info text-center rounded-2xl mb-2 md:w-[700px] lg:w-[1000px]"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -56,13 +56,12 @@ const Activities = () => {
                     <button
                         key={year}
                         onClick={() => setSelectedYear(year)}
-                        className={`btn btn-outline transition-all ${
-                            selectedYear === year
-                                ? 'btn-primary'
-                                : ''
-                        }`}
+                        className={`btn  transition-all ${selectedYear === year
+                            ? 'btn-primary'
+                            : ''
+                            }`}
                     >
-                        {year === "all" 
+                        {year === "all"
                             ? (language === 'en' ? "All Years" : "ទាំងអស់")
                             : year}
                     </button>
@@ -98,8 +97,8 @@ const Activities = () => {
                 ) : (
                     <div className="col-span-full text-center py-10">
                         <p className="text-xl text-gray-500">
-                            {language === 'en' 
-                                ? "No activities found" 
+                            {language === 'en'
+                                ? "No activities found"
                                 : "រកមិនឃើញសកម្មភាព"}
                         </p>
                     </div>

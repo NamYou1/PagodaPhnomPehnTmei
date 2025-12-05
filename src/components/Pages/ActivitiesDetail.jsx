@@ -3,13 +3,27 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import { initialData } from "./data";
 import { Download } from "lucide-react";
 import ImageCarousel from "../ImageCarousel";
+import { useTranslation } from "../../hooks/useTranslation";
 
 const ActivitiesDetail = () => {
   const { id } = useParams();
   const data = initialData.find((item) => item.id == id);
   const [selectedImages, setSelectedImages] = useState([]);
   const [selectMode, setSelectMode] = useState(false);
+  const { t, language } = useTranslation();
+  const currentTitle =
+    language === "en" ? data.title : data.titleKm || data.title;
+  const currentDescription =
+    language === "en" ? data.description : data.descriptionKm || data.description;
 
+  const sanitizeFilename = (str) => {
+    if (!str) return "download";
+    return str
+      .toString()
+      .trim()
+      .replace(/\s+/g, "_")
+      .replace(/[^a-zA-Z0-9_\-\u00C0-\u024F\u1E00-\u1EFF\u1780-\u17FF\.]/g, "");
+  };
   const toggleSelectMode = () => {
     setSelectMode(!selectMode);
     setSelectedImages([]);
@@ -43,7 +57,10 @@ const ActivitiesDetail = () => {
       for (let child of data.Children) {
         if (selectedImages.includes(child.id)) {
           const index = data.Children.findIndex((c) => c.id === child.id);
-          await downloadImage(child.image, `${data.title}-${index + 1}.jpg`);
+          await downloadImage(
+            child.image,
+            `${sanitizeFilename(currentTitle)}-${index + 1}.jpg`
+          );
         }
       }
     }
@@ -54,14 +71,14 @@ const ActivitiesDetail = () => {
 
   const downloadAllPhotos = async () => {
     // Download main image
-    await downloadImage(data.imgUrl, `${data.title}-main.jpg`);
+    await downloadImage(data.imgUrl, `${sanitizeFilename(currentTitle)}-main.jpg`);
 
     // Download all children images
     if (data.Children) {
       for (let i = 0; i < data.Children.length; i++) {
         await downloadImage(
           data.Children[i].image,
-          `${data.title}-${i + 1}.jpg`
+          `${sanitizeFilename(currentTitle)}-${i + 1}.jpg`
         );
       }
     }
@@ -94,9 +111,9 @@ const ActivitiesDetail = () => {
         <ImageCarousel
           images={[
             data.imgUrl,
-            ...(data.Children ? data.Children.map(child => child.image) : [])
+            ...(data.Children ? data.Children.map((child) => child.image) : []),
           ]}
-          title={data.title}
+          title={currentTitle}
           autoScroll={true}
           interval={5000}
         />
@@ -106,13 +123,13 @@ const ActivitiesDetail = () => {
       <div className="max-w-4xl mx-auto px-4 mb-8">
         <div className="card bg-base-100 shadow-md">
           <div className="card-body">
-            <h2 className="card-title text-2xl md:text-3xl">{data.title}</h2>
-            <p className="text-gray-600 leading-relaxed">{data.description}</p>
+            <h2 className="card-title text-2xl md:text-3xl">{currentTitle}</h2>
+            <p className="text-gray-600 leading-relaxed">{currentDescription}</p>
           </div>
         </div>
       </div>
 
-      <div className="grid  grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-6 px-6 pb-10">
+      <div className="grid  grid-cols- md:grid-cols-4 lg:grid-cols-5 gap-6 px-6 pb-10">
         {data.Children &&
           data.Children.map((child, index) => (
             <div
@@ -123,11 +140,12 @@ const ActivitiesDetail = () => {
               <figure className="relative">
                 <img
                   src={child.image}
-                  alt={`${data.title} - Image ${child.id}`}
-                  className={`w-full h-full object-cover rounded-lg shadow-md transition-all ${selectMode && selectedImages.includes(child.id)
-                    ? "ring-4 ring-primary opacity-80"
-                    : ""
-                    }`}
+                  alt={`${currentTitle} - Image ${child.id}`}
+                  className={`w-full h-full object-cover rounded-lg shadow-md transition-all ${
+                    selectMode && selectedImages.includes(child.id)
+                      ? "ring-4 ring-primary opacity-80"
+                      : ""
+                  }`}
                 />
 
                 {/* Selection Checkbox */}
@@ -148,7 +166,7 @@ const ActivitiesDetail = () => {
                     onClick={() =>
                       downloadSingleImage(
                         child.image,
-                        `${data.title}-${index + 1}.jpg`
+                        `${sanitizeFilename(currentTitle)}-${index + 1}.jpg`
                       )
                     }
                     className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100 transition-opacity"

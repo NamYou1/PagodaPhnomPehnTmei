@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
 import LanguageToggle from "../components/LanguageToggle";
 import logo from "../assets/Logo.jpg";
@@ -13,11 +13,11 @@ const Navbar = () => {
     },
     {
       label: t('nav.about'),
-      path: "about",
+      path: "/about",
     },
     {
       label: t('nav.contact'),
-      path: "contact",
+      path: "/contact",
     },
     // {
     //   label: t('nav.purpose'),
@@ -25,11 +25,11 @@ const Navbar = () => {
     // },
     {
       label: t('nav.Activities'),
-      path: "activities",
+      path: "/activities",
     },
     {
       label: t('nav.Dharma'),
-      path: "dhama-lessons",
+      path: "/dhama-lessons",
     }
   ];
 
@@ -55,7 +55,15 @@ const Navbar = () => {
           >
             {links.map(({ path, label }) => (
               <li key={path}>
-                <Link to={path}>{label}</Link>
+                <NavLink
+                  to={path}
+                  className={({ isActive }) =>
+                    `block px-3 py-2 rounded ${isActive ? 'text-primary font-semibold bg-primary/10' : 'text-base-600'
+                    }`
+                  }
+                >
+                  {label}
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -75,7 +83,15 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">
           {links.map(({ path, label }) => (
             <li key={path}>
-              <Link to={path}>{label}</Link>
+              <NavLink
+                to={path}
+                className={({ isActive }) =>
+                  `px-3 py-2 rounded-md transition-colors ${isActive ? 'text-primary font-semibold bg-primary/10' : 'text-gray-700 hover:text-primary'
+                  }`
+                }
+              >
+                {label}
+              </NavLink>
             </li>
           ))}
         </ul>
