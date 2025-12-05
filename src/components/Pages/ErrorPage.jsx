@@ -6,7 +6,7 @@ const ErrorPage = () => {
     <div className='flex flex-col justify-center items-center h-screen'>
       <div>
         <Link to="/" className='btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl'>Back </Link>
-        <h1 className='text-6xl font-bold text-primary'>404 - Page Not Found</h1>
+        {/* <h1 className='text-6xl font-bold text-primary'>404 - Page Not Found</h1> */}
       </div>
       <img className='w-lg ' src={NotFound} alt="Not Found" />
     </div>

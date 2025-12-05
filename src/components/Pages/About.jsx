@@ -56,7 +56,7 @@ const About = () => {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-8 mt-10">
+    <div className="container mx-auto mt-17 md:px-4 ">
       
       {/* Hero Section */}
       <div className="hero  bg-base-200 rounded-box ">

@@ -1,16 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from '../../hooks/useTranslation'
+import { Facebook, Mail, Phone, Youtube } from 'lucide-react';
 
 function Founder() {
-
+    const { t } = useTranslation();
 
     const socialLinks = [
-        { name: 'LinkedIn', url: 'https://linkedin.com', icon: '💼' },
-        { name: 'Twitter', url: 'https://twitter.com', icon: '𝕏' },
-        { name: 'Email', url: 'mailto:founder@example.com', icon: '✉️' },
+        { name: 'Youtube', url: 'https://linkedin.com', icon: <Youtube /> },
+        { name: 'Facebook', url: 'https://www.facebook.com/yi.hak.3', icon: <Facebook /> },
+        { name: 'Email', url: 'mailto:founder@example.com', icon: <Mail /> },
+        {name : "PhoneNumber", url : "+855 98 905 246", icon : <Phone />}
     ]
 
     return (
+
         <main className="bg-white">
             {/* Hero Section */}
             <section className="relative overflow-hidden">
@@ -31,13 +35,11 @@ function Founder() {
                         {/* Hero Content */}
                         <div className="flex-1 text-gray-900 text-center md:text-left bg-white rounded-xl shadow-lg p-8">
                             <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-4 bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-pink-400">
-                               Yu YiHak
+                                {t('founder.name')}
                             </h1>
-                            <p className="text-xl md:text-2xl text-purple-700 mb-4 md:mb-6 font-semibold">Founder & CEO</p>
+                            <p className="text-xl md:text-2xl text-purple-700 mb-4 md:mb-6 font-semibold">{t('founder.title')}</p>
                             <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto">
-                                Passionate about building innovative solutions that make a difference.
-                                With over 15 years of experience in technology and entrepreneurship,
-                                I'm committed to creating products that empower people and transform industries.
+                              {t('founder.bio')}
                             </p>
 
                             {/* Social Links */}

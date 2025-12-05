@@ -1,3 +1,5 @@
+import { Activities } from "../components/Pages";
+
 const translations = {
   en: {
     nav: {
@@ -6,6 +8,8 @@ const translations = {
       structure: "Structure",
       founder: "Founder",
       contact: "Contact",
+      Activities: "Activities",
+      Dharma : "Dharma",
     },
     home: {
       title: "Featured Activities",
@@ -59,18 +63,27 @@ which can currently support 12 monks and 12 students.`,
           "Leading the industry with AI-powered solutions and sustainable technology practices.",
       },
     },
+    contact: {
+      title: "Get in Touch",
+      description: "We'd love to hear from you. Here's how you can reach us.",
+      phone: "Phone",
+      email: "Email",
+      address: "Address",
+      addressDetails: "Str 1982 , Phnom Penh Tmei , Sen Sok , Phnom Penh , Cambodai ",
+      phoneNumber: "096 4563 693",
+      emailAddress: "namyou854@gamil.com",
+      ourSocials: "Our Socials"
+    },
     details: {
       moreActivities: "More Activities",
       backButton: "Back",
     },
     founder: {
-      name: "Sophea",
+      name: "Yu YiHak",
       title: "Founder & CEO",
       bio: "Passionate about building innovative solutions that make a difference. With over 15 years of experience in technology and entrepreneurship, I'm committed to creating products that empower people and transform industries.",
       achievements: "Key Achievements",
-      visionMission: "Vision & Mission",
-      vision: "Our Vision",
-      mission: "Our Mission",
+     
       team: "Leadership Team",
       testimonials: "What People Say",
       cta: "Let's Build the Future Together",
@@ -87,6 +100,8 @@ which can currently support 12 monks and 12 students.`,
       structure: "រចនាសម្ព័ន្ធ",
       founder: "ស្ថាបនករ",
       contact: "ទាក់ទងយើង",
+      Activities: "សកម្មភាពនានា",
+      Dharma : "ស្តាប់ព្រះធម៌",
     },
     home: {
       title: "សកម្មភាពនានា",
@@ -154,6 +169,18 @@ which can currently support 12 monks and 12 students.`,
       team: "ក្រុមអគ្គនាយក",
       testimonials: "មតិយោបល់របស់មនុស្ស",
       cta: "តោះគ្នាបង្កើតអនាគតជាមួយគ្នា",
+    },
+    contact:{
+      title: "ទាក់ទងយើង",
+      description: "ទំនាក់ទំនងមកវត្តភ្នំពេញថ្មី និង ទីតាំងរបស់វត្តភ្នំពេញថ្មី",
+      phone: "ទូរស័ព្ទ",
+      email: "អ៊ីមែល",
+      address: "អាសយដ្ឋាន",
+      addressDetails: "ផ្លូវ ១៩៨២ , ភ្នំពេញថ្មី , សែនសុខ , រាជធានីភ្នំពេញ , កម្ពុជា ",
+      phoneNumber: "០៩៦ ៤៥៦៣ ៦៩៣",
+      emailAddress: "namyou854@gmail.com",
+      ourSocials: "បណ្តាញសង្គមរបស់យើង"
+
     },
     structure: {
       title: "រចនាសម្ព័ន្ធអង្គការ",

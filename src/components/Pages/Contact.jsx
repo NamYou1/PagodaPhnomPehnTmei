@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useTransition } from 'react'
+import { useTranslation } from '../../hooks/useTranslation'
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-7">
       {/* Contact Hero Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
-        <p className="text-xl">We'd love to hear from you. Here's how you can reach us.</p>
+      <div className="text-center mb-2">
+        <h1 className="text-4xl font-bold mb-4">{t('contact.title')}</h1>
+        <p className="text-xl">{t('contact.description')}</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
         {/* Contact Information */}
         <div className="card bg-base-200 shadow-xl">
           <div className="card-body">
-            <h2 className="card-title text-2xl mb-6">Contact Information</h2>
+            <h2 className="card-title text-2xl mb-6">{t('contact.title')}</h2>
 
             {/* Phone Contact */}
             <div className="flex items-center gap-4 mb-6">
@@ -23,8 +25,8 @@ const Contact = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Phone</h3>
-                <a href="tel:+1234567890" className="link link-hover">096 4563 693</a>
+                <h3 className="font-semibold text-lg">{t('contact.phone')}</h3>
+                <a href="tel:+1234567890" className="link link-hover">{t('contact.phoneNumber')}</a>
               </div>
             </div>
 
@@ -36,7 +38,7 @@ const Contact = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Email</h3>
+                <h3 className="font-semibold text-lg">{t('contact.email')}</h3>
                 <a href="mailto:contact@example.com" className="link link-hover">namyou854@gamil.com</a>
               </div>
             </div>
@@ -50,13 +52,13 @@ const Contact = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Address</h3>
-                <p>Str 1982 , Phnom Penh Tmei , Sen Sok , Phnom Penh , Cambodai </p>
+                <h3 className="font-semibold text-lg">{t('contact.address')}</h3>
+                <p>{t('contact.addressDetails')}</p>
               </div>
             </div>
 
             {/* Social Media Links */}
-            <div className="divider">Connect With Us</div>
+            <div className="divider">{t('contact.ourSocials')}</div>
 
             <div className="flex justify-center gap-6">
               {/* Telegram */}

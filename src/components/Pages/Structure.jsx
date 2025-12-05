@@ -140,9 +140,9 @@ const Structure = () => {
     const { t, language } = useTranslation()
 
     return (
-        <main className="min-h-screen bg-base-100">
-            <div className="container mx-auto">
-                <header className="text-center mb-4 sm:mb-6 md:mb-8">
+        <main className=" ">
+            <div className=" mx-auto">
+                <header className="text-center">
                     <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
                         {language === 'en' ? t('structure.title') : 'រចនាសម្ព័ន្ធអង្គការ'}
                     </h1>

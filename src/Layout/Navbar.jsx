@@ -24,11 +24,11 @@ const Navbar = () => {
     //   path: "purpose",
     // },
     {
-      label: "Activities",
-      path: "Activities",
+      label: t('nav.Activities'),
+      path: "activities",
     },
     {
-      label: "Dharma",
+      label: t('nav.Dharma'),
       path: "dhama-lessons",
     }
   ];
