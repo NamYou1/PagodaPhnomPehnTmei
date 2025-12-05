@@ -33,7 +33,7 @@ import {
 export const initialData = [
     {
         id: 1,
-        title: "Mountain Adventure",
+        title: "Kathina",
         titleKm: "កឋិនទាន",
         description:
             "Enjoy the breathtaking views and the thrill of climbing the majestic mountains.",

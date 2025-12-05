@@ -141,11 +141,10 @@ const ActivitiesDetail = () => {
                 <img
                   src={child.image}
                   alt={`${currentTitle} - Image ${child.id}`}
-                  className={`w-full h-full object-cover rounded-lg shadow-md transition-all ${
-                    selectMode && selectedImages.includes(child.id)
+                  className={`w-full h-full object-cover rounded-lg shadow-md transition-all ${selectMode && selectedImages.includes(child.id)
                       ? "ring-4 ring-primary opacity-80"
                       : ""
-                  }`}
+                    }`}
                 />
 
                 {/* Selection Checkbox */}
@@ -187,18 +186,18 @@ const ActivitiesDetail = () => {
           <>
             <Link
               to="/"
-              className="btn btn-outline btn-primary mb-6 mx-6"
+              className="btn btn-outline btn-primary "
             >
               ← Back
             </Link>
             <button onClick={downloadAllPhotos} className="btn btn-primary">
-              <Download />Download All Photos
+              <Download />Download All
             </button>
             <button
               onClick={toggleSelectMode}
               className="btn btn-outline btn-primary"
             >
-              ✓ Select Photos to Download
+              ✓ Select
             </button>
           </>
         ) : (

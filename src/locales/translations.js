@@ -80,7 +80,7 @@ which can currently support 12 monks and 12 students.`,
     },
     founder: {
       name: "Yu YiHak",
-      title: "Founder & CEO",
+      title: "Leader of the construction of the new Wat Phnom Penh Tmei",
       bio: "Passionate about building innovative solutions that make a difference. With over 15 years of experience in technology and entrepreneurship, I'm committed to creating products that empower people and transform industries.",
       achievements: "Key Achievements",
 

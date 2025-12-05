@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company / description + small map */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-2">
-              {language === 'en' ? 'Wat Phnom Pehn Tmey ' : 'ទីតាំងវត្តភ្នំពេញថ្មី '}
+              {language === 'en' ? 'Wat Phnom Pehn Tmei ' : 'ទីតាំងវត្តភ្នំពេញថ្មី '}
             </h3>
             <p> {language === 'en' ? ' Street 1982, Phnom Pehn, Cambodia' : 'ផ្លូវ ១៩៨២ ភ្នំពេញ កម្ពុជា'}</p>
 
@@ -72,8 +72,8 @@ const Footer = () => {
             </p>
             <p className="text-sm">
               {language === 'en' ? 'Email' : 'អ៊ីមែល'}: {" "}
-              <a href="mailto:WatPhnomPehnTmei@gmail.com" className="link">
-                WatPhnomPehnTmei@gmail.com
+              <a href="watphnompehntmei@gmail.com" className="link">
+                watphnompehntmei@gmail.com
               </a>
             </p>
 
@@ -123,7 +123,7 @@ const Footer = () => {
 
         <div className="text-center text-sm">
           <p>
-            © {new Date().getFullYear()} {language === 'en' ? 'Wat Phnom Pehn Tmey' : 'វត្តភ្នំពេញថ្មី'}. {' '}
+            © {new Date().getFullYear()} {language === 'en' ? 'Wat Phnom Pehn Tmei' : 'វត្តភ្នំពេញថ្មី'}. {' '}
             {language === 'en' ? 'All rights reserved.' : 'រក្សាសិទ្ធិទាំងអស់។'}
           </p>
         </div>
