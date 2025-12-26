@@ -89,7 +89,7 @@ const Activities = () => {
                                 </h2>
                                 {/* <p className="text-xs text-primary font-semibold">{year}</p> */}
                                 <p className="text-sm text-gray-500">
-                                    {language === 'en' ? description : descriptionKm}
+                                    {language === 'en' ? description.slice(0, 100) : descriptionKm.slice(0, 97)}
                                 </p>
                             </div>
                         </div>

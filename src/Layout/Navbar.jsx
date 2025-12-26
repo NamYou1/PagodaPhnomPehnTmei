@@ -19,18 +19,18 @@ const Navbar = () => {
       label: t('nav.contact'),
       path: "/contact",
     },
-    // {
-    //   label: t('nav.purpose'),
-    //   path: "purpose",
-    // },
+    {
+      label: t('nav.purpose'),
+      path: "purpose",
+    },
     {
       label: t('nav.Activities'),
       path: "/activities",
     },
-    {
-      label: t('nav.Dharma'),
-      path: "/dhama-lessons",
-    }
+    // {
+    //   label: t('nav.Dharma'),
+    //   path: "/dhama-lessons",
+    // }
   ];
 
   return (

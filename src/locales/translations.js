@@ -1,4 +1,4 @@
-import { Activities } from "../components/Pages";
+import { Activities, Purpose } from "../components/Pages";
 
 const translations = {
   en: {
@@ -10,6 +10,7 @@ const translations = {
       contact: "Contact",
       Activities: "Activities",
       Dharma: "Dharma",
+      purpose: "Purpose"
     },
     home: {
       title: "Featured Activities",
@@ -105,6 +106,7 @@ which can currently support 12 monks and 12 students.`,
       contact: "ទាក់ទងយើង",
       Activities: "សកម្មភាពនានា",
       Dharma: "ស្តាប់ព្រះធម៌",
+      purpose: "គោលបំណង"
     },
     home: {
       title: "សកម្មភាពនានា",
@@ -196,6 +198,9 @@ which can currently support 12 monks and 12 students.`,
       title: "រចនាសម្ព័ន្ធអង្គការ",
       desc: "ផែនទីលម្អិតសាមញ្ញនិងប្រតिកម្ម។ បន្ថែម `imgUrl` ទៅលើថ្នាំណាមួយដើម្បីបង្ហាញរូបភាព។",
     },
+    purpose: {
+
+    }
   },
 };
 
