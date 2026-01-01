@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from '../../hooks/useTranslation'
 import { Facebook, Mail, Phone, Youtube } from 'lucide-react';
-
+import MasterHak from "../../assets/MasterHak.jpg"
+// import logo from "../assets/Logo.jpg";
 function Founder() {
     const { t } = useTranslation();
 
@@ -25,7 +26,7 @@ function Founder() {
                             <div className="absolute -inset-1 bg-linear-to-r from-purple-600 to-pink-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
                             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                                 <img
-                                    src="https://scontent.fpnh5-5.fna.fbcdn.net/v/t39.30808-6/593449294_2831884250343446_7789011829553880149_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFZP38-9OBCQYOO2zhn5DPQ_TxykjKL8Aj9PHKSMovwCHGut5gsB7osLYkOjygIyheGR8LdRQisFEW4PF2lE4tv&_nc_ohc=WIGQM85qxPcQ7kNvwHGbV06&_nc_oc=AdmETsIs3LP81niRTY2jv7GyplSa5TGATJ0WD3yoBznkzecKPWw0MlkXd3G0rkUPKpc&_nc_zt=23&_nc_ht=scontent.fpnh5-5.fna&_nc_gid=UBIfLcuFuqUr2mPy9QEp1Q&oh=00_AfmcSY6GnEOf14rE1YW7aEuwDkblsM1SNfF4RQfps_xHGQ&oe=69372BCA"
+                                    src={MasterHak}
                                     alt="Founder"
                                     className="w-full h-full object-cover"
                                 />

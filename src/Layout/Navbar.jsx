@@ -4,7 +4,7 @@ import { useTranslation } from "../hooks/useTranslation";
 import LanguageToggle from "../components/LanguageToggle";
 import logo from "../assets/Logo.jpg";
 const Navbar = () => {
-  const { t, language } = useTranslation();
+  const { t } = useTranslation();
 
   const links = [
     {
@@ -19,10 +19,10 @@ const Navbar = () => {
       label: t('nav.contact'),
       path: "/contact",
     },
-    {
-      label: t('nav.purpose'),
-      path: "purpose",
-    },
+    // {
+    //   label: t('nav.purpose'),
+    //   path: "purpose",
+    // },
     {
       label: t('nav.Activities'),
       path: "/activities",

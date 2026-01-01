@@ -90,8 +90,7 @@ which can currently support 12 monks and 12 students.`,
       cta: "Let's Build the Future Together",
     },
     structure: {
-      title: "Organization Structure",
-      desc: "A simple, responsive org chart. Add `imgUrl` to any node in the data to show an image.",
+      title: "Organization Structure of WatPhnom Pehn Tmei",
     },
     activities: {
       searchPlaceholder: "Search activities...",
@@ -119,7 +118,6 @@ which can currently support 12 monks and 12 students.`,
           `តបទៅតាមសំណើរសូមរបស់អាចារ្យគណ:កម្មការ សាលាបុណ្យ សន្សំកុសល ភ្នំពេញថ្មី សម្តេចព្រះសក្យមុនី កិត្តិបណ្ឌិត រ័ត្នសារឿន ព្រះអនុគណ ខណ្ឌ សែនសុខ រាជធានី ភ្នំពេញ
            ព្រះចៅអធិការវត្ត សំរោងអណ្តែត បានចាត់តាំង ព្រះគ្រូសាសនាវង្ស យូ យីហាក់ សុវណ្ណស្សរោ ឲ្យមកគង់នៅសាលាបុណ្យ  
           នាថ្ងៃ សុក្រ ១០កើត ខែពិសាខ ឆ្នាំ រកា នព្វស័ក ព.ស ២៥៦០ ត្រូវនឹង ថ្ងៃទី០៥ ខែ ឧសភា ឆ្នាំ២០១៧ ជាព្រះសង្ឃដំបងគេបំផុត ដើម្បីគ្រប់គ្រងដឹកនាំកសាង។`,
-        // learnMore: "រៀនសូត្របន្ថែមទៀត",
       },
       timeline: {
         title: "ដំណើរការកសាងរបស់ វត្តភ្នំពេញថ្មី",
@@ -195,8 +193,7 @@ which can currently support 12 monks and 12 students.`,
       searchPlaceholder: "ស្វែងរកសកម្មភាពនានា...",
     },
     structure: {
-      title: "រចនាសម្ព័ន្ធអង្គការ",
-      desc: "ផែនទីលម្អិតសាមញ្ញនិងប្រតिកម្ម។ បន្ថែម `imgUrl` ទៅលើថ្នាំណាមួយដើម្បីបង្ហាញរូបភាព។",
+      title: "រចនាសម្ព័ន្ធ​ វត្តភ្នំពេញថ្មី",
     },
     purpose: {
 
