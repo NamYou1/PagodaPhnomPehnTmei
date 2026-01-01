@@ -8,49 +8,49 @@ const About = () => {
     {
       id: 1,
       year: 2017,
-      title: t('about.timeline.foundation'),
+      // title: t('about.timeline.foundation'),
       description: t('about.timeline.desc2017')
     },
     {
       id: 2,
       year: 2018,
-      title: t('about.timeline.growth'),
+      // title: t('about.timeline.growth'),
       description: t('about.timeline.desc2018')
     },
     {
       id: 3,
       year: 2019,
-      title: t('about.timeline.expansion'),
+      // title: t('about.timeline.expansion'),
       description: t('about.timeline.desc2019')
     },
     {
       id: 4,
       year: 2020,
-      title: t('about.timeline.adaptation'),
+      // title: t('about.timeline.adaptation'),
       description: t('about.timeline.desc2020')
     },
     {
       id: 5,
       year: 2021,
-      title: t('about.timeline.transformation'),
+      // title: t('about.timeline.transformation'),
       description: t('about.timeline.desc2021')
     },
     {
       id: 6,
       year: 2023,
-      title: t('about.timeline.awards'),
+      // title: t('about.timeline.awards'),
       description: t('about.timeline.desc2023')
     },
     {
       id: 7,
       year: 2024,
-      title: t('about.timeline.innovation'),
+      // title: t('about.timeline.innovation'),
       description: t('about.timeline.desc2024')
     },
     {
       id: 8,
       year: 2025,
-      title: t('about.timeline.future'),
+      // title: t('about.timeline.future'),
       description: t('about.timeline.desc2025')
     }
   ]
@@ -78,7 +78,9 @@ const About = () => {
             <li key={item.id}>
               {index !== 0 && <hr />}
               <div className={index % 2 === 0 ? 'timeline-start timeline-box' : 'timeline-end timeline-box'}>
-                <h3 className="font-bold text-lg">{item.year} - {item.title}</h3>
+                <h3 className="font-bold text-lg text-center">{item.year} 
+                  {/* - {item.title} */}
+                  </h3>
                 <p>{item.description}</p>
               </div>
               <div className="timeline-middle">

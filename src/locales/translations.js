@@ -25,14 +25,14 @@ const translations = {
       },
       timeline: {
         title: "Our History",
-        foundation: "Foundation",
-        growth: "Growth",
-        expansion: "Major Expansion",
-        adaptation: "Digital Adaptation",
-        transformation: "Digital Transformation",
-        awards: "Innovation Award",
-        innovation: "Industry Leadership",
-        future: "Future Forward",
+        // foundation: "Foundation",
+        // growth: "Growth",
+        // expansion: "Next process",
+        // adaptation: "Leadership in 2020",
+        // transformation: "Digital Transformation",
+        // awards: "Innovation Award",
+        // innovation: "Industry Leadership",
+        // future: "Future Forward",
         desc2017:
           "Started as a small team with big dreams. Launched our first product and secured initial funding.",
         desc2018: `According to the request of the Committee of the Monks of the New Phnom Penh Buddhist School dated Friday, 5th Rouch,
@@ -57,11 +57,17 @@ const translations = {
 which is 10 meters wide, 15.6 meters long, and 2 stories high.
 which can currently support 12 monks and 12 students.`,
         desc2023:
-          "Received multiple industry awards for our innovative solutions and sustainable practices.",
+          `Continue to build an interconnected building, adding functions that meet the needs of the use
+which is 10 meters wide, 15.6 meters long, and 2 stories high.
+which can currently support 12 monks and 12 students.`,
         desc2024:
-          "Leading the industry with AI-powered solutions and sustainable technology practices.",
+          `Continue to build an interconnected building, adding functions that meet the needs of the use
+which is 10 meters wide, 15.6 meters long, and 2 stories high.
+which can currently support 12 monks and 12 students.`,
         desc2025:
-          "Leading the industry with AI-powered solutions and sustainable technology practices.",
+          `Continue to build an interconnected building, adding functions that meet the needs of the use
+which is 10 meters wide, 15.6 meters long, and 2 stories high.
+which can currently support 12 monks and 12 students.`,
       },
     },
     contact: {
@@ -121,16 +127,12 @@ which can currently support 12 monks and 12 students.`,
       },
       timeline: {
         title: "ដំណើរការកសាងរបស់ វត្តភ្នំពេញថ្មី",
-        foundation: "ការស្ថាបនា",
-        growth: "ការរីកចម្រើន",
-        expansion: "ការពង្រីកលំដាប់",
-        adaptation: "ការសម្របខ្លួនឌីជីថល",
-        transformation: "ការផ្លាស់ប្តូរឌីជីថល",
-        awards: "ពានរង្វាន់ច្នៃប្រឌិត",
-        innovation: "ការដឹកនាំឧស័ហកម្ម",
-        future: "ឈានទៅមុខក្នុងអនាគត",
+        foundation: "ការចាប់ផ្តើមកសាងវត្តភ្នំពេញថ្មី",
         desc2017:
-          "បានចាប់ផ្តើមដូចក្រុមតូចដែលមានសុបិន្តធំ។ បានបង្ហាញផលិតផលដំបូងរបស់យើង និងទទួលបានមូលនិធិដំបូង។",
+          `យោងតាមសំណើរសុំរបស់គណៈកម្មការអាចារ្យសាលាបុណ្យភ្នំពេញថ្មីចុះថ្ងៃសុក្រ ៥រោច ខែ
+          ពិសាខ ឆ្នាំចសំរឹទ្ធិស័ក ព.ស២៥៦២ ត្រូវនឹងថ្ងៃទី៦ ខែ ឧសភា ឆ្នាំ២០១៨ ស្តីអំពីការនិមន្ត
+          ព្រះសង្ឃនៅសាលាបុណ្យភ្នំពេញថ្មី
+          តាមការចាំបាច់របស់សាលាបុណ្យភូមិភ្នំពេញថ្មី។`,
         desc2018: `យោងតាមសំណើរសុំរបស់គណៈកម្មការអាចារ្យសាលាបុណ្យភ្នំពេញថ្មីចុះថ្ងៃសុក្រ ៥រោច ខែ
           ពិសាខ ឆ្នាំចសំរឹទ្ធិស័ក ព.ស២៥៦២ ត្រូវនឹងថ្ងៃទី៦ ខែ ឧសភា ឆ្នាំ២០១៨ ស្តីអំពីការនិមន្ត
           ព្រះសង្ឃនៅសាលាបុណ្យភ្នំពេញថ្មី
@@ -152,11 +154,17 @@ which can currently support 12 monks and 12 students.`,
           ដែលមានទទឹង១០ម៉ែត្រ បណ្តោយ ១៥ម៉ែត្រ៦តឹក កម្ពស់២ជាន់។
           ដែលបច្ចុប្បន្នភាព អាចទ្រទ្រង់ព្រះសង្ឃ១២អង្គ និងនិស្សិត១២នាក់។`,
         desc2023:
-          "lore leading the industry with AI-powered solutions and sustainable technology practices.",
+          `បន្តការកសាងអាគារភ្ជាប់គ្នា ដោយបន្ថែមុខងារដែលជាតម្រូវការនៃការប្រើប្រាស់
+          ដែលមានទទឹង១០ម៉ែត្រ បណ្តោយ ១៥ម៉ែត្រ៦តឹក កម្ពស់២ជាន់។
+          ដែលបច្ចុប្បន្នភាព អាចទ្រទ្រង់ព្រះសង្ឃ១២អង្គ និងនិស្សិត១២នាក់។`,
         desc2024:
-          "lore leading the industry with AI-powered solutions and sustainable technology practices.",
+          `បន្តការកសាងអាគារភ្ជាប់គ្នា ដោយបន្ថែមុខងារដែលជាតម្រូវការនៃការប្រើប្រាស់
+          ដែលមានទទឹង១០ម៉ែត្រ បណ្តោយ ១៥ម៉ែត្រ៦តឹក កម្ពស់២ជាន់។
+          ដែលបច្ចុប្បន្នភាព អាចទ្រទ្រង់ព្រះសង្ឃ១២អង្គ និងនិស្សិត១២នាក់។`,
         desc2025:
-          "lore leading the industry with AI-powered solutions and sustainable technology practices.",
+          `បន្តការកសាងអាគារភ្ជាប់គ្នា ដោយបន្ថែមុខងារដែលជាតម្រូវការនៃការប្រើប្រាស់
+          ដែលមានទទឹង១០ម៉ែត្រ បណ្តោយ ១៥ម៉ែត្រ៦តឹក កម្ពស់២ជាន់។
+          ដែលបច្ចុប្បន្នភាព អាចទ្រទ្រង់ព្រះសង្ឃ១២អង្គ និងនិស្សិត១២នាក់។`,
       },
     },
     details: {
@@ -169,13 +177,6 @@ which can currently support 12 monks and 12 students.`,
       bio: `តបទៅតាមសំណើរសូមរបស់អាចារ្យគណ:កម្មការ សាលាបុណ្យ សន្សំកុសល ភ្នំពេញថ្មី សម្តេចព្រះសក្យមុនី កិត្តិបណ្ឌិត រ័ត្នសារឿន ព្រះអនុគណ ខណ្ឌ សែនសុខ រាជធានី ភ្នំពេញ
            ព្រះចៅអធិការវត្ត សំរោងអណ្តែត បានចាត់តាំង ព្រះគ្រូសាសនាវង្ស យូ យីហាក់ សុវណ្ណស្សរោ ឲ្យមកគង់នៅសាលាបុណ្យ  
           នាថ្ងៃ សុក្រ ១០កើត ខែពិសាខ ឆ្នាំ រកា នព្វស័ក ព.ស ២៥៦០ ត្រូវនឹង ថ្ងៃទី០៥ ខែ ឧសភា ឆ្នាំ២០១៧ ជាព្រះសង្ឃដំបងគេបំផុត ដើម្បីគ្រប់គ្រងដឹកនាំកសាង។`,
-      achievements: "ការងារលម្អិតលក្ខណៈពិសេស",
-      visionMission: "ចក្ខុវិស័យនិងបេសកកម្ម",
-      vision: "ចក្ខុវិស័យរបស់យើង",
-      mission: "បេសកកម្មរបស់យើង",
-      team: "ក្រុមអគ្គនាយក",
-      testimonials: "មតិយោបល់របស់មនុស្ស",
-      cta: "តោះគ្នាបង្កើតអនាគតជាមួយគ្នា",
     },
     contact: {
       title: "ទាក់ទងយើង",
