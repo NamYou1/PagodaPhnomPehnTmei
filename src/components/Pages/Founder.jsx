@@ -10,13 +10,13 @@ function Founder() {
     const socialLinks = [
         // { name: 'Youtube', url: 'https://linkedin.com', icon: <Youtube /> },
         { name: 'Facebook', url: 'https://www.facebook.com/yi.hak.3', icon: <Facebook /> },
-        { name: 'Email', url: 'mailto:founder@example.com', icon: <Mail /> },
+        // { name: 'Email', url: 'mailto:founder@example.com', icon: <Mail /> },
         { name: "PhoneNumber", url: "+855 98 905 246", icon: <Phone /> }
     ]
 
     return (
 
-        <main className="bg-white">
+        <main className=" ">
             {/* Hero Section */}
             <section className="relative overflow-hidden">
                 <div className="relative max-w-6xl mx-auto ">
@@ -34,7 +34,7 @@ function Founder() {
                         </div>
 
                         {/* Hero Content */}
-                        <div className="flex-1 text-gray-900 text-center md:text-left bg-white rounded-xl shadow-lg p-8 ">
+                        <div className="flex-1 text-gray-900  md:text-left rounded-xl shadow-lg p-8 ">
                             <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-4 bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-pink-400">
                                 {t('founder.name')}
                             </h1>

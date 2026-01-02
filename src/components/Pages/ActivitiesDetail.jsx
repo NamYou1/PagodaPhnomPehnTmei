@@ -129,19 +129,20 @@ const ActivitiesDetail = () => {
         </div>
       </div>
 
-      <div className="grid  grid-cols- md:grid-cols-4 lg:grid-cols-5 gap-6 px-6 pb-10">
+      <div className="columns-2 md:columns-4 lg:columns-6 gap-2 px-2 pb-4">
         {data.Children &&
           data.Children.map((child, index) => (
             <div
               key={child.id}
-              className="relative group cursor-pointer"
+              className="relative group cursor-pointer break-inside-avoid mb-6"
               onClick={() => selectMode && toggleImageSelection(child.id)}
             >
               <figure className="relative">
                 <img
                   src={child.image}
                   alt={`${currentTitle} - Image ${child.id}`}
-                  className={`w-full h-full object-cover rounded-lg shadow-md transition-all ${selectMode && selectedImages.includes(child.id)
+                  className={`w-full rounded-lg shadow-md transition-all
+              ${selectMode && selectedImages.includes(child.id)
                       ? "ring-4 ring-primary opacity-80"
                       : ""
                     }`}
@@ -159,7 +160,7 @@ const ActivitiesDetail = () => {
                   </div>
                 )}
 
-                {/* Individual Download Button (only show when not in select mode) */}
+                {/* Download Button */}
                 {!selectMode && (
                   <button
                     onClick={() =>
@@ -171,7 +172,6 @@ const ActivitiesDetail = () => {
                     className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100 transition-opacity"
                     title="Download this photo"
                   >
-                    {/* 📥 */}
                     <Download />
                   </button>
                 )}
@@ -179,6 +179,7 @@ const ActivitiesDetail = () => {
             </div>
           ))}
       </div>
+
 
       {/* Download Controls */}
       <div className="flex justify-center gap-4 mb-6 flex-wrap px-4">
