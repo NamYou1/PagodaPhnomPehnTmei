@@ -42,7 +42,7 @@ const ActivitiesDetail = () => {
       const found = initialData.find((item) => item.id == id);
       setData(found);
       setLoading(false);
-    }, 2000); // simulate API delay
+    }, 10000); // simulate API delay
   }, [id]);
 
   /* =========================
@@ -70,7 +70,7 @@ const ActivitiesDetail = () => {
         <span className="loading loading-spinner loading-lg text-primary"></span>
         <div className="text-center">
           <p className="text-lg font-semibold">Loading...</p>
-          <p className="text-sm text-gray-600">Please wait 3 seconds ...</p>
+          <p className="text-sm text-gray-600">Please wait 10 seconds ...</p>
         </div>
       </div>
     );
@@ -245,9 +245,9 @@ const ActivitiesDetail = () => {
             Next
           </button>
 
-          <span className="ml-4 text-sm text-gray-600">
+          {/* <p className="ml-4 text-sm text-gray-600">
             Page {currentPage} of {totalPages} ({totalItems} images)
-          </span>
+          </p> */}
         </div>
       )}
 
