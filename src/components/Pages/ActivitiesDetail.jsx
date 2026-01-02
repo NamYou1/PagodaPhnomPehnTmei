@@ -1,20 +1,30 @@
-import React, { useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { initialData } from "./data";
-import { Download } from "lucide-react";
+import { Download, ChevronLeft, ChevronRight } from "lucide-react";
 import ImageCarousel from "../ImageCarousel";
 import { useTranslation } from "../../hooks/useTranslation";
 
 const ActivitiesDetail = () => {
   const { id } = useParams();
   const data = initialData.find((item) => item.id == id);
+
   const [selectedImages, setSelectedImages] = useState([]);
   const [selectMode, setSelectMode] = useState(false);
-  const { t, language } = useTranslation();
+
+  // 🔹 Modal states
+  const [previewIndex, setPreviewIndex] = useState(null);
+
+  const { language } = useTranslation();
   const currentTitle =
     language === "en" ? data.title : data.titleKm || data.title;
   const currentDescription =
-    language === "en" ? data.description : data.descriptionKm || data.description;
+    language === "en"
+      ? data.description
+      : data.descriptionKm || data.description;
+
+  // 🔹 All images for modal navigation
+  const images = data.Children?.map((c) => c.image) || [];
 
   const sanitizeFilename = (str) => {
     if (!str) return "download";
@@ -22,205 +32,172 @@ const ActivitiesDetail = () => {
       .toString()
       .trim()
       .replace(/\s+/g, "_")
-      .replace(/[^a-zA-Z0-9_\-\u00C0-\u024F\u1E00-\u1EFF\u1780-\u17FF\.]/g, "");
-  };
-  const toggleSelectMode = () => {
-    setSelectMode(!selectMode);
-    setSelectedImages([]);
+      .replace(/[^a-zA-Z0-9_\-\u1780-\u17FF]/g, "");
   };
 
   const toggleImageSelection = (childId) => {
-    if (selectedImages.includes(childId)) {
-      setSelectedImages(selectedImages.filter((id) => id !== childId));
-    } else {
-      setSelectedImages([...selectedImages, childId]);
-    }
-  };
-
-  const selectAll = () => {
-    if (data.Children) {
-      setSelectedImages(data.Children.map((child) => child.id));
-    }
-  };
-
-  const deselectAll = () => {
-    setSelectedImages([]);
-  };
-
-  const downloadSelectedPhotos = async () => {
-    if (selectedImages.length === 0) {
-      alert("Please select at least one photo to download");
-      return;
-    }
-
-    if (data.Children) {
-      for (let child of data.Children) {
-        if (selectedImages.includes(child.id)) {
-          const index = data.Children.findIndex((c) => c.id === child.id);
-          await downloadImage(
-            child.image,
-            `${sanitizeFilename(currentTitle)}-${index + 1}.jpg`
-          );
-        }
-      }
-    }
-
-    setSelectMode(false);
-    setSelectedImages([]);
-  };
-
-  const downloadAllPhotos = async () => {
-    // Download main image
-    await downloadImage(data.imgUrl, `${sanitizeFilename(currentTitle)}-main.jpg`);
-
-    // Download all children images
-    if (data.Children) {
-      for (let i = 0; i < data.Children.length; i++) {
-        await downloadImage(
-          data.Children[i].image,
-          `${sanitizeFilename(currentTitle)}-${i + 1}.jpg`
-        );
-      }
-    }
+    setSelectedImages((prev) =>
+      prev.includes(childId)
+        ? prev.filter((id) => id !== childId)
+        : [...prev, childId]
+    );
   };
 
   const downloadImage = async (url, filename) => {
-    try {
-      const response = await fetch(url);
-      const blob = await response.blob();
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(link.href);
-    } catch (error) {
-      console.error("Download failed:", error);
-    }
+    const response = await fetch(url);
+    const blob = await response.blob();
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    link.click();
+    URL.revokeObjectURL(link.href);
   };
 
-  const downloadSingleImage = (url, filename) => {
-    downloadImage(url, filename);
+  // 🔹 Modal navigation
+  const closeModal = () => setPreviewIndex(null);
+
+  const prevImage = () => {
+    setPreviewIndex((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
   };
+
+  const nextImage = () => {
+    setPreviewIndex((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  // 🔹 Keyboard support
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (previewIndex === null) return;
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowLeft") prevImage();
+      if (e.key === "ArrowRight") nextImage();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [previewIndex]);
 
   return (
     <>
-      {/* Hero Section with Carousel */}
+      {/* 🔹 Hero Carousel */}
       <div className="mt-20 mb-8 px-4">
         <ImageCarousel
-          images={[
-            data.imgUrl,
-            ...(data.Children ? data.Children.map((child) => child.image) : []),
-          ]}
+          images={[data.imgUrl, ...images]}
           title={currentTitle}
-          autoScroll={true}
-          interval={5000}
+          autoScroll
         />
       </div>
 
-      {/* Description Card */}
+      {/* 🔹 Description */}
       <div className="max-w-4xl mx-auto px-4 mb-8">
         <div className="card bg-base-100 shadow-md">
           <div className="card-body">
-            <h2 className="card-title text-2xl md:text-3xl">{currentTitle}</h2>
-            <p className="text-gray-600 leading-relaxed">{currentDescription}</p>
+            <h2 className="card-title text-3xl">{currentTitle}</h2>
+            <p className="text-gray-600">{currentDescription}</p>
           </div>
         </div>
       </div>
 
+      {/* 🔹 Image Grid */}
       <div className="columns-2 md:columns-4 lg:columns-6 gap-2 px-2 pb-4">
-        {data.Children &&
-          data.Children.map((child, index) => (
-            <div
-              key={child.id}
-              className="relative group cursor-pointer break-inside-avoid mb-6"
-              onClick={() => selectMode && toggleImageSelection(child.id)}
-            >
-              <figure className="relative">
-                <img
-                  src={child.image}
-                  alt={`${currentTitle} - Image ${child.id}`}
-                  className={`w-full rounded-lg shadow-md transition-all
-              ${selectMode && selectedImages.includes(child.id)
-                      ? "ring-4 ring-primary opacity-80"
-                      : ""
-                    }`}
-                />
+        {data.Children?.map((child, index) => (
+          <div
+            key={child.id}
+            className="relative group break-inside-avoid mb-6"
+          >
+            <img
+              src={child.image}
+              alt={child.id}
+              onClick={() => !selectMode && setPreviewIndex(index)}
+              className={`w-full rounded-lg shadow-md cursor-zoom-in transition
+                ${selectMode && selectedImages.includes(child.id)
+                  ? "ring-4 ring-primary opacity-80"
+                  : ""
+                }`}
+            />
 
-                {/* Selection Checkbox */}
-                {selectMode && (
-                  <div className="absolute top-2 left-2">
-                    <input
-                      type="checkbox"
-                      checked={selectedImages.includes(child.id)}
-                      onChange={() => toggleImageSelection(child.id)}
-                      className="checkbox checkbox-primary checkbox-lg"
-                    />
-                  </div>
-                )}
+            {/* Checkbox */}
+            {selectMode && (
+              <input
+                type="checkbox"
+                checked={selectedImages.includes(child.id)}
+                onClick={(e) => e.stopPropagation()}
+                onChange={() => toggleImageSelection(child.id)}
+                className="checkbox checkbox-primary checkbox-lg absolute top-2 left-2"
+              />
+            )}
 
-                {/* Download Button */}
-                {!selectMode && (
-                  <button
-                    onClick={() =>
-                      downloadSingleImage(
-                        child.image,
-                        `${sanitizeFilename(currentTitle)}-${index + 1}.jpg`
-                      )
-                    }
-                    className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100 transition-opacity"
-                    title="Download this photo"
-                  >
-                    <Download />
-                  </button>
-                )}
-              </figure>
-            </div>
-          ))}
+            {/* Download */}
+            {!selectMode && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  downloadImage(
+                    child.image,
+                    `${sanitizeFilename(currentTitle)}-${index + 1}.jpg`
+                  );
+                }}
+                className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100"
+              >
+                <Download size={16} />
+              </button>
+            )}
+          </div>
+        ))}
       </div>
 
+      {/* 🔹 Modal */}
+      {previewIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center"
+          onClick={closeModal}
+        >
+          <div
+            className="relative max-w-6xl w-full px-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close */}
+            <button
+              className="absolute top-4 right-4 btn btn-circle btn-sm bg-white"
+              onClick={closeModal}
+            >
+              ✕
+            </button>
 
-      {/* Download Controls */}
-      <div className="flex justify-center gap-4 mb-6 flex-wrap px-4">
-        {!selectMode ? (
-          <>
-            <Link
-              to="/"
-              className="btn btn-outline btn-primary "
-            >
-              ← Back
-            </Link>
-            <button onClick={downloadAllPhotos} className="btn btn-primary">
-              <Download />Download All
-            </button>
+            {/* Prev */}
             <button
-              onClick={toggleSelectMode}
-              className="btn btn-outline btn-primary"
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 btn btn-circle bg-white"
             >
-              ✓ Select
+              <ChevronLeft />
             </button>
-          </>
-        ) : (
-          <>
-            <button onClick={selectAll} className="btn btn-sm btn-outline">
-              Select All
-            </button>
-            <button onClick={deselectAll} className="btn btn-sm btn-outline">
-              Deselect All
-            </button>
+
+            {/* Next */}
             <button
-              onClick={downloadSelectedPhotos}
-              className="btn btn-primary"
-              disabled={selectedImages.length === 0}
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 btn btn-circle bg-white"
             >
-              <Download /> Download Selected ({selectedImages.length})
+              <ChevronRight />
             </button>
-            <button onClick={toggleSelectMode} className="btn btn-outline">
-              Cancel
-            </button>
-          </>
-        )}
+
+            {/* Image */}
+            <img
+              src={images[previewIndex]}
+              className="max-h-[90vh] mx-auto rounded-lg shadow-2xl"
+              alt="Preview"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* 🔹 Footer Buttons */}
+      <div className="flex justify-center gap-4 mb-10">
+        <Link to="/" className="btn btn-outline btn-primary">
+          ← Back
+        </Link>
       </div>
     </>
   );
