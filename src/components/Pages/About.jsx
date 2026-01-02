@@ -62,7 +62,7 @@ const About = () => {
       <div className="hero  bg-base-200 rounded-box ">
         <div className="hero-content text-center">
           <div className="max-w-2xl">
-            <h1 className="text-5xl font-bold mb-8">{t('about.hero.title')}</h1>
+            <h3 className="text-4xl font-bold mb-8">{t('about.hero.title')}</h3>
             <p className="text-xl mb-6">{t('about.hero.description')}</p>
             {/* <button className="btn btn-primary">{t('about.hero.learnMore')}</button> */}
           </div>

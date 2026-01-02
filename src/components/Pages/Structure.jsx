@@ -1,10 +1,10 @@
 ﻿
 import { useTranslation } from '../../hooks/useTranslation';
-import masterHak from '../../assets/img/masterHak.jpg';
-import lokbgmean from '../../assets/img/lokbgmean.jpg';
-import lkbgbunny from '../../assets/img/lokbgbunny.jpg';
-import tong from '../../assets/img/tong.jpg';
-import chhaiya from '../../assets/img/yaya.jpg';
+import masterHak from '../../assets/Monks/masterHak.jpg';
+import lokbgmean from '../../assets/Monks/lokbgmean.jpg';
+import lkbgbunny from '../../assets/Monks/lokbgbunny.jpg';
+import tong from '../../assets/Monks/tong.jpg';
+import chhaiya from '../../assets/Monks/yaya.jpg';
 const orgData = {
     id: 'ceo',
     name: 'Yu YiHak',

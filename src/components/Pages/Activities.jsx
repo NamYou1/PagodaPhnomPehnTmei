@@ -24,7 +24,7 @@ const Activities = () => {
     });
 
     // Filter data based on search and year
-    const filteredData = Data.filter(item => {
+    let filteredData = Data.filter(item => {
         const matchesSearch =
             (language === 'en' ? item.title : item.titleKm)
                 .toLowerCase()
@@ -34,6 +34,20 @@ const Activities = () => {
 
         return matchesSearch && matchesYear;
     });
+
+    // If "All Years" selected, show only one card per unique title (most recent)
+    if (selectedYear === "all") {
+        const uniqueTitles = new Map();
+        filteredData.forEach(item => {
+            const titleKey = language === 'en' ? item.title : item.titleKm;
+            const existing = uniqueTitles.get(titleKey);
+            // Keep the one with the most recent year
+            if (!existing || item.year > existing.year) {
+                uniqueTitles.set(titleKey, item);
+            }
+        });
+        filteredData = Array.from(uniqueTitles.values());
+    }
 
     return (
         <div className="mt-0 md:mt-20">
@@ -84,10 +98,14 @@ const Activities = () => {
                                 />
                             </figure>
                             <div className="card-body flex justify-between">
-                                <h2 className="card-title text-lg font-semibold">
-                                    {language === 'en' ? title : titleKm}
-                                </h2>
-                                {/* <p className="text-xs text-primary font-semibold">{year}</p> */}
+                                <div className="flex justify-between items-start">
+                                    <h2 className="card-title text-lg font-semibold">
+                                        {language === 'en' ? title : titleKm}
+                                    </h2>
+                                    {selectedYear !== "all" && (
+                                        <span className="badge badge-primary badge-sm">{year}</span>
+                                    )}
+                                </div>
                                 <p className="text-sm text-gray-500">
                                     {language === 'en' ? description.slice(0, 100) : descriptionKm.slice(0, 97)}
                                 </p>

@@ -7,7 +7,7 @@ import { useTranslation } from "../../hooks/useTranslation";
 
 const ActivitiesDetail = () => {
   const { id } = useParams();
-  const { t, language } = useTranslation();
+  const { language } = useTranslation();
 
   /* =========================
      Loading State
@@ -27,15 +27,22 @@ const ActivitiesDetail = () => {
   const [previewIndex, setPreviewIndex] = useState(null);
 
   /* =========================
+     Pagination States
+  ========================== */
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 30;
+
+  /* =========================
      Fetch Data (simulate async)
   ========================== */
   useEffect(() => {
     setLoading(true);
+    setCurrentPage(1); // Reset to page 1 when activity changes
     setTimeout(() => {
       const found = initialData.find((item) => item.id == id);
       setData(found);
       setLoading(false);
-    }, 1000); // simulate API delay
+    }, 2000); // simulate API delay
   }, [id]);
 
   /* =========================
@@ -59,8 +66,12 @@ const ActivitiesDetail = () => {
   ========================== */
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
+      <div className="flex flex-col justify-center items-center min-h-screen gap-4">
         <span className="loading loading-spinner loading-lg text-primary"></span>
+        <div className="text-center">
+          <p className="text-lg font-semibold">Loading...</p>
+          <p className="text-sm text-gray-600">Please wait 3 seconds ...</p>
+        </div>
       </div>
     );
   }
@@ -68,6 +79,15 @@ const ActivitiesDetail = () => {
   if (!data) return <p className="text-center mt-20">No data found</p>;
 
   const images = data.Children?.map((c) => c.image) || [];
+
+  /* =========================
+     Pagination Calculations
+  ========================== */
+  const totalItems = data.Children?.length || 0;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentChildren = data.Children?.slice(startIndex, endIndex) || [];
 
   const currentTitle =
     language === "en" ? data.title : data.titleKm || data.title;
@@ -81,7 +101,7 @@ const ActivitiesDetail = () => {
       ?.toString()
       .trim()
       .replace(/\s+/g, "_")
-      .replace(/[^a-zA-Z0-9_\-\.]/g, "") || "download";
+      .replace(/[^a-zA-Z0-9_\-.]/g, "") || "download";
 
   /* =========================
      Modal Controls
@@ -138,7 +158,7 @@ const ActivitiesDetail = () => {
       {/* ================= DESCRIPTION ================= */}
       <div className="max-w-4xl mx-auto px-4 mb-8">
         <div className="card bg-base-100 shadow">
-          <div className="card-body ">
+          <div className="card-body">
             <h2 className="card-title text-3xl">{currentTitle}</h2>
             <p className="text-gray-600">{currentDescription}</p>
           </div>
@@ -147,7 +167,7 @@ const ActivitiesDetail = () => {
 
       {/* ================= IMAGE GRID ================= */}
       <div className="columns-2 md:columns-4 lg:columns-6 gap-2 px-2 pb-4">
-        {data.Children?.map((child, index) => (
+        {currentChildren?.map((child, index) => (
           <div
             key={child.id}
             className="relative group break-inside-avoid mb-6"
@@ -155,7 +175,7 @@ const ActivitiesDetail = () => {
             <img
               src={child.image}
               alt=""
-              onClick={() => !selectMode && openModal(index)}
+              onClick={() => !selectMode && openModal(startIndex + index)}
               className={`w-full rounded-lg shadow cursor-zoom-in
                 ${selectMode && selectedImages.includes(child.id)
                   ? "ring-4 ring-primary opacity-80"
@@ -179,7 +199,7 @@ const ActivitiesDetail = () => {
                   e.stopPropagation();
                   downloadImage(
                     child.image,
-                    `${sanitizeFilename(currentTitle)}-${index + 1}.jpg`
+                    `${sanitizeFilename(currentTitle)}-${startIndex + index + 1}.jpg`
                   );
                 }}
                 className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100"
@@ -191,8 +211,48 @@ const ActivitiesDetail = () => {
         ))}
       </div>
 
+      {/* ================= PAGINATION ================= */}
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center gap-2 mb-8">
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+            disabled={currentPage === 1}
+            className="btn btn-outline btn-primary btn-sm"
+          >
+            Previous
+          </button>
+
+          <div className="flex gap-1">
+            {[...Array(totalPages)].map((_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => setCurrentPage(i + 1)}
+                className={`btn btn-sm ${currentPage === i + 1
+                    ? "btn-primary"
+                    : "btn-outline btn-primary"
+                  }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
+            disabled={currentPage === totalPages}
+            className="btn btn-outline btn-primary btn-sm"
+          >
+            Next
+          </button>
+
+          <span className="ml-4 text-sm text-gray-600">
+            Page {currentPage} of {totalPages} ({totalItems} images)
+          </span>
+        </div>
+      )}
+
       {/* ================= CONTROLS ================= */}
-      <div className="ml-4 mb-10 flex gap-4">
+      <div className="ml-4 ">
         <Link to="/" className="btn btn-outline btn-primary">← Back</Link>
         {/* <button onClick={toggleSelectMode} className="btn btn-primary">
           {selectMode ? "Cancel" : "Select"}

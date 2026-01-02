@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Plant from "../../assets/img/Plant.jpg";
-import ppnew from "../../assets/img/ppnew.jpg";
-import pp from "../../assets/img/pp.jpg";
-import { budha2 } from "../../assets/ImageCarousel";
+import Plant from "../../assets/Monks/Plant.jpg";
+// import ppnew from "../../assets/Monks/ppnew.jpg";
+import pp from "../../assets/Monks/pp.jpg";
+// import { budha2 } from "../../assets/ImageCarousel";
 const slidesData = [
   {
     id: 1,
@@ -10,16 +10,12 @@ const slidesData = [
   },
   {
     id: 2,
-    imgUrl: ppnew,
-  },
-  {
-    id: 3,
     imgUrl: pp,
   }
-  , {
-    id: 4,
-    imgUrl: budha2,
-  }
+  // , {
+  //   id: 3,
+  //   imgUrl: budha2,
+  // }
 
 ];
 

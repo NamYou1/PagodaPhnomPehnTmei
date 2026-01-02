@@ -12,6 +12,10 @@ const Navbar = () => {
       path: "/",
     },
     {
+      label: t('nav.Activities'),
+      path: "/activities",
+    },
+    {
       label: t('nav.about'),
       path: "/about",
     },
@@ -23,10 +27,7 @@ const Navbar = () => {
     //   label: t('nav.purpose'),
     //   path: "purpose",
     // },
-    {
-      label: t('nav.Activities'),
-      path: "/activities",
-    },
+
     // {
     //   label: t('nav.Dharma'),
     //   path: "/dhama-lessons",
