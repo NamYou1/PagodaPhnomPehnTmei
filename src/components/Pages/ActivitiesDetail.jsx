@@ -7,15 +7,68 @@ import { useTranslation } from "../../hooks/useTranslation";
 
 const ActivitiesDetail = () => {
   const { id } = useParams();
-  const data = initialData.find((item) => item.id == id);
+  const { t, language } = useTranslation();
 
+  /* =========================
+     Loading State
+  ========================== */
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+
+  /* =========================
+     Gallery States
+  ========================== */
   const [selectedImages, setSelectedImages] = useState([]);
   const [selectMode, setSelectMode] = useState(false);
 
-  // 🔹 Modal states
+  /* =========================
+     Modal States
+  ========================== */
   const [previewIndex, setPreviewIndex] = useState(null);
 
-  const { language } = useTranslation();
+  /* =========================
+     Fetch Data (simulate async)
+  ========================== */
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      const found = initialData.find((item) => item.id == id);
+      setData(found);
+      setLoading(false);
+    }, 1000); // simulate API delay
+  }, [id]);
+
+  /* =========================
+     Keyboard Controls
+  ========================== */
+  useEffect(() => {
+    if (previewIndex === null) return;
+
+    const handleKey = (e) => {
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [previewIndex]);
+
+  /* =========================
+     Helpers
+  ========================== */
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <span className="loading loading-spinner loading-lg text-primary"></span>
+      </div>
+    );
+  }
+
+  if (!data) return <p className="text-center mt-20">No data found</p>;
+
+  const images = data.Children?.map((c) => c.image) || [];
+
   const currentTitle =
     language === "en" ? data.title : data.titleKm || data.title;
   const currentDescription =
@@ -23,29 +76,47 @@ const ActivitiesDetail = () => {
       ? data.description
       : data.descriptionKm || data.description;
 
-  // 🔹 All images for modal navigation
-  const images = data.Children?.map((c) => c.image) || [];
-
-  const sanitizeFilename = (str) => {
-    if (!str) return "download";
-    return str
-      .toString()
+  const sanitizeFilename = (str) =>
+    str
+      ?.toString()
       .trim()
       .replace(/\s+/g, "_")
-      .replace(/[^a-zA-Z0-9_\-\u1780-\u17FF]/g, "");
-  };
+      .replace(/[^a-zA-Z0-9_\-\.]/g, "") || "download";
 
-  const toggleImageSelection = (childId) => {
+  /* =========================
+     Modal Controls
+  ========================== */
+  const openModal = (index) => setPreviewIndex(index);
+  const closeModal = () => setPreviewIndex(null);
+
+  const nextImage = () =>
+    setPreviewIndex((prev) => (prev + 1) % images.length);
+
+  const prevImage = () =>
+    setPreviewIndex((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
+
+  /* =========================
+     Selection Controls
+  ========================== */
+  const toggleImageSelection = (id) => {
     setSelectedImages((prev) =>
-      prev.includes(childId)
-        ? prev.filter((id) => id !== childId)
-        : [...prev, childId]
+      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
     );
   };
 
+  const toggleSelectMode = () => {
+    setSelectMode(!selectMode);
+    setSelectedImages([]);
+  };
+
+  /* =========================
+     Download
+  ========================== */
   const downloadImage = async (url, filename) => {
-    const response = await fetch(url);
-    const blob = await response.blob();
+    const res = await fetch(url);
+    const blob = await res.blob();
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     link.download = filename;
@@ -53,36 +124,9 @@ const ActivitiesDetail = () => {
     URL.revokeObjectURL(link.href);
   };
 
-  // 🔹 Modal navigation
-  const closeModal = () => setPreviewIndex(null);
-
-  const prevImage = () => {
-    setPreviewIndex((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
-    );
-  };
-
-  const nextImage = () => {
-    setPreviewIndex((prev) =>
-      prev === images.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  // 🔹 Keyboard support
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (previewIndex === null) return;
-      if (e.key === "Escape") closeModal();
-      if (e.key === "ArrowLeft") prevImage();
-      if (e.key === "ArrowRight") nextImage();
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [previewIndex]);
-
   return (
     <>
-      {/* 🔹 Hero Carousel */}
+      {/* ================= HERO ================= */}
       <div className="mt-20 mb-8 px-4">
         <ImageCarousel
           images={[data.imgUrl, ...images]}
@@ -91,17 +135,17 @@ const ActivitiesDetail = () => {
         />
       </div>
 
-      {/* 🔹 Description */}
+      {/* ================= DESCRIPTION ================= */}
       <div className="max-w-4xl mx-auto px-4 mb-8">
-        <div className="card bg-base-100 shadow-md">
-          <div className="card-body">
+        <div className="card bg-base-100 shadow">
+          <div className="card-body ">
             <h2 className="card-title text-3xl">{currentTitle}</h2>
             <p className="text-gray-600">{currentDescription}</p>
           </div>
         </div>
       </div>
 
-      {/* 🔹 Image Grid */}
+      {/* ================= IMAGE GRID ================= */}
       <div className="columns-2 md:columns-4 lg:columns-6 gap-2 px-2 pb-4">
         {data.Children?.map((child, index) => (
           <div
@@ -110,27 +154,25 @@ const ActivitiesDetail = () => {
           >
             <img
               src={child.image}
-              alt={child.id}
-              onClick={() => !selectMode && setPreviewIndex(index)}
-              className={`w-full rounded-lg shadow-md cursor-zoom-in transition
+              alt=""
+              onClick={() => !selectMode && openModal(index)}
+              className={`w-full rounded-lg shadow cursor-zoom-in
                 ${selectMode && selectedImages.includes(child.id)
                   ? "ring-4 ring-primary opacity-80"
                   : ""
                 }`}
             />
 
-            {/* Checkbox */}
             {selectMode && (
               <input
                 type="checkbox"
                 checked={selectedImages.includes(child.id)}
                 onClick={(e) => e.stopPropagation()}
                 onChange={() => toggleImageSelection(child.id)}
-                className="checkbox checkbox-primary checkbox-lg absolute top-2 left-2"
+                className="checkbox checkbox-primary absolute top-2 left-2"
               />
             )}
 
-            {/* Download */}
             {!selectMode && (
               <button
                 onClick={(e) => {
@@ -149,7 +191,15 @@ const ActivitiesDetail = () => {
         ))}
       </div>
 
-      {/* 🔹 Modal */}
+      {/* ================= CONTROLS ================= */}
+      <div className="ml-4 mb-10 flex gap-4">
+        <Link to="/" className="btn btn-outline btn-primary">← Back</Link>
+        {/* <button onClick={toggleSelectMode} className="btn btn-primary">
+          {selectMode ? "Cancel" : "Select"}
+        </button> */}
+      </div>
+
+      {/* ================= MODAL ================= */}
       {previewIndex !== null && (
         <div
           className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center"
@@ -161,8 +211,8 @@ const ActivitiesDetail = () => {
           >
             {/* Close */}
             <button
-              className="absolute top-4 right-4 btn btn-circle btn-sm bg-white"
               onClick={closeModal}
+              className="absolute top-4 right-4 btn btn-circle btn-sm bg-white"
             >
               ✕
             </button>
@@ -170,7 +220,7 @@ const ActivitiesDetail = () => {
             {/* Prev */}
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 btn btn-circle bg-white"
+              className="absolute left-2 top-1/2 -translate-y-1/2 btn btn-circle bg-white"
             >
               <ChevronLeft />
             </button>
@@ -178,27 +228,19 @@ const ActivitiesDetail = () => {
             {/* Next */}
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 btn btn-circle bg-white"
+              className="absolute right-2 top-1/2 -translate-y-1/2 btn btn-circle bg-white"
             >
               <ChevronRight />
             </button>
 
-            {/* Image */}
             <img
               src={images[previewIndex]}
+              alt=""
               className="max-h-[90vh] mx-auto rounded-lg shadow-2xl"
-              alt="Preview"
             />
           </div>
         </div>
       )}
-
-      {/* 🔹 Footer Buttons */}
-      <div className="flex justify-center gap-4 mb-10">
-        <Link to="/" className="btn btn-outline btn-primary">
-          ← Back
-        </Link>
-      </div>
     </>
   );
 };

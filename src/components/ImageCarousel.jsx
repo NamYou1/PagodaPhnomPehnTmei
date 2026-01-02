@@ -44,9 +44,8 @@ const ImageCarousel = ({ images, title, autoScroll = true, interval = 5000 }) =>
                 {images.map((image, index) => (
                     <div
                         key={index}
-                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                            index === currentIndex ? 'opacity-100' : 'opacity-0'
-                        }`}
+                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                            }`}
                     >
                         <img
                             src={image}
@@ -87,41 +86,41 @@ const ImageCarousel = ({ images, title, autoScroll = true, interval = 5000 }) =>
             </div>
 
             {/* Thumbnail Navigation */}
-            <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 justify-start md:justify-center">
-                {images.map((image, index) => (
-                    <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
-                            index === currentIndex
+            <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                <div className="flex gap-2 sm:gap-3 mx-auto">
+                    {images.map((image, index) => (
+                        <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className={`flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all duration-300 ${index === currentIndex
                                 ? 'border-primary scale-105 h-20 w-24 md:h-24 md:w-32'
                                 : 'border-gray-300 hover:border-primary h-16 w-20 md:h-20 md:w-28 hover:scale-105'
-                        }`}
-                    >
-                        <img
-                            src={image}
-                            alt={`Thumbnail ${index + 1}`}
-                            className="w-full h-full object-cover"
-                        />
-                    </button>
-                ))}
+                                }`}
+                        >
+                            <img
+                                src={image}
+                                alt={`Thumbnail ${index + 1}`}
+                                className="w-full h-full object-cover"
+                            />
+                        </button>
+                    ))}
+                </div>
             </div>
 
-            {/* Dot Indicators */}
+            {/* Dot Indicators
             <div className="flex gap-2 justify-center mt-4">
                 {images.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`rounded-full transition-all duration-300 ${
-                            index === currentIndex
-                                ? 'bg-primary w-3 h-3 md:w-4 md:h-4'
-                                : 'bg-gray-300 hover:bg-gray-400 w-2 h-2 md:w-3 md:h-3'
-                        }`}
+                        className={`rounded-full transition-all duration-300 ${index === currentIndex
+                            ? 'bg-primary w-3 h-3 md:w-4 md:h-4'
+                            : 'bg-gray-300 hover:bg-gray-400 w-2 h-2 md:w-3 md:h-3'
+                            }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
                 ))}
-            </div>
+            </div> */}
         </div>
     );
 };
