@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
 import LanguageToggle from "../components/LanguageToggle";
-import logo from "../assets/Logo.jpg";
+import logo from "../assets/General/Logo.jpg";
 const Navbar = () => {
   const { t } = useTranslation();
 

@@ -6,20 +6,20 @@ const Contact = () => {
   return (
     <div className="container mx-auto mt-7">
       {/* Contact Hero Section */}
-      <div className="text-center mb-2">
+      <div className="text-center mb-2 animate-fadeIn">
         <h1 className="text-4xl font-bold mb-4">{t('contact.title')}</h1>
         <p className="text-xl">{t('contact.description')}</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
         {/* Contact Information */}
-        <div className="card bg-base-200 shadow-xl">
+        <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 animate-slideUp" style={{ animationDelay: '100ms' }}>
           <div className="card-body">
             <h2 className="card-title text-2xl mb-6">{t('contact.title')}</h2>
 
             {/* Phone Contact */}
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-primary p-3 rounded-full">
+            <div className="flex items-center gap-4 mb-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
+              <div className="bg-primary p-3 rounded-full transition-transform duration-300 hover:scale-110 hover:rotate-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                 </svg>
@@ -31,8 +31,8 @@ const Contact = () => {
             </div>
 
             {/* Email Contact */}
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-primary p-3 rounded-full">
+            <div className="flex items-center gap-4 mb-6 animate-fadeInUp" style={{ animationDelay: '300ms' }}>
+              <div className="bg-primary p-3 rounded-full transition-transform duration-300 hover:scale-110 hover:rotate-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
@@ -44,8 +44,8 @@ const Contact = () => {
             </div>
 
             {/* Address */}
-            <div className="flex items-center gap-4 mb-8">
-              <div className="bg-primary p-3 rounded-full">
+            <div className="flex items-center gap-4 mb-8 animate-fadeInUp" style={{ animationDelay: '400ms' }}>
+              <div className="bg-primary p-3 rounded-full transition-transform duration-300 hover:scale-110 hover:rotate-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
@@ -58,12 +58,12 @@ const Contact = () => {
             </div>
 
             {/* Social Media Links */}
-            <div className="divider">{t('contact.ourSocials')}</div>
+            <div className="divider animate-fadeInUp" style={{ animationDelay: '500ms' }}>{t('contact.ourSocials')}</div>
 
-            <div className="flex justify-center gap-6">
+            <div className="flex justify-center gap-6 animate-fadeInUp" style={{ animationDelay: '600ms' }}>
               {/* Telegram */}
               <a href="https://t.me/Namyou1" target="_blank" rel="noopener noreferrer"
-                className="btn btn-circle btn-outline hover:bg-primary hover:border-primary">
+                className="btn btn-circle btn-outline hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110 hover:rotate-12">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.247-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
                 </svg>
@@ -71,7 +71,7 @@ const Contact = () => {
 
               {/* Facebook */}
               <a href="https://www.facebook.com/profile.php?id=100085604379815" target="_blank" rel="noopener noreferrer"
-                className="btn btn-circle btn-outline hover:bg-primary hover:border-primary">
+                className="btn btn-circle btn-outline hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110 hover:rotate-12">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                 </svg>
@@ -89,7 +89,7 @@ const Contact = () => {
         </div>
 
         {/* Google Maps */}
-        <div className="card bg-base-200 shadow-xl">
+        <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 animate-slideUp" style={{ animationDelay: '200ms' }}>
           <div className="card-body p-2">
             {/* Use an embed-friendly URL (output=embed). The previous non-embed place URL may be blocked from iframes. */}
             <iframe
@@ -101,6 +101,7 @@ const Contact = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className="transition-all duration-300 hover:scale-[1.02]"
             ></iframe>
           </div>
         </div>

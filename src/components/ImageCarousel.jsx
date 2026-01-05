@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const ImageCarousel = ({ images, title, autoScroll = true, interval = 1000 }) => {
+const ImageCarousel = ({ images, title, autoScroll = true, interval = 5000 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Auto scroll effect

@@ -1,5 +1,5 @@
-import { VisakBocheaMain, VisakBocheaPhoto } from "../../assets/VisakBochea";
-import { KathinaPhoto, KathinaMain } from "../../assets/Kaṭhina";
+import { VisakBocheaMain, VisakBocheaPhoto } from "../../assets/VisakBochea/index.js";
+import { KathinaPhoto, KathinaMain } from "../../assets/Kaṭhina/index.js";
 import { MahabaliMain, MahabaliPhoto } from "../../assets/Mahabali/index.js";
 import { MeakBocheaMain, MeakBocheaPhoto } from "../../assets/MeakBochea/index.js";
 import { AlmsbowlMeakBocheaMain, AlmsbowlMeakBocheaPhoto } from "../../assets/AlmsbowlMeakBochea/index.js";

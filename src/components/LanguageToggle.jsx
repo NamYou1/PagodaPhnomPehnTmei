@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLanguage } from '../context/LanguageContext'
-import cm from '../assets/cmb.png'
-import uk from '../assets/uk.png'
+import cm from '../assets/General/cmb.png'
+import uk from '../assets/General/uk.png'
 
 const LanguageToggle = () => {
     const { language, toggleLanguage } = useLanguage()

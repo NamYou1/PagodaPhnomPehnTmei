@@ -57,9 +57,9 @@ const About = () => {
 
   return (
     <div className="container mx-auto mt-17 md:px-4 ">
-      
+
       {/* Hero Section */}
-      <div className="hero  bg-base-200 rounded-box ">
+      <div className="hero bg-base-200 rounded-box animate-fadeIn">
         <div className="hero-content text-center">
           <div className="max-w-2xl">
             <h3 className="text-4xl font-bold mb-8">{t('about.hero.title')}</h3>
@@ -71,16 +71,16 @@ const About = () => {
 
       {/* Timeline Section */}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">{t('about.timeline.title')}</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 animate-slideUp" style={{ animationDelay: '100ms' }}>{t('about.timeline.title')}</h2>
 
         <ul className="timeline timeline-vertical">
           {History.map((item, index) => (
-            <li key={item.id}>
-              {index !== 0 && <hr />}
-              <div className={index % 2 === 0 ? 'timeline-start timeline-box' : 'timeline-end timeline-box'}>
-                <h3 className="font-bold text-lg text-center">{item.year} 
+            <li key={item.id} className="animate-fadeInUp" style={{ animationDelay: `${200 + index * 100}ms` }}>
+              {index !== 0 && <hr className="transition-all duration-300" />}
+              <div className={`${index % 2 === 0 ? 'timeline-start timeline-box' : 'timeline-end timeline-box'} hover:shadow-lg hover:scale-105 transition-all duration-300`}>
+                <h3 className="font-bold text-lg text-center">{item.year}
                   {/* - {item.title} */}
-                  </h3>
+                </h3>
                 <p>{item.description}</p>
               </div>
               <div className="timeline-middle">

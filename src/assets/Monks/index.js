@@ -1,12 +1,15 @@
 import ArtSengorn from './ArtSengorn.jpg';
 import DenSann from './DenSann.jpg';
-import masterHak from './masterHak.jpg';
+import masterHak from './MasterHak.jpg';
 import PhalPhai from './PhalPhai.jpg';
 import Sokleng from './Sokleng.jpg';
 import TolSokmean from './TolSokmean.JPG';
 import KhyChhaiya from './KhyChhaiya.png';
 import NamYou from './NamYou.png';
-
+import Mengtong from './Mengtong.jpg';
+import VonBunny from './VonBunny.jpg';
+import YuYiHak from './YuYiHak.jpg';
+import YanBunThoeun from './YanBunThoeun.jpg';
 export {
     ArtSengorn,
     DenSann,
@@ -15,5 +18,9 @@ export {
     Sokleng,
     TolSokmean,
     KhyChhaiya,
-    NamYou
+    NamYou,
+    Mengtong,
+    VonBunny,
+    YuYiHak,
+    YanBunThoeun
 };

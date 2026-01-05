@@ -5,7 +5,7 @@ const Footer = () => {
   const { t, language } = useTranslation();
 
   return (
-    <footer className="bg-base-300 text-base-content pt-8 md:mt-10">
+    <footer className="bg-base-300 text-base-content pt-8 mt-0 ">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-start">
           {/* Company / description + small map */}

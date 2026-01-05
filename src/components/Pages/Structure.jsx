@@ -1,143 +1,19 @@
 ﻿import { useState } from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
-import { masterHak, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai } from '../../assets/Monks';
-const orgData = {
-    id: 'ceo',
-    name: 'Yu YiHak',
-    nameKm: 'យូ យីហាក់',
-    title: 'CEO',
-    titleKm: 'ប្រធានសង្ឃ',
-    imgUrl: masterHak,
-    joinYear: 2017,
-    bio: 'Chief Buddhist Monk and spiritual leader of Wat Phnom Penh Tmei',
-    bioKm: 'ប្រធានសង្ឃ និងជាអ្នកដឹកនាំខាងសាសនា នៃវត្តភ្នំពេញថ្មី',
-    children: [
-        {
-            id: 'left-vp',
-            name: 'Tol SokMean',
-            nameKm: 'តុល សុខមាន',
-            title: 'Bhikkhu',
-            titleKm: 'ភិក្ខុ',
-            imgUrl: TolSokmean,
-            joinYear: 2018,
-            // leftYear: 2025,
-            bio: 'Senior monk responsible for religious ceremonies',
-            bioKm: 'ភិក្ខុជាន់ខ្ពស់ ទទួលបន្ទុកពិធីសាសនា',
-            children: [
-                {
-                    id: 'prod-1',
-                    name: 'Phal Phai',
-                    nameKm: 'ផល​ ផៃ',
-                    title: 'Bhikkhu',
-                    titleKm: 'ភិក្ខុ',
-                    imgUrl: PhalPhai,
-                    leftYear: 2025,
-                    joinYear: 2020,
-                    bio: 'Monk specialized in meditation practices',
-                    bioKm: 'ភិក្ខុ ជំនាញខាងសមាធិកម្ម',
-                },
-                {
-                    id: 'prod-3',
-                    name: 'Art Sengorn',
-                    nameKm: 'អាត សេងអ៊ាន់',
-                    title: 'Bhikkhu',
-                    titleKm: 'ភិក្ខុ',
-                    imgUrl: ArtSengorn,
-                    leftYear: 2025,
-                    joinYear: 2021,
-                    bio: 'Monk dedicated to teaching and community service',
-                    bioKm: 'ភិក្ខុ ទទួលបន្ទុកការបង្រៀន និងសេវាសហគមន៍',
-                },
-                {
-                    id: 'prod-2',
-                    name: 'Sok Leng',
-                    nameKm: 'សុខ ឡេង',
-                    title: 'Bhikkhu',
-                    titleKm: 'ភិក្ខុ',
-                    imgUrl: Sokleng,
-                    joinYear: 2021,
-                    bio: 'Monk specialized in meditation practices',
-                    bioKm: 'ភិក្ខុ ជំនាញខាងសមាធិកម្ម',
+import { dataMonks } from '../Data/dataMonk';
 
-                },
-                {
-                    id: 'prod-4',
-                    name: 'Pheng Chhunmeng Tong',
-                    nameKm: 'ផេង ឆុនម៉ង់ ទង',
-                    title: 'Bhikkhu',
-                    titleKm: 'ភិក្ខុ',
-                    imgUrl: null,
-                    joinYear: 2024,
-                    bio: 'Monk specialized in meditation practices',
-                    bioKm: 'ភិក្ខុ ជំនាញខាងសមាធិកម្ម',
-                },
-                {
-                    id: 'ops-2',
-                    name: 'Den San',
-                    nameKm: 'ដែន សាន',
-                    title: 'Bhikkhu',
-                    titleKm: 'ភិក្ខុ',
-                    imgUrl: DenSann,
-                    joinYear: 2023,
-                    bio: 'Monk focused on community outreach',
-                    bioKm: 'ភិក្ខុ ផ្តោតលើការងារសហគមន៍',
-                    children: [
-                        {
-                            id: 'ui-2',
-                            name: 'Nam You',
-                            nameKm: 'ណាំ យ៉ូ',
-                            title: 'samner',
-                            titleKm: 'សាមណេរ',
-                            imgUrl: NamYou,
-                            joinYear: 2023,
-                            bio: 'Novice monk in training',
-                            bioKm: 'សាមណេរ កំពុងរៀនសូត្រ',
-                        },
-                        {
-                            id: 'ui-1',
-                            name: 'Khy ChhaiYa',
-                            nameKm: 'ឃី ឆៃយ៉ា',
-                            title: 'samner',
-                            titleKm: 'សាមណេរ',
-                            imgUrl: KhyChhaiya,
-                            joinYear: 2023,
-                            bio: 'Novice monk studying Buddhist scriptures',
-                            bioKm: 'សាមណេរ ពុំបត្រសិក្សាគម្ពីរសាសនា',
-                        },
-
-                    ]
-                },
-
-
-            ],
-        },
-        {
-            id: 'right-vp',
-            name: 'Von Bunny',
-            nameKm: 'វ៉ុន ប៊ុន្នី',
-            title: 'Bhikkhu',
-            titleKm: 'ភិក្ខុ',
-            imgUrl: masterHak,
-            joinYear: 2021,
-            bio: 'Senior monk overseeing temple operations',
-            bioKm: 'ភិក្ខុជាន់ខ្ពស់ ត្រួតពិនិត្យប្រតិបត្តិការវត្ត',
-
-        },
-
-    ],
-}
-
+// dataMo
 // Modal Component for Member Details
 const MemberDetailModal = ({ member, language, onClose }) => {
     if (!member) return null;
 
     return (
         <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn"
             onClick={onClose}
         >
             <div
-                className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+                className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-slideUp"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="relative">
@@ -156,7 +32,7 @@ const MemberDetailModal = ({ member, language, onClose }) => {
                         <img
                             src={member.imgUrl}
                             alt={language === 'en' ? member.name : member.nameKm}
-                            className="w-32 h-32 rounded-full object-cover mx-auto shadow-xl border-4 border-white"
+                            className="w-32 h-32 rounded-full object-fit-contain mx-auto shadow-xl border-4 border-white"
                         />
                         <h2 className="text-3xl font-bold text-primary mt-4">
                             {language === 'en' ? member.name : member.nameKm}
@@ -179,7 +55,7 @@ const MemberDetailModal = ({ member, language, onClose }) => {
                                     <p className="text-sm text-gray-500">
                                         {member.leftYear
                                             ? (language === 'en' ? 'Period' : 'រយៈពេល')
-                                            : (language === 'en' ? 'Joined Year' : 'ឆ្នាំចូលរួម')
+                                            : (language === 'en' ? 'Joined Year' : 'ចូលមកស្នាក់នៅ')
                                         }
                                     </p>
                                     <p className="text-lg font-semibold text-gray-800">
@@ -225,7 +101,7 @@ const Avatar = ({ name, imgUrl, onClick }) => {
             <img
                 src={imgUrl}
                 alt={name}
-                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full object-cover shadow-md cursor-pointer hover:shadow-xl hover:scale-110 transition-all duration-300"
+                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full object-fit-contain object-center shadow-md cursor-pointer hover:shadow-xl hover:scale-110 transition-all duration-300"
                 onClick={onClick}
             />
         )
@@ -385,14 +261,14 @@ const Structure = () => {
     const [selectedYear, setSelectedYear] = useState('NOW');
     const [selectedMember, setSelectedMember] = useState(null);
     const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'tree'
-
-    const availableYears = getAllYears(orgData);
+    // dataMonks
+    const availableYears = getAllYears(dataMonks);
 
     // For NOW, only show members still in the pagoda (no leftYear or leftYear in the future)
     // For specific years, show who was active during that year
     const filteredData = selectedYear === 'NOW'
-        ? filterByYear(orgData, currentYear, true) // true = only show current members
-        : filterByYear(orgData, parseInt(selectedYear), false);
+        ? filterByYear(dataMonks, currentYear, true) // true = only show current members
+        : filterByYear(dataMonks, parseInt(selectedYear), false);
 
     // Get flat list of all members for grid view
     const allMembers = filteredData ? flattenMembers(filteredData) : [];
@@ -447,7 +323,7 @@ const Structure = () => {
                                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                     }`}
                             >
-                                {language === 'en' ? 'NOW' : 'ឥឡូវ'}
+                                {language === 'en' ? 'NOW' : 'ឥឡូវនេះ'}
                             </button>
                             {availableYears.map(year => (
                                 <button
@@ -470,10 +346,11 @@ const Structure = () => {
                         /* Grid View - All members in a flat grid */
                         <div className="w-full max-w-6xl">
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-                                {allMembers.map((member) => (
+                                {allMembers.map((member, index) => (
                                     <div
                                         key={member.id}
-                                        className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                                        className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer animate-fadeInUp"
+                                        style={{ animationDelay: `${index * 50}ms` }}
                                         onClick={() => setSelectedMember(member)}
                                     >
                                         <Avatar

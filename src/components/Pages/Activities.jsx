@@ -1,7 +1,7 @@
 import React, { Children, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "../../hooks/useTranslation";
-import { initialData } from "./data";
+import { initialData } from "../Data/data.js";
 
 
 const Activities = () => {
@@ -51,29 +51,30 @@ const Activities = () => {
 
     return (
         <div className="mt-0 md:mt-20">
-            <h2 className="text-3xl font-bold text-center mb-4 text-primary">
+            <h2 className="text-3xl font-bold text-center mb-4 text-primary animate-fadeIn">
                 {t('home.title')}
             </h2>
-            <div className="flex justify-center items-center flex-wrap">
+            <div className="flex justify-center items-center flex-wrap animate-fadeIn">
                 <input
                     type="text"
                     placeholder={t('activities.searchPlaceholder')}
-                    className="input input-info text-center rounded-2xl mb-2 md:w-[700px] lg:w-[1000px]"
+                    className="input input-info text-center rounded-2xl mb-2 md:w-[700px] lg:w-[1000px] transition-all focus:scale-105"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
             </div>
 
             {/* Year Filter Buttons */}
-            <div className="flex gap-2 justify-center items-center mb-6 flex-wrap md:gap-3">
-                {years.map(year => (
+            <div className="flex gap-2 justify-center items-center mb-6 flex-wrap md:gap-3 animate-fadeIn" style={{ animationDelay: '100ms' }}>
+                {years.map((year, index) => (
                     <button
                         key={year}
                         onClick={() => setSelectedYear(year)}
-                        className={`btn  transition-all ${selectedYear === year
+                        className={`btn transition-all duration-300 hover:scale-105 animate-fadeInUp ${selectedYear === year
                             ? 'btn-primary'
                             : ''
                             }`}
+                        style={{ animationDelay: `${150 + index * 50}ms` }}
                     >
                         {year === "all"
                             ? (language === 'en' ? "All Years" : "ទាំងអស់")
@@ -84,10 +85,11 @@ const Activities = () => {
             {/* 🏕️ Cards Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 pb-10">
                 {filteredData.length > 0 ? (
-                    filteredData.map(({ id, imgUrl, title, titleKm, description, descriptionKm, year }) => (
+                    filteredData.map(({ id, imgUrl, title, titleKm, description, descriptionKm, year }, index) => (
                         <div
                             key={id}
-                            className="card bg-base-100 shadow-md hover:shadow-xl cursor-pointer transition-transform transform hover:scale-105"
+                            className="card bg-base-100 shadow-md hover:shadow-xl cursor-pointer transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 animate-fadeInUp"
+                            style={{ animationDelay: `${index * 80}ms` }}
                             onClick={() => handleCardClick(id)}
                         >
                             <figure>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from '../../hooks/useTranslation'
 import { Facebook, Mail, Phone, Youtube } from 'lucide-react';
-import MasterHak from "../../assets/MasterHak.jpg"
+import MasterHak from "../../assets/Monks/MasterHak.jpg"
 // import logo from "../assets/Logo.jpg";
 function Founder() {
     const { t } = useTranslation();

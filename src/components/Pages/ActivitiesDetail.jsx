@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { initialData } from "./data";
+import { initialData } from "../Data/data.js";
 import { Download, ChevronLeft, ChevronRight } from "lucide-react";
 import ImageCarousel from "../ImageCarousel";
 import { useTranslation } from "../../hooks/useTranslation";
@@ -147,7 +147,7 @@ const ActivitiesDetail = () => {
   return (
     <>
       {/* ================= HERO ================= */}
-      <div className="mt-20 mb-8 px-4">
+      <div className="mt-20 mb-8 px-4 animate-fadeIn">
         <ImageCarousel
           images={[data.imgUrl, ...images]}
           title={currentTitle}
@@ -156,8 +156,8 @@ const ActivitiesDetail = () => {
       </div>
 
       {/* ================= DESCRIPTION ================= */}
-      <div className="max-w-4xl mx-auto px-4 mb-8">
-        <div className="card bg-base-100 shadow">
+      <div className="max-w-4xl mx-auto px-4 mb-8 animate-slideUp" style={{ animationDelay: '100ms' }}>
+        <div className="card bg-base-100 shadow hover:shadow-xl transition-shadow duration-300">
           <div className="card-body">
             <h2 className="card-title text-3xl">{currentTitle}</h2>
             <p className="text-gray-600">{currentDescription}</p>
@@ -170,13 +170,14 @@ const ActivitiesDetail = () => {
         {currentChildren?.map((child, index) => (
           <div
             key={child.id}
-            className="relative group break-inside-avoid mb-6"
+            className="relative group break-inside-avoid mb-6 animate-fadeInUp"
+            style={{ animationDelay: `${index * 30}ms` }}
           >
             <img
               src={child.image}
               alt=""
               onClick={() => !selectMode && openModal(startIndex + index)}
-              className={`w-full rounded-lg shadow cursor-zoom-in
+              className={`w-full rounded-lg shadow cursor-zoom-in transition-all duration-300 hover:scale-105
                 ${selectMode && selectedImages.includes(child.id)
                   ? "ring-4 ring-primary opacity-80"
                   : ""
@@ -202,7 +203,7 @@ const ActivitiesDetail = () => {
                     `${sanitizeFilename(currentTitle)}-${startIndex + index + 1}.jpg`
                   );
                 }}
-                className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100"
+                className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
               >
                 <Download size={16} />
               </button>
@@ -228,8 +229,8 @@ const ActivitiesDetail = () => {
                 key={i + 1}
                 onClick={() => setCurrentPage(i + 1)}
                 className={`btn btn-sm ${currentPage === i + 1
-                    ? "btn-primary"
-                    : "btn-outline btn-primary"
+                  ? "btn-primary"
+                  : "btn-outline btn-primary"
                   }`}
               >
                 {i + 1}
