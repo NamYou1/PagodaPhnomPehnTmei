@@ -35,10 +35,10 @@ function Founder() {
 
                         {/* Hero Content */}
                         <div className="flex-1 text-gray-900  md:text-left rounded-xl shadow-lg p-8 ">
-                            <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-4 bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-pink-400">
+                            <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-4 bg-clip-text text-transparent text-blue-800 bg-gradient-to-r from-purple-600 to-pink-600">
                                 {t('founder.name')}
                             </h1>
-                            <p className="text-xl md:text-2xl text-purple-700 mb-4 md:mb-6 font-semibold">{t('founder.title')}</p>
+                            <p className="text-xl md:text-2xl text-primary mb-4 md:mb-6 font-semibold">{t('founder.title')}</p>
                             <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto">
                                 {t('founder.bio')}
                             </p>

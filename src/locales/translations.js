@@ -24,7 +24,7 @@ const translations = {
         // learnMore: "Learn More",
       },
       timeline: {
-        title: "Our History",
+        title: "Wat Phnom Thmei History",
         // foundation: "Foundation",
         // growth: "Growth",
         // expansion: "Next process",
@@ -54,20 +54,20 @@ const translations = {
         desc2020:
           "The project to build a building began with the demolition of the old building and the construction of a new building measuring 6.5 meters wide, 27 meters long, and 5 meters high, elevated above the ground, with functions such as a common area, 1 living room, 3 bathrooms, 1 kitchen, along with a zinc roof, built on top for monks and students to live in.",
         desc2021: `Continue to build an interconnected building, adding functions that meet the needs of the use
-which is 10 meters wide, 15.6 meters long, and 2 stories high.
-which can currently support 12 monks and 12 students.`,
+          which is 10 meters wide, 15.6 meters long, and 2 stories high.
+          which can currently support 12 monks and 12 students.`,
         desc2023:
           `Continue to build an interconnected building, adding functions that meet the needs of the use
-which is 10 meters wide, 15.6 meters long, and 2 stories high.
-which can currently support 12 monks and 12 students.`,
+            which is 10 meters wide, 15.6 meters long, and 2 stories high.
+            which can currently support 12 monks and 12 students.`,
         desc2024:
           `Continue to build an interconnected building, adding functions that meet the needs of the use
-which is 10 meters wide, 15.6 meters long, and 2 stories high.
-which can currently support 12 monks and 12 students.`,
+          which is 10 meters wide, 15.6 meters long, and 2 stories high.
+          which can currently support 12 monks and 12 students.`,
         desc2025:
           `Continue to build an interconnected building, adding functions that meet the needs of the use
-which is 10 meters wide, 15.6 meters long, and 2 stories high.
-which can currently support 12 monks and 12 students.`,
+        which is 10 meters wide, 15.6 meters long, and 2 stories high.
+        which can currently support 12 monks and 12 students.`,
       },
     },
     contact: {
@@ -96,7 +96,7 @@ which can currently support 12 monks and 12 students.`,
       cta: "Let's Build the Future Together",
     },
     structure: {
-      title: "Organization Structure of WatPhnom Pehn Tmei",
+      title: "The number of monks residing at Wat Phnom Thmey",
     },
     activities: {
       searchPlaceholder: "Search activities...",
@@ -106,7 +106,7 @@ which can currently support 12 monks and 12 students.`,
     nav: {
       home: "ទំព័រដើម",
       about: "អំពីយើង",
-      structure: "រចនាសម្ព័ន្ធ",
+      structure: "ចំនួនព្រះសង្ឃដែលគង់នៅ​ វត្តភ្នំពេញថ្មី",
       founder: "អ្នកដឹកនាំកសាង",
       contact: "ទាក់ទងយើង",
       Activities: "សកម្មភាពនានា",

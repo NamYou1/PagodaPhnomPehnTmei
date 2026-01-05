@@ -1,21 +1,12 @@
-import React, { useState } from "react";
-import Plant from "../../assets/Monks/Plant.jpg";
-// import ppnew from "../../assets/Monks/ppnew.jpg";
-import pp from "../../assets/Monks/pp.jpg";
-// import { budha2 } from "../../assets/ImageCarousel";
+import { useState } from "react";
+import { WatPhnomPehnTmeiPlant } from "../../assets/SlideImage";
+
 const slidesData = [
   {
     id: 1,
-    imgUrl: Plant,
+    imgUrl: WatPhnomPehnTmeiPlant,
   },
-  {
-    id: 2,
-    imgUrl: pp,
-  }
-  // , {
-  //   id: 3,
-  //   imgUrl: budha2,
-  // }
+
 
 ];
 
