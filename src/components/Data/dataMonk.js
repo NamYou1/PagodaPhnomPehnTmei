@@ -6,7 +6,7 @@ export const dataMonks = {
     nameKm: 'យូ យីហាក់',
     title: 'CEO',
     titleKm: 'ប្រធានសង្ឃ',
-    // imgUrl: YuYiHak,
+    imgUrl: null,
     joinYear: 2017,
     bio: 'Chief Buddhist Monk and spiritual leader of Wat Phnom Penh Tmei',
     bioKm: 'ប្រធានសង្ឃ និងជាអ្នកដឹកនាំខាងសាសនា នៃវត្តភ្នំពេញថ្មី',
