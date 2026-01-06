@@ -23,10 +23,10 @@ const Navbar = () => {
       label: t('nav.contact'),
       path: "/contact",
     },
-    // {
-    //   label: t('nav.purpose'),
-    //   path: "purpose",
-    // },
+    {
+      label: t('nav.purpose'),
+      path: "purpose",
+    },
 
     // {
     //   label: t('nav.Dharma'),

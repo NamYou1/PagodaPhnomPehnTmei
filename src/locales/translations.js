@@ -10,7 +10,7 @@ const translations = {
       contact: "Contact",
       Activities: "Activities",
       Dharma: "Dharma",
-      purpose: "Purpose"
+      purpose: "purpose"
     },
     home: {
       title: "Featured Activities",

@@ -196,7 +196,7 @@ const flattenMembers = (node, members = [], isRoot = true) => {
         // Add CEO first
         members.push(node);
 
-        // Add direct children in specific order: Bunny second, Tol Sokmean third
+        // Add direct children in specific order: Bunny second, Tol Sokmean third, then others
         if (node.children) {
             // Find Bunny and Tol Sokmean by id or name
             const bunny = node.children.find(child => child.id === 'right-vp' || child.name === 'Von Bunny');
@@ -205,6 +205,13 @@ const flattenMembers = (node, members = [], isRoot = true) => {
             // Add Bunny first, then Tol Sokmean
             if (bunny) members.push(bunny);
             if (tolSokmean) members.push(tolSokmean);
+
+            // Add other direct children (like Phai Phally and Yan Bunthoeun)
+            node.children.forEach(child => {
+                if (child.id !== 'right-vp' && child.id !== 'left-vp') {
+                    members.push(child);
+                }
+            });
 
             // Then add grandchildren and below
             node.children.forEach(child => {

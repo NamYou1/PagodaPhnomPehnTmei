@@ -83,18 +83,7 @@ export const dataMonks = {
                     bio: 'Monk focused on community outreach',
                     bioKm: 'ភិក្ខុ ផ្តោតលើការងារសហគមន៍',
                     children: [
-                        {
-                            id: 'ui-1',
-                            name: 'Yan Bunthoeun',
-                            nameKm: 'យ៉ាន់ ប៊ុនធឿន',
-                            title: 'samner',
-                            titleKm: 'សាមណេរ',
-                            imgUrl: YanBunThoeun,
-                            joinYear: 2017,
-                            leftYear: 2025,
-                            bio: 'Novice monk in training',
-                            bioKm: 'សាមណេរ កំពុងរៀនសូត្រ',
-                        },
+
                         {
                             id: 'ui-2',
                             name: 'Nam You',
