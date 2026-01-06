@@ -1,4 +1,4 @@
-import { YanBunThoeun, VonBunny, Mengtong, masterHak, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai, Phally } from "../../assets/Monks/index.js";
+import { YanBunThoeun, VonBunny, Mengtong, masterHak, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai, Phally, YuYiHak } from "../../assets/Monks/index.js";
 
 export const dataMonks = {
     id: 'ceo',
@@ -6,7 +6,7 @@ export const dataMonks = {
     nameKm: 'យូ យីហាក់',
     title: 'CEO',
     titleKm: 'ប្រធានសង្ឃ',
-    imgUrl: null,
+    imgUrl: YuYiHak,
     joinYear: 2017,
     bio: 'Chief Buddhist Monk and spiritual leader of Wat Phnom Penh Tmei',
     bioKm: 'ប្រធានសង្ឃ និងជាអ្នកដឹកនាំខាងសាសនា នៃវត្តភ្នំពេញថ្មី',
