@@ -25,7 +25,7 @@ const Navbar = () => {
     },
     {
       label: t('nav.purpose'),
-      path: "purpose",
+      path: "/purpose",
     },
 
     // {
