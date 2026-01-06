@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { initialData } from "../Data/data.js";
+import { initialData } from "../../Data/data.js";
 import { Download, ChevronLeft, ChevronRight } from "lucide-react";
-import ImageCarousel from "../ImageCarousel";
-import { useTranslation } from "../../hooks/useTranslation";
+import ImageCarousel from "./ImageCarousel.jsx";
+import { useTranslation } from "../../../hooks/useTranslation.js";
 
 const ActivitiesDetail = () => {
   const { id } = useParams();

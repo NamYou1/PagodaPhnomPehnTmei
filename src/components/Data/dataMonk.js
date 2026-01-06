@@ -121,8 +121,6 @@ export const dataMonks = {
 
                     ]
                 },
-
-
             ],
         },
         {
@@ -138,7 +136,7 @@ export const dataMonks = {
 
         },
         {
-            id: 'right-center',
+            id: 'center-2',
             name: 'Phai Phally',
             nameKm: 'ផៃ ផល្លី',
             title: 'Bhikkhu',
@@ -148,46 +146,18 @@ export const dataMonks = {
             joinYear: 2017,
             bio: 'Monk specialized in meditation practices',
             bioKm: 'ភិក្ខុ ជំនាញខាងសមាធិកម្ម',
-            children: [
-                {
-                    id: 'ui-1',
-                    name: 'Yan Bunthoeun',
-                    nameKm: 'យ៉ាន់ ប៊ុនធឿន',
-                    title: 'samner',
-                    titleKm: 'សាមណេរ',
-                    imgUrl: YanBunThoeun,
-                    joinYear: 2017,
-                    leftYear: 2025,
-                    bio: 'Novice monk in training',
-                    bioKm: 'សាមណេរ កំពុងរៀនសូត្រ',
-                },
-            ]
-        },
-        // Add more center members here
-        {
-            id: 'center-2',
-            name: 'Member Name',
-            nameKm: 'ឈ្មោះជាភាសាខ្មែរ',
-            title: 'Bhikkhu',
-            titleKm: 'ភិក្ខុ',
-            imgUrl: null,
-            joinYear: 2019,
-            bio: 'Member description',
-            bioKm: 'ពិពណ៌នាជាភាសាខ្មែរ',
         },
         {
             id: 'center-3',
-            name: 'Another Member',
-            nameKm: 'ឈ្មោះជាភាសាខ្មែរ',
-            title: 'Bhikkhu',
-            titleKm: 'ភិក្ខុ',
-            imgUrl: null,
-            joinYear: 2019,
-            bio: 'Member description',
-            bioKm: 'ពិពណ៌នាជាភាសាខ្មែរ',
+            name: 'Yan Bunthoeun',
+            nameKm: 'យ៉ាន់ ប៊ុនធឿន',
+            title: 'samner',
+            titleKm: 'សាមណេរ',
+            imgUrl: YanBunThoeun,
+            joinYear: 2017,
+            leftYear: 2025,
+            bio: 'Novice monk in training',
+            bioKm: 'សាមណេរ កំពុងរៀនសូត្រ',
         },
-
-
-
     ],
 }

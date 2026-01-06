@@ -1,7 +1,7 @@
 import React, { Children, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "../../hooks/useTranslation";
-import { initialData } from "../Data/data.js";
+import { useTranslation } from "../../../hooks/useTranslation.js";
+import { initialData } from "../../Data/data.js";
 
 
 const Activities = () => {

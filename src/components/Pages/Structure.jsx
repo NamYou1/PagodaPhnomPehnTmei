@@ -345,7 +345,11 @@ const Structure = () => {
                     {viewMode === 'grid' ? (
                         /* Grid View - All members in a flat grid */
                         <div className="w-full max-w-6xl">
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                            <div className={`grid ${selectedYear === '2017' ? 'grid-cols-3' :
+                                selectedYear === '2018' ? 'grid-cols-2 sm:grid-cols-4' :
+                                    selectedYear === '2020' ? 'grid-cols-3 sm:grid-cols-6' :
+                                        'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'
+                                } gap-4 md:gap-6`}>
                                 {allMembers.map((member, index) => (
                                     <div
                                         key={member.id}

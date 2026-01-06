@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Carousel from "./Carousel";
-import Activities from "./Activities";
+import Activities from "./Card/Activities.jsx";
 import Structure from "./Structure";
 import Founder from "./Founder";
 
