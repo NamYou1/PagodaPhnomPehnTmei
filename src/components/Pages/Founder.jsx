@@ -13,32 +13,32 @@ const founderData = [
         id: 'left-vp',
         name: 'Yu YiHak',
         nameKm: 'យូ យីហាក់',
-        title: 'Founder & Chief Buddhist Monk',
-        titleKm: 'ស្ថាបនិក និងជាប្រធានសង្ឃ',
-        bio: 'Chief Buddhist Monk and spiritual leader of Wat Phnom Penh Tmei',
-        bioKm: 'ប្រធានសង្ឃ និងជាអ្នកដឹកនាំខាងសាសនា នៃវត្តភ្នំពេញថ្មី',
+        title: 'Leads the construction and is the Chief Monk at Wat Phnom Penh Tmei',
+        titleKm: 'អ្នកដឹកនាំកសាង និងជាប្រធានសង្ឃ នៅវត្តភ្នំពេញថ្មី',
+        bio: '',
+        bioKm: '',
         imgUrl: MasterHak,
         socialLinks: [
             // { name: 'Youtube', url: 'https://linkedin.com', icon: 'Youtube' },
             { name: 'Facebook', url: 'https://www.facebook.com/yi.hak.3', icon: 'Facebook' },
             // { name: 'Email', url: 'mailto:founder@example.com', icon: 'Email' },
-            { name: 'PhoneNumber', url: '+855 98 905 246', icon: 'Phone' }
+            // { name: 'PhoneNumber', url: '+855 98 905 246', icon: 'Phone' }   
         ]
     },
     {
         id: 'right-vp',
-        name: 'Soun Kong',
-        nameKm: 'សួន គង់',
-        title: '',
-        titleKm: 'អ្នកឧបត្ថម្ភកសាងវត្តភ្នំពេញថ្មី​ តាំងពីដើមមក ',
+        name: 'Sound Kong',
+        nameKm: 'មហាឧបាសិកាពុទ្ធសានូបត្ថម សួន គង់',
+        title: 'You help maintain the new Phnom Penh Temple and help the monks inside the temple.',
+        titleKm: 'អ្នកជួយទំនុបបំរុង វត្តភ្នំពេញថ្មី​ និង​ជួយខ្នះខ្នែង​ក្នុង​នៅក្នុងវត្ត ',
         bio: '',
         bioKm: '',
         imgUrl: SoundKong,
         socialLinks: [
             // { name: 'Youtube', url: 'https://linkedin.com', icon: 'Youtube' },
-            { name: 'Facebook', url: 'https://www.facebook.com/yi.hak.3', icon: 'Facebook' },
+            // { name: 'Facebook', url: 'https://www.facebook.com/yi.hak.3', icon: 'Facebook' },
             // { name: 'Email', url: 'mailto:founder@example.com', icon: 'Email' },
-            { name: 'PhoneNumber', url: '+855 98 905 246', icon: 'Phone' }
+            // { name: 'PhoneNumber', url: '+855 98 905 246', icon: 'Phone' }
         ]
     },
 

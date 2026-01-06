@@ -20,8 +20,8 @@ export const dataMonks = {
             imgUrl: TolSokmean,
             joinYear: 2018,
             // leftYear: 2025,
-            bio: 'Senior monk responsible for religious ceremonies',
-            bioKm: 'ភិក្ខុជាន់ខ្ពស់ ទទួលបន្ទុកពិធីសាសនា',
+            bio: 'Bhikku Tol SokMean is the temple planner and is responsible for the temple construction project.',
+            bioKm: 'ភិក្ខុ តុល សុខមាន ជាអ្នកគូសប្លង់វត្ត និងជាអ្នកទទួលខុសត្រូវលើគម្រោងកសាងសង់វត្ត',
             children: [
 
 
@@ -34,8 +34,8 @@ export const dataMonks = {
                     imgUrl: PhalPhai,
                     leftYear: 2025,
                     joinYear: 2020,
-                    bio: 'Monk specialized in meditation practices',
-                    bioKm: 'ភិក្ខុ ជំនាញខាងសមាធិកម្ម',
+                    bio: 'Bhikku Phal Phai studying at Build Bright University, majoring in Information and Technology (IT) .',
+                    bioKm: 'ភិក្ខុ ផល ផៃ បានបញ្ចប់ការសិក្សានៅសកលវិទ្យាល័យបៀលប្រាយ មុខជំនាញ ព័ត៌មាននិង បច្ចេកវិទ្យា(អាយធី) ។',
                 },
                 {
                     id: 'prod-3',
@@ -46,8 +46,8 @@ export const dataMonks = {
                     imgUrl: ArtSengorn,
                     leftYear: 2025,
                     joinYear: 2021,
-                    bio: 'Monk dedicated to teaching and community service',
-                    bioKm: 'ភិក្ខុ ទទួលបន្ទុកការបង្រៀន និងសេវាសហគមន៍',
+                    bio: ' Bhikku Art Sengorn studying Electrical Engineering at National Technical Training Institute.',
+                    bioKm: 'ភិក្ខុ អាត សេងអ៊ាន់ កំពុងសិក្សានៅមុខជំនាញ អគ្គីសនីនៅ National Technical Training Institute ។',
                 },
                 {
                     id: 'prod-2',
@@ -57,20 +57,20 @@ export const dataMonks = {
                     titleKm: 'ភិក្ខុ',
                     imgUrl: Sokleng,
                     joinYear: 2021,
-                    bio: 'Monk specialized in meditation practices',
-                    bioKm: 'ភិក្ខុ ជំនាញខាងសមាធិកម្ម',
+                    bio: 'Bhikku Sok Leng studying at Build Bright University, majoring in Information and Technology (IT)',
+                    bioKm: 'ភិក្ខុ សុខ ឡេង កំពុងសិក្សានៅសកលវិទ្យាល័យ បៀលប្រាយ មុខជំនាញ ព័ត៌មាននិង បច្ចេកវិទ្យា(អាយធី)',
 
                 },
                 {
                     id: 'prod-4',
-                    name: 'Pheng Chhunmeng Tong',
-                    nameKm: 'ផេង ឆុនម៉ង់ ទង',
+                    name: 'Pheng ChhunmengTong',
+                    nameKm: 'ផេង ឈុនម៉េងតុង',
                     title: 'Bhikkhu',
                     titleKm: 'ភិក្ខុ',
                     imgUrl: Mengtong,
                     joinYear: 2024,
-                    bio: 'Monk specialized in meditation practices',
-                    bioKm: 'ភិក្ខុ ជំនាញខាងសមាធិកម្ម',
+                    bio: 'Bhikku Pheng ChunmengTong studying at Build Bright University, majoring in Information and Technology (IT))',
+                    bioKm: 'ភិក្ខុ ផេង ឈុនម៉េងតុង កំពុងសិក្សានៅសកលវិទ្យាល័យ បៀលប្រាយ មុខជំនាញ ការផ្សព្វផ្សាយ (IT)',
                 },
                 {
                     id: 'ops-2',
@@ -80,8 +80,8 @@ export const dataMonks = {
                     titleKm: 'ភិក្ខុ',
                     imgUrl: DenSann,
                     joinYear: 2023,
-                    bio: 'Monk focused on community outreach',
-                    bioKm: 'ភិក្ខុ ផ្តោតលើការងារសហគមន៍',
+                    bio: 'Bhikku Den San studying at Build Bright University, majoring in Information and Technology (IT)',
+                    bioKm: 'ភិក្ខុ ដែន សាន់ កំពុងសិក្សានៅសកលវិទ្យាល័យ បៀលប្រាយ មុខជំនាញ ការផ្សព្វផ្សាយ (IT)',
                     children: [
 
                         {
@@ -93,8 +93,8 @@ export const dataMonks = {
                             imgUrl: NamYou,
                             joinYear: 2023,
                             // leftYear : null,
-                            bio: 'Novice monk in training',
-                            bioKm: 'សាមណេរ កំពុងរៀនសូត្រ',
+                            bio: 'Samner Nam You studying at Build Bright University, majoring in Information and Technology (IT)',
+                            bioKm: `សាមណេរ ណាំ យ៉ូ កំពុងសិក្សានៅសកលវិទ្យាល័យ បៀលប្រាយ មុខជំនាញ ព័ត៌មាននិង បច្ចេកវិទ្យា(អាយធី)`,
                         },
                         {
                             id: 'ui-3',
@@ -104,8 +104,8 @@ export const dataMonks = {
                             titleKm: 'សាមណេរ',
                             imgUrl: KhyChhaiya,
                             joinYear: 2023,
-                            bio: 'Novice monk studying Buddhist scriptures',
-                            bioKm: 'សាមណេរ ពុំបត្រសិក្សាគម្ពីរសាសនា',
+                            bio: 'Samner Khy Chaiya is studying at the National Technical Training Institute, majoring in civil engineering.',
+                            bioKm: 'សាមណេរ ឃី ឆៃយ៉ា កំពុងសិក្សានៅសកលវិទ្យាល័យ National Technical Training Institute មុខជំនាញ សំណង់ស៊ីវិល',
                         },
 
                     ]
@@ -120,8 +120,8 @@ export const dataMonks = {
             titleKm: 'ភិក្ខុ',
             imgUrl: Bunny,
             joinYear: 2020,
-            bio: 'Senior monk overseeing temple operations',
-            bioKm: 'ភិក្ខុជាន់ខ្ពស់ ត្រួតពិនិត្យប្រតិបត្តិការវត្ត',
+            bio: 'Bhikku Von Bunny is the head monk responsible for temple operations',
+            bioKm: 'ភិក្ខុ​ វ៉ុន ប៊ុន្ន ជាអ្នកដឹកនាំការងារនៅក្នុងវត្តទាំងមូល',
 
         },
         {
@@ -133,8 +133,8 @@ export const dataMonks = {
             imgUrl: Phally,
             leftYear: 2020,
             joinYear: 2017,
-            bio: 'Monk specialized in meditation practices',
-            bioKm: 'ភិក្ខុ ជំនាញខាងសមាធិកម្ម',
+            bio: '',
+            bioKm: '',
         },
         {
             id: 'center-3',
@@ -145,8 +145,8 @@ export const dataMonks = {
             imgUrl: YanBunThoeun,
             joinYear: 2017,
             leftYear: 2025,
-            bio: 'Novice monk in training',
-            bioKm: 'សាមណេរ កំពុងរៀនសូត្រ',
+            bio: '',
+            bioKm: '',
         },
     ],
 }
