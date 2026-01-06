@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
-// import { floorLorter, floorzero, flowtwo } from "../../assets/Posepurse";
 import FloorOne from '../../assets/Posepurse/floor1.jpg';
 import Floorloter from '../../assets/Posepurse/floorLorter.jpg';
-import Flowtwo from '../../assets/Posepurse/floorTwo.jpg';
+import floortwo from '../../assets/Posepurse/floorTwo.jpg';
 import Floorzero from '../../assets/Posepurse/floorzero.jpg';
-// import { floorLorter, floorzero, flowtwo } from '../../assets/Posepurse';
-
 const dataPurpose = [
   {
     id: 'right-floor-zero',
@@ -28,7 +25,7 @@ const dataPurpose = [
     id: 'right-floor-two',
     titleEn: 'Floor Level Two',
     titleKm: 'ជាន់ទីពីរ',
-    imagefloor: Flowtwo,
+    imagefloor: floortwo,
     descriptionEn: 'The second floor features the main Buddha shrine room, where sacred relics and Buddha statues are enshrined. This holy space is used for important religious ceremonies and special blessings.',
     descriptionKm: '',
   },
