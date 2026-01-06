@@ -7,10 +7,13 @@ import TolSokmean from './TolSokmean.JPG';
 import KhyChhaiya from './KhyChhaiya.png';
 import NamYou from './NamYou.png';
 import Mengtong from './Mengtong.jpg';
+import Bunny from "./Bunny.JPG";
 // import VonBunny from './VonBunny.JPG';
+// import Bunny from "."
 import YuYiHak from './YuYiHak.JPG';
 import YanBunThoeun from './YanBunThoeun.jpg';
 import Phally from './Phally.jpg';
+import { Import } from 'lucide-react';
 // import  SoundKong from './SoundKong.jpg';
 export {
     ArtSengorn,
@@ -22,7 +25,7 @@ export {
     KhyChhaiya,
     NamYou,
     Mengtong,
-    // VonBunny,
+    Bunny,
     YuYiHak,
     YanBunThoeun
     , Phally,
