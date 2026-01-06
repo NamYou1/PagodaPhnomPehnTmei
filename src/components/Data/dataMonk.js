@@ -1,4 +1,4 @@
-import { YanBunThoeun, VonBunny, Mengtong, masterHak, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai, Phally, YuYiHak } from "../../assets/Monks/index.js";
+import { YanBunThoeun, Mengtong, masterHak, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai, Phally, YuYiHak } from "../../assets/Monks/index.js";
 
 export const dataMonks = {
     id: 'ceo',
@@ -118,7 +118,7 @@ export const dataMonks = {
             nameKm: 'វ៉ុន ប៊ុន្នី',
             title: 'Bhikkhu',
             titleKm: 'ភិក្ខុ',
-            imgUrl: VonBunny,
+            imgUrl: null,
             joinYear: 2020,
             bio: 'Senior monk overseeing temple operations',
             bioKm: 'ភិក្ខុជាន់ខ្ពស់ ត្រួតពិនិត្យប្រតិបត្តិការវត្ត',

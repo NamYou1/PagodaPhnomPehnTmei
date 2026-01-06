@@ -7,7 +7,7 @@ import TolSokmean from './TolSokmean.JPG';
 import KhyChhaiya from './KhyChhaiya.png';
 import NamYou from './NamYou.png';
 import Mengtong from './Mengtong.jpg';
-import VonBunny from './VonBunny.JPG';
+// import VonBunny from './VonBunny.JPG';
 import YuYiHak from './YuYiHak.JPG';
 import YanBunThoeun from './YanBunThoeun.jpg';
 import Phally from './Phally.jpg';
@@ -22,7 +22,7 @@ export {
     KhyChhaiya,
     NamYou,
     Mengtong,
-    VonBunny,
+    // VonBunny,
     YuYiHak,
     YanBunThoeun
     , Phally,
