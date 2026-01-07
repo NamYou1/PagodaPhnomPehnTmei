@@ -29,28 +29,28 @@ const About = () => {
       // title: t('about.timeline.adaptation'),
       description: t('about.timeline.desc2020')
     },
-    {
-      id: 5,
-      year: 2021,
-      // title: t('about.timeline.transformation'),
-      description: t('about.timeline.desc2021')
-    },
-    {
-      id: 6,
-      year: 2023,
-      // title: t('about.timeline.awards'),
-      description: t('about.timeline.desc2023')
-    },
-    {
-      id: 7,
-      year: 2024,
-      // title: t('about.timeline.innovation'),
-      description: t('about.timeline.desc2024')
-    },
+    // {
+    //   id: 5,
+    //   year: 2022,
+    //   // title: t('about.timeline.transformation'),
+    //   description: t('about.timeline.desc2021')
+    // },
+    // {
+    //   id: 6,
+    //   year: 2023,
+    //   // title: t('about.timeline.awards'),
+    //   description: t('about.timeline.desc2023')
+    // },
+    // {
+    //   id: 7,
+    //   year: 2024,
+    //   // title: t('about.timeline.innovation'),
+    //   description: t('about.timeline.desc2024')
+    // },
     {
       id: 8,
-      year: 2025,
-      // title: t('about.timeline.future'),
+      year: 2022 ,
+      title: t('about.timeline.future'),
       description: t('about.timeline.desc2025')
     }
   ]
@@ -62,7 +62,7 @@ const About = () => {
       <div className="hero bg-base-200 rounded-box animate-fadeIn">
         <div className="hero-content text-center">
           <div className="max-w-2xl">
-            <h3 className="text-4xl font-bold mb-8">{t('about.hero.title')}</h3>
+            <h3 className="text-primary text-4xl font-bold mb-8">{t('about.hero.title')}</h3>
             <p className="text-xl mb-6">{t('about.hero.description')}</p>
             {/* <button className="btn btn-primary">{t('about.hero.learnMore')}</button> */}
           </div>
@@ -71,15 +71,15 @@ const About = () => {
 
       {/* Timeline Section */}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8 animate-slideUp" style={{ animationDelay: '100ms' }}>{t('about.timeline.title')}</h2>
+        <h2 className="text-3xl text-primary font-bold text-center mb-8 animate-slideUp" style={{ animationDelay: '100ms' }}>{t('about.timeline.title')}</h2>
 
         <ul className="timeline timeline-vertical">
           {History.map((item, index) => (
             <li key={item.id} className="animate-fadeInUp" style={{ animationDelay: `${200 + index * 100}ms` }}>
               {index !== 0 && <hr className="transition-all duration-300" />}
               <div className={`${index % 2 === 0 ? 'timeline-start timeline-box' : 'timeline-end timeline-box'} hover:shadow-lg hover:scale-105 transition-all duration-300`}>
-                <h3 className="font-bold text-lg text-center">{item.year}
-                  {/* - {item.title} */}
+                <h3 className="font-bold text-lg text-center text-primary">{item.year}
+                    {item.title}
                 </h3>
                 <p>{item.description}</p>
               </div>

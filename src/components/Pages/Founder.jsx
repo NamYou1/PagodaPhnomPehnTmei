@@ -216,7 +216,7 @@ function Founder() {
                                 ? index % 2 === 0 ? 'animate-fadeInRight' : 'animate-fadeInLeft'
                                 : 'opacity-0'
                                 }`}>
-                                <h1 className={`text-4xl md:text-6xl font-bold mb-3 md:mb-4 bg-clip-text text-transparent text-blue-800 bg-gradient-to-r from-purple-600 to-pink-600 ${visibleSections.includes(index) ? 'animate-fadeInUp delay-100' : 'opacity-0'
+                                <h1 className={`text-4xl md:text-6xl font-bold mb-3 md:mb-4 bg-clip-text  text-blue-800  ${visibleSections.includes(index) ? 'animate-fadeInUp delay-100' : 'opacity-0'
                                     }`}>
                                     {language === 'en' ? founder.name : founder.nameKm}
                                 </h1>
