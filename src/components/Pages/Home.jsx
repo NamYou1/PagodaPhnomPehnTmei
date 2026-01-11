@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Carousel from "./Carousel";
 import Activities from "./Card/Activities.jsx";
 import Structure from "./Structure";
 import Founder from "./Founder";
+import Article from "./Article.jsx";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Carousel />
       {/* <CardPhoto /> */}
       <Activities />
+      <Article />
       <Founder />
       <Structure />
     </div>

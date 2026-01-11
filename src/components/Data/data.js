@@ -65,7 +65,7 @@ export const initialData = [
         description:
             `Wednesday, February 12, 2025 which in Lunar is day of 15 Koeut, month of Meak, year of Dragon, Chhorsak era, Buddhist era 2568.`,
         descriptionKm:
-            `ថ្ងៃពុធ ១៥កើត ខែមាឃ ឆ្នាំរោង ឆស័ក ពុទ្ធសករាជ ២៥៦៨ ត្រូវនឹងថ្ងៃទី១២ ខែកុម្ភៈ ឆ្នាំ២០២៥​ ។`,
+            `ថ្ងៃពុធ ១៥កើត ខែមាឃ ឆ្នាំរោង ឆស័ក ពុទ្ធសករាជ ២៥៦៨ ត្រូវនឹងថ្ងៃទី១២ ខែកុម្ភៈ ឆ្នាំ២០២៥ ។`,
         imgUrl: MeakBocheaMain,
         vdourl: "https://www.facebook.com/share/v/17SAmw2aMU/",
         year: 2025,
@@ -107,7 +107,7 @@ export const initialData = [
         descriptionKm:
             `សូមជ្រះថ្លាអនុមោទនា!!!
             ពិធីសិតនូវព្រះពុទ្ធរូប សាងឡើងអំពីរលោហៈ វត្តភ្នំពេញថ្មី
-            ថ្ងៃអាទិត្យ ១៥កើត ពេញបូណ៌មី ខែមិគសិរ ត្រូវនឹងថ្ងៃទី១៥ ​ខែធ្នូ ព.ស.២៥៦៨ គ.ស.២០២៤`,
+            ថ្ងៃអាទិត្យ ១៥កើត ពេញបូណ៌មី ខែមិគសិរ ត្រូវនឹងថ្ងៃទី១៥ ខែធ្នូ ព.ស.២៥៦៨ គ.ស.២០២៤`,
         imgUrl: AlmsbowlMeakBocheaMain,
         vdourl: "",
         year: 2024,

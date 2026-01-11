@@ -10,7 +10,8 @@ const translations = {
       contact: "Contact",
       Activities: "Activities",
       Dharma: "Dharma",
-      purpose: "purpose"
+      purpose: "Purpose",
+      article: "Article"
     },
     home: {
       title: "Featured Activities",
@@ -98,9 +99,28 @@ const translations = {
     structure: {
       title: "The number of monks residing at Wat Phnom Thmey",
     },
-    activities: {
-      searchPlaceholder: "Search activities...",
+    purpose: {
+
     },
+    support: {
+      title: "Support Our Temple",
+      subtitle: "Your donation helps build and maintain our temple community",
+      qrTitle: "Scan to Donate",
+      qrDescription: "Scan the QR code with your banking app to make a donation",
+      bankInfo: "Bank Information",
+      accountName: "Wat Phnom Penh Tmei",
+      accountNumber: "000 123 456 789",
+      bankName: "ABA Bank",
+      phoneNumber: "+855 96 456 3693",
+      thankYou: "Thank you for your generous support!",
+      otherWays: "Other Ways to Support",
+      volunteerTitle: "Volunteer",
+      volunteerDesc: "Join us in temple activities and ceremonies",
+      materialsTitle: "Donate Materials",
+      materialsDesc: "Support with construction materials or daily necessities",
+      contactTitle: "Contact Us",
+      contactDesc: "Reach out for more information on how to help"
+    }
   },
   km: {
     nav: {
@@ -111,7 +131,8 @@ const translations = {
       contact: "ទាក់ទងយើង",
       Activities: "សកម្មភាពនានា",
       Dharma: "ស្តាប់ព្រះធម៌",
-      purpose: "គោលបំណង"
+      purpose: "គោលបំណង",
+      article: "អត្ថបទ"
     },
     home: {
       title: "សកម្មភាពនានា",
@@ -193,11 +214,31 @@ const translations = {
     activities: {
       searchPlaceholder: "ស្វែងរកសកម្មភាពនានា...",
     },
+
     structure: {
       title: "រចនាសម្ព័ន្ធ​ វត្តភ្នំពេញថ្មី",
     },
     purpose: {
 
+    },
+    support: {
+      title: "ចូលរួមកសាង វត្តភ្នំពេញថ្មី",
+      subtitle: "ការបរិច្ចាគរបស់អ្នកជួយកសាង   ",
+      qrTitle: "ស្កេនដើម្បីបរិច្ចាគ",
+      qrDescription: "ស្កេនលេខកូដ QR ជាមួយកម្មវិធីធនាគាររបស់អ្នកដើម្បីបរិច្ចាគ",
+      bankInfo: "ព័ត៌មានធនាគារ",
+      accountName: "វត្តភ្នំពេញថ្មី",
+      accountNumber: "០០០ ១២៣ ៤៥៦ ៧៨៩",
+      bankName: "ធនាគារ អេ.ប៊ី.អេ",
+      phoneNumber: "+៨៥៥ ៩៦ ៤៥៦ ៣៦៩៣",
+      thankYou: "សូមអរគុណចំពោះការគាំទ្រដ៏សប្បុរសរបស់អ្នក!",
+      otherWays: "វិធីផ្សេងទៀតដើម្បីគាំទ្រ",
+      volunteerTitle: "ស្ម័គ្រចិត្ត",
+      volunteerDesc: "ចូលរួមជាមួយយើងក្នុងសកម្មភាពវត្ត និងពិធីសាសនា",
+      materialsTitle: "បរិច្ចាគសម្ភារៈ",
+      materialsDesc: "គាំទ្រជាមួយសម្ភារៈកសាង ឬរបស់របរចាំបាច់ប្រចាំថ្ងៃ",
+      contactTitle: "ទាក់ទងយើង",
+      contactDesc: "ទាក់ទងមកដើម្បីទទួលព័ត៌មានបន្ថែមអំពីរបៀបជួយ"
     }
   },
 };

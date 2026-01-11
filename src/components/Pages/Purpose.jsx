@@ -4,7 +4,7 @@ import FloorOne from "../../assets/PursPose/FloorOne.jpg";
 import FloorTwo from "../../assets/PursPose/FloorTwo.jpg";
 import Groundfloor from "../../assets/PursPose/Groundfloor.jpg";
 import Mezzaninefloor from "../../assets/PursPose/Mezzaninefloor.jpg";
-
+import YouQR from "../../assets/PursPose/QR.png";
 const dataPurpose = [
   {
     id: 'right-floor-zero',
@@ -43,7 +43,17 @@ const dataPurpose = [
 const Purpose = () => {
   const { t, language } = useTranslation();
   const [visibleSections, setVisibleSections] = useState([]);
+  // const [showModal, setShowModal] = useState(true);
   const sectionRefs = useRef([]);
+
+  // Auto-close modal after 5 seconds
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowModal(false);
+  //   }, 2000);
+
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   useEffect(() => {
     const observers = sectionRefs.current.map((ref, index) => {
@@ -71,8 +81,10 @@ const Purpose = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 mt-[50px] sm:mt-[60px] lg:mt-[70px]">
-      <style>{`
+    <>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 mt-[50px] sm:mt-[60px] lg:mt-[70px]">
+        <style>{`
                 @keyframes fadeInUp {
                     from {
                         opacity: 0;
@@ -117,6 +129,19 @@ const Purpose = () => {
                     }
                 }
 
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                .animate-fadeIn {
+                    animation: fadeIn 0.3s ease-out forwards;
+                }
+
                 .animate-fadeInUp {
                     animation: fadeInUp 0.8s ease-out forwards;
                 }
@@ -157,93 +182,249 @@ const Purpose = () => {
                     }
                 }
             `}</style>
-      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold text-purple-800 mb-3 sm:mb-4">
-        {language === 'en' ? ' Construction Project Wat Phnom Penh Tmei ' : 'គម្រោងកសាង វត្តភ្នំពេញថ្មី'}
-      </h3>
-      {/* Introduction Section */}
-      <div className="mb-8 sm:mb-10 lg:mb-12 space-y-4 sm:space-y-6">
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-md p-4 sm:p-6 lg:p-8 border-l-4 border-blue-600">
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed font-medium">
-            {language === 'en' ? (
-              <>
-                <span className="text-blue-700 font-bold">Initiated by</span> the committee in collaboration with
-                all levels of authorities in Sen Sok district,
-                along with Buddhist devotees near and far. <span className="text-indigo-700 font-semibold">Led by Preah Sovannsoro Yu Yihak</span>
-                <span className="text-purple-700 font-semibold block mt-2">Design plans by Bhikkhu Buddhivaro Tul Sokhman</span>
-              </>
-            ) : (
-              <>
-                <span className="text-blue-700 font-bold">ផ្តួចផ្តើមកសាងដោយ</span> អាចារ្យគណៈកម្មការរួមជាមួយ
-                អជ្ញាធរគ្រប់លំដាប់ថ្នាក់ក្នុងខណ្ឌសែនសុខ
-                ព្រមទាំងប្រជាពលរដ្ឋពុទ្ធបរិសទីជិតឆ្ងាយ <span className="text-indigo-700 font-semibold">ដឹកនាំគម្រោងដោយ ព្រះសុវណ្ណសោរោ យូ យីហាក់</span>
-                <span className="text-red-400 font-semibold block mt-2">សិក្សាប្លង់ដោយ ភិក្ខុពុទ្ធិវរោ តុល សុខមាន</span>
-              </>
-            )}
-          </p>
+        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold text-purple-800 mb-3 sm:mb-4">
+          {language === 'en' ? ' Construction Project Wat Phnom Penh Tmei ' : 'គម្រោងកសាង វត្តភ្នំពេញថ្មី'}
+        </h3>
+        {/* Introduction Section */}
+        <div className="mb-8 sm:mb-10 lg:mb-12 space-y-4 sm:space-y-6">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-md p-4 sm:p-6 lg:p-8 border-l-4 border-blue-600">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed font-medium">
+              {language === 'en' ? (
+                <>
+                  <span className="text-blue-700 font-bold">Initiated by</span> the committee in collaboration with
+                  all levels of authorities in Sen Sok district,
+                  along with Buddhist devotees near and far. <span className="text-indigo-700 font-semibold">Led by Preah Sovannsoro Yu Yihak</span>
+                  <span className="text-purple-700 font-semibold block mt-2">Design plans by Bhikkhu Buddhivaro Tul Sokhman</span>
+                </>
+              ) : (
+                <>
+                  <span className="text-blue-700 font-bold">ផ្តួចផ្តើមកសាងដោយ</span> អាចារ្យគណៈកម្មការរួមជាមួយ
+                  អជ្ញាធរគ្រប់លំដាប់ថ្នាក់ក្នុងខណ្ឌសែនសុខ
+                  ព្រមទាំងប្រជាពលរដ្ឋពុទ្ធបរិសទីជិតឆ្ងាយ <span className="text-indigo-700 font-semibold">ដឹកនាំគម្រោងដោយ ព្រះសុវណ្ណសោរោ យូ យីហាក់</span>
+                  <span className="text-red-400 font-semibold block mt-2">សិក្សាប្លង់ដោយ ភិក្ខុពុទ្ធិវរោ តុល សុខមាន</span>
+                </>
+              )}
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-md p-4 sm:p-6 lg:p-8 border-l-4 border-purple-600">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-purple-800 mb-3 sm:mb-4">
+              {language === 'en' ? 'Purpose' : 'គោលបំណង'}
+            </h3>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed font-medium">
+              {language === 'en'
+                ? 'To extend the lifespan of the old temple site for monks and poor students to reside and continue their scriptural studies.'
+                : 'បន្តអាយុកាលនៃជាទីស្ថាននៃវត្តអារាមចាស់សម្រាប់ភិក្ខុសង្ឃ និង និស្សិតក្រីក្រស្នាក់នៅដើម្បីបន្តការសិក្សារៀនសូត្រ'
+              }
+            </p>
+          </div>
         </div>
 
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-md p-4 sm:p-6 lg:p-8 border-l-4 border-purple-600">
-          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-purple-800 mb-3 sm:mb-4">
-            {language === 'en' ? 'Purpose' : 'គោលបំណង'}
-          </h3>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed font-medium">
-            {language === 'en'
-              ? 'To extend the lifespan of the old temple site for monks and poor students to reside and continue their scriptural studies.'
-              : 'បន្តអាយុកាលនៃជាទីស្ថាននៃវត្តអារាមចាស់សម្រាប់ភិក្ខុសង្ឃ និង និស្សិតក្រីក្រស្នាក់នៅដើម្បីបន្តការសិក្សារៀនសូត្រ'
-            }
-          </p>
-        </div>
-      </div>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-center text-primary px-2">
+          {language === 'en' ? 'Temple Floor Structure' : 'អាគារតាមជាន់នីមួយៗ'}
+        </h1>
 
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-center text-primary px-2">
-        {language === 'en' ? 'Temple Floor Structure' : 'អាគារតាមជាន់នីមួយៗ'}
-      </h1>
-
-      <div className="space-y-8 sm:space-y-12 lg:space-y-16">
-        {dataPurpose.map((floor, index) => (
-          <section
-            key={floor.id}
-            ref={(el) => (sectionRefs.current[index] = el)}
-            className="relative overflow-hidden"
-          >
-            <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center ${index % 2 === 0 ? '' : 'md:flex-row-reverse'
-              }`}>
-              {/* Image */}
-              <div className={`${index % 2 === 0 ? 'md:order-1' : 'md:order-2'} ${visibleSections.includes(index)
-                ? index % 2 === 0 ? 'animate-fadeInLeft' : 'animate-fadeInRight'
-                : 'opacity-0'
+        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
+          {dataPurpose.map((floor, index) => (
+            <section
+              key={floor.id}
+              ref={(el) => (sectionRefs.current[index] = el)}
+              className="relative overflow-hidden"
+            >
+              <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center ${index % 2 === 0 ? '' : 'md:flex-row-reverse'
                 }`}>
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-                  <img
-                    src={floor.imagefloor}
-                    alt={language === 'en' ? floor.titleEn : floor.titleKm}
-                    className="relative  rounded-lg shadow-2xl transition-transform duration-300 group-hover:scale-105"
-                  />
+                {/* Image */}
+                <div className={`${index % 2 === 0 ? 'md:order-1' : 'md:order-2'} ${visibleSections.includes(index)
+                  ? index % 2 === 0 ? 'animate-fadeInLeft' : 'animate-fadeInRight'
+                  : 'opacity-0'
+                  }`}>
+                  <div className="relative group">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                    <img
+                      src={floor.imagefloor}
+                      alt={language === 'en' ? floor.titleEn : floor.titleKm}
+                      className="relative  rounded-lg shadow-2xl transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className={`${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} ${visibleSections.includes(index)
+                  ? index % 2 === 0 ? 'animate-fadeInRight' : 'animate-fadeInLeft'
+                  : 'opacity-0'
+                  }`}>
+                  <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 hover:shadow-2xl transition-shadow duration-300">
+                    <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 ${visibleSections.includes(index) ? 'animate-fadeInUp delay-100' : 'opacity-0'
+                      }`}>
+                      {language === 'en' ? floor.titleEn : floor.titleKm}
+                    </h2>
+                    <p className={`text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed ${visibleSections.includes(index) ? 'animate-fadeInUp delay-200' : 'opacity-0'
+                      }`}>
+                      {language === 'en' ? floor.descriptionEn : floor.descriptionKm}
+                    </p>
+                  </div>
                 </div>
               </div>
+            </section>
+          ))}
+        </div>
 
-              {/* Content */}
-              <div className={`${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} ${visibleSections.includes(index)
-                ? index % 2 === 0 ? 'animate-fadeInRight' : 'animate-fadeInLeft'
-                : 'opacity-0'
-                }`}>
-                <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 hover:shadow-2xl transition-shadow duration-300">
-                  <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 ${visibleSections.includes(index) ? 'animate-fadeInUp delay-100' : 'opacity-0'
-                    }`}>
-                    {language === 'en' ? floor.titleEn : floor.titleKm}
-                  </h2>
-                  <p className={`text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed ${visibleSections.includes(index) ? 'animate-fadeInUp delay-200' : 'opacity-0'
-                    }`}>
-                    {language === 'en' ? floor.descriptionEn : floor.descriptionKm}
+        {/* Support Section */}
+        <div className="mt-5 ">
+          <div className="rounded-2xl shadow-xl overflow-hidden">
+            {/* Header */}
+            <div className="bg-gray-300 py-8 px-6 text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-2">
+                {t('support.title')}
+              </h2>
+              <p className="text-lg sm:text-xl opacity-90">
+                {t('support.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 p-6 sm:p-8 lg:p-12">
+              {/* QR Code Section */}
+              <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 sm:p-8">
+                <h3 className="text-2xl font-bold text-purple-800 mb-4">
+                  {t('support.qrTitle')}
+                </h3>
+
+                {/* QR Code Container */}
+                <div className=" p-4 rounded-xl mb-4">
+                  <div className="w-64 h-64 bg-white flex items-center justify-center rounded-lg shadow-inner">
+                    <img
+                      src={YouQR}
+                      alt="QR Code for Donation"
+                      className="w-full h-full object-contain p-2"
+                    />
+                  </div>
+                </div>
+
+                {/* <p className="text-center text-gray-600 text-sm sm:text-base mb-4">
+                  {t('support.qrDescription')}
+                </p> */}
+
+                <div className="w-full border-t border-gray-200 pt-4">
+                  <p className="text-center text-lg font-semibold text-purple-700">
+                    {t('support.thankYou')}
                   </p>
                 </div>
               </div>
+
+              {/* Bank Information Section */}
+              <div className="flex flex-col justify-between">
+                {/* Bank Details */}
+                <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 mb-6">
+                  <h3 className="text-2xl font-bold text-purple-800 mb-6 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                    {t('support.bankInfo')}
+                  </h3>
+
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3 p-3 bg-purple-50 rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-600 mb-1">
+                          {language === 'en' ? 'Account Name' : 'ឈ្មោះគណនី'}
+                        </p>
+                        <p className="font-semibold text-gray-800">
+                          {t('support.accountName')}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 bg-pink-50 rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-pink-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+                      </svg>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-600 mb-1">
+                          {language === 'en' ? 'Account Number' : 'លេខគណនី'}
+                        </p>
+                        <p className="font-semibold text-gray-800 text-lg">
+                          {t('support.accountNumber')}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-600 mb-1">
+                          {language === 'en' ? 'Bank Name' : 'ឈ្មោះធនាគារ'}
+                        </p>
+                        <p className="font-semibold text-gray-800">
+                          {t('support.bankName')}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-600 mb-1">
+                          {language === 'en' ? 'Phone' : 'ទូរស័ព្ទ'}
+                        </p>
+                        <p className="font-semibold text-gray-800">
+                          {t('support.phoneNumber')}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Other Ways to Support */}
+                {/* <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl shadow-lg p-6">
+                  <h3 className="text-xl font-bold text-purple-800 mb-4">
+                    {t('support.otherWays')}
+                  </h3>
+
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                      <div>
+                        <p className="font-semibold text-gray-800">{t('support.volunteerTitle')}</p>
+                        <p className="text-sm text-gray-600">{t('support.volunteerDesc')}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-pink-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                      </svg>
+                      <div>
+                        <p className="font-semibold text-gray-800">{t('support.materialsTitle')}</p>
+                        <p className="text-sm text-gray-600">{t('support.materialsDesc')}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <div>
+                        <p className="font-semibold text-gray-800">{t('support.contactTitle')}</p>
+                        <p className="text-sm text-gray-600">{t('support.contactDesc')}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
+              </div>
             </div>
-          </section>
-        ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

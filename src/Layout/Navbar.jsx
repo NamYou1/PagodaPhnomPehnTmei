@@ -28,10 +28,10 @@ const Navbar = () => {
       path: "/purpose",
     },
 
-    // {
-    //   label: t('nav.Dharma'),
-    //   path: "/dhama-lessons",
-    // }
+    {
+      label: t('nav.article'),
+      path: "/article",
+    }
   ];
 
   return (

@@ -12,7 +12,7 @@ const founderData = [
     {
         id: 'left-vp',
         name: 'Yu YiHak',
-        nameKm: 'យូ យីហាក់',
+        nameKm: 'ព្រះអង្គគ្រូ សាសនវង្ស យូ យីហាក់',
         title: 'Leads the construction and is the Chief Monk at Wat Phnom Penh Tmei',
         titleKm: 'អ្នកដឹកនាំកសាង និងជាប្រធានសង្ឃ នៅវត្តភ្នំពេញថ្មី',
         bio: '',
@@ -28,7 +28,7 @@ const founderData = [
     {
         id: 'right-vp',
         name: 'Sound Kong',
-        nameKm: 'មហាឧបាសិកាពុទ្ធសានូបត្ថម សួន គង់',
+        nameKm: 'មហាឧបាសិកា សួន គង់',
         title: 'You help maintain the new Phnom Penh Temple and help the monks inside the temple.',
         titleKm: 'អ្នកជួយទំនុបបំរុង វត្តភ្នំពេញថ្មី​ និង​ជួយខ្នះខ្នែង​ក្នុង​នៅក្នុងវត្ត ',
         bio: '',
@@ -45,7 +45,7 @@ const founderData = [
 ];
 
 function Founder() {
-    const { t, language } = useTranslation();
+    const {  language } = useTranslation();
     const [visibleSections, setVisibleSections] = useState([]);
     const sectionRefs = useRef([]);
 

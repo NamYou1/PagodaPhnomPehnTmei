@@ -2,8 +2,8 @@ import { YanBunThoeun ,Bunny, Mengtong, NamYou, KhyChhaiya, Sokleng, DenSann, To
 
 export const dataMonks = {
     id: 'ceo',
-    name: 'Yu YiHak',
-    nameKm: 'យូ យីហាក់',
+    name: 'Master Yu YiHak',
+    nameKm: 'ព្រះអង្គគ្រូសាសនវង្ស យូ យីហាក់',
     title: 'CEO',
     titleKm: 'ប្រធានសង្ឃ',
     imgUrl: YuYiHak,
@@ -28,7 +28,7 @@ export const dataMonks = {
                 {
                     id: 'prod-1',
                     name: 'Phal Phai',
-                    nameKm: 'ផល​ ផៃ',
+                    nameKm: 'ភិក្ខុ ផល​ ផៃ',
                     title: 'Bhikkhu',
                     titleKm: 'ភិក្ខុ',
                     imgUrl: PhalPhai,
@@ -40,7 +40,7 @@ export const dataMonks = {
                 {
                     id: 'prod-3',
                     name: 'Art Sengorn',
-                    nameKm: 'អាត សេងអ៊ាន់',
+                    nameKm: 'ភិក្ខុ អាត សេងអ៊ាន់',
                     title: 'Bhikkhu',
                     titleKm: 'ភិក្ខុ',
                     imgUrl: ArtSengorn,
@@ -52,7 +52,7 @@ export const dataMonks = {
                 {
                     id: 'prod-2',
                     name: 'Sok Leng',
-                    nameKm: 'សុខ ឡេង',
+                    nameKm: 'ភិក្ខុ សុខ ឡេង',
                     title: 'Bhikkhu',
                     titleKm: 'ភិក្ខុ',
                     imgUrl: Sokleng,
@@ -64,7 +64,7 @@ export const dataMonks = {
                 {
                     id: 'prod-4',
                     name: 'Pheng ChhunmengTong',
-                    nameKm: 'ផេង ឈុនម៉េងតុង',
+                    nameKm: '  ភិក្ខុ ផេង ឈុនម៉េងតុង',
                     title: 'Bhikkhu',
                     titleKm: 'ភិក្ខុ',
                     imgUrl: Mengtong,
@@ -75,7 +75,7 @@ export const dataMonks = {
                 {
                     id: 'ops-2',
                     name: 'Den San',
-                    nameKm: 'ដែន សាន',
+                    nameKm: 'ភិក្ខុ ដែន សាន',
                     title: 'Bhikkhu',
                     titleKm: 'ភិក្ខុ',
                     imgUrl: DenSann,
@@ -87,7 +87,7 @@ export const dataMonks = {
                         {
                             id: 'ui-2',
                             name: 'Nam You',
-                            nameKm: 'ណាំ យ៉ូ',
+                            nameKm: 'សាមណេរ ណាំ យ៉ូ',
                             title: 'samner',
                             titleKm: 'សាមណេរ',
                             imgUrl: NamYou,
@@ -99,7 +99,7 @@ export const dataMonks = {
                         {
                             id: 'ui-3',
                             name: 'Khy ChhaiYa',
-                            nameKm: 'ឃី ឆៃយ៉ា',
+                            nameKm: 'សាមណេរ ឃី ឆៃយ៉ា',
                             title: 'samner',
                             titleKm: 'សាមណេរ',
                             imgUrl: KhyChhaiya,
@@ -115,7 +115,7 @@ export const dataMonks = {
         {
             id: 'right-vp',
             name: 'Von Bunny',
-            nameKm: 'វ៉ុន ប៊ុន្នី',
+            nameKm: 'ភិក្ខុ វ៉ុន ប៊ុន្នី',
             title: 'Bhikkhu',
             titleKm: 'ភិក្ខុ',
             imgUrl: Bunny,
@@ -127,7 +127,7 @@ export const dataMonks = {
         {
             id: 'center-2',
             name: 'Phai Phally',
-            nameKm: 'ផៃ ផល្លី',
+            nameKm: 'ភិក្ខុ ផៃ ផល្លី',
             title: 'Bhikkhu',
             titleKm: 'ភិក្ខុ',
             imgUrl: Phally,
@@ -139,7 +139,7 @@ export const dataMonks = {
         {
             id: 'center-3',
             name: 'Yan Bunthoeun',
-            nameKm: 'យ៉ាន់ ប៊ុនធឿន',
+            nameKm: 'សាមណេរ យ៉ាន់ ប៊ុនធឿន',
             title: 'samner',
             titleKm: 'សាមណេរ',
             imgUrl: YanBunThoeun,

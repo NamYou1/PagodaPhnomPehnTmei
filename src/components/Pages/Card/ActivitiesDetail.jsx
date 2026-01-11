@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { initialData } from "../../Data/data.js";
 import { Download, ChevronLeft, ChevronRight } from "lucide-react";
 import ImageCarousel from "./ImageCarousel.jsx";
@@ -44,6 +44,10 @@ const ActivitiesDetail = () => {
       setLoading(false);
     }, 10000); // simulate API delay
   }, [id]);
+  
+
+  // navigate to /activities if no data found
+  const navigate = useNavigate();
 
   /* =========================
      Keyboard Controls
@@ -164,7 +168,12 @@ const ActivitiesDetail = () => {
           </div>
         </div>
       </div>
-
+      <button
+        onClick={() => navigate('/activities')}
+        className="btn  m-6 btn-primary transition-all"
+      >
+        ← {language === 'en' ? 'Back to Activities' : 'ត្រឡប់ក្រោយ'}
+      </button>
       {/* ================= IMAGE GRID ================= */}
       <div className="columns-2 md:columns-4 lg:columns-6 gap-2 px-2 pb-4">
         {currentChildren?.map((child, index) => (
@@ -253,13 +262,7 @@ const ActivitiesDetail = () => {
       )}
 
       {/* ================= CONTROLS ================= */}
-      <div className="ml-4 ">
-        <Link to="/" className="btn btn-outline btn-primary">← Back</Link>
-        {/* <button onClick={toggleSelectMode} className="btn btn-primary">
-          {selectMode ? "Cancel" : "Select"}
-        </button> */}
-      </div>
-
+   
       {/* ================= MODAL ================= */}
       {previewIndex !== null && (
         <div
