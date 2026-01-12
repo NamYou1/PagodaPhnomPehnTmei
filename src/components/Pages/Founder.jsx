@@ -11,7 +11,7 @@ const founderData = [
 
     {
         id: 'left-vp',
-        name: 'Yu YiHak',
+        name: 'You YiHak',
         nameKm: 'ព្រះអង្គគ្រូ សាសនវង្ស យូ យីហាក់',
         title: 'Leads the construction and is the Chief Monk at Wat Phnom Penh Tmei',
         titleKm: 'អ្នកដឹកនាំកសាង និងជាប្រធានសង្ឃ នៅវត្តភ្នំពេញថ្មី',

@@ -2,7 +2,7 @@ import { YanBunThoeun ,Bunny, Mengtong, NamYou, KhyChhaiya, Sokleng, DenSann, To
 
 export const dataMonks = {
     id: 'ceo',
-    name: 'Master Yu YiHak',
+    name: 'Master You YiHak',
     nameKm: 'ព្រះអង្គគ្រូសាសនវង្ស យូ យីហាក់',
     title: 'CEO',
     titleKm: 'ប្រធានសង្ឃ',

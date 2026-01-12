@@ -1,14 +1,10 @@
 import { useState } from "react";
-import { WatPhnomPehnTmeiPlant } from "../../assets/SlideImage";
+import CarouselImage from "../../assets/SlideImage";
 
-const slidesData = [
-  {
-    id: 1,
-    imgUrl: WatPhnomPehnTmeiPlant,
-  },
-
-
-];
+const slidesData = CarouselImage.map((imgUrl, index) => ({
+  id: index + 1,
+  imgUrl: imgUrl
+}));
 
 const Carousel = () => {
   const [data, setData] = useState(slidesData);
