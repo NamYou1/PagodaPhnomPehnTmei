@@ -32,11 +32,11 @@ const Article = () => {
                 {/* Hero Section */}
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-                        {language === 'en' ? 'Buddhist Articles & Festival Insights' : 'អត្ថបទព្រះពុទ្ធសាសនា និងព័ត៌មានលម្អិតអំពីពិធីបុណ្យ'}
+                        {language === 'en' ? 'Buddhist Articles' : 'អត្ថបទអំពីព្រះពុទ្ធសាសនា '}
                     </h1>
-                    <p className="text-lg text-base-content/80 mb-4">
+                    {/* <p className="text-lg text-base-content/80 mb-4">
                         {language === 'en' ? 'Explore Buddhist teachings, temple life, and festival traditions' : 'ស្វែងយល់អំពីការបង្រៀនព្រះពុទ្ធសាសនា ជីវិតវត្ត និងប្រពៃណីពិធីបុណ្យ'}
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* Search and Filter */}
@@ -69,11 +69,11 @@ const Article = () => {
                             className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer hover:scale-105"
                             onClick={() => navigate(`/article/${article.id}`)}
                         >
-                            <figure className="h-48 overflow-hidden">
+                            <figure className="h-78 overflow-hidden ">
                                 <img
                                     src={article.image}
                                     alt={language === 'en' ? article.title : article.titleKm}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full hover:scale-110 transition-transform duration-500"
                                 />
                             </figure>
                             <div className="card-body">

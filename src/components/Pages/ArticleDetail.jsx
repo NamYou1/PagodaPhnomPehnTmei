@@ -41,11 +41,11 @@ const ArticleDetail = () => {
                 {/* Article Detail Card */}
                 <div className="bg-base-100 rounded-lg shadow-xl overflow-hidden animate-fadeIn">
                     {/* Featured Image */}
-                    <figure className="relative h-96 overflow-hidden">
+                    <figure className="relative h-[700px] overflow-hidden">
                         <img
                             src={article.image}
                             alt={language === 'en' ? article.title : article.titleKm}
-                            className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                            className="w-full h-full hover:scale-110 transition-transform duration-500"
                         />
                         <div className="absolute top-4 left-4">
                             <span className="badge badge-primary badge-lg">
@@ -56,6 +56,22 @@ const ArticleDetail = () => {
 
                     {/* Article Content */}
                     <div className="p-8 md:p-12">
+                        {/* YouTube Video Section */}
+                        {article.videoUrl && (
+                            <div className="mb-8">
+                                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                                    <iframe
+                                        className="absolute top-0 left-0 w-full h-full rounded-lg"
+                                        src={article.videoUrl}
+                                        title={language === 'en' ? article.title : article.titleKm}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            </div>
+                        )}
+
                         {/* Meta Information */}
                         <div className="flex flex-wrap items-center gap-3 text-sm text-base-content/60 mb-6">
                             <div className="flex items-center gap-2">
@@ -103,7 +119,7 @@ const ArticleDetail = () => {
                         <div className="divider my-8"></div>
 
                         {/* Share Section */}
-                        <div className="flex items-center justify-between flex-wrap gap-4">
+                        {/* <div className="flex items-center justify-between flex-wrap gap-4">
                             <div className="flex items-center gap-2">
                                 <span className="font-semibold">
                                     {language === 'en' ? 'Share this article:' : 'ចែករំលែកអត្ថបទនេះ៖'}
@@ -125,7 +141,7 @@ const ArticleDetail = () => {
                             >
                                 {language === 'en' ? 'Read More Articles' : 'អានអត្ថបទបន្ថែម'}
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

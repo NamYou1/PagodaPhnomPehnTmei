@@ -51,11 +51,7 @@ const Footer = () => {
                   {t('nav.contact')}
                 </a>
               </li>
-              <li>
-                <a href="/structure" className="link link-hover">
-                  {t('nav.structure')}
-                </a>
-              </li>
+
             </ul>
           </div>
 
