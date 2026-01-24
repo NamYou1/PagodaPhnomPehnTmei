@@ -41,7 +41,7 @@ const dataPurpose = [
 ];
 
 const Purpose = () => {
-  const { t, language } = useTranslation();
+  const {language } = useTranslation();
   const [visibleSections, setVisibleSections] = useState([]);
   // const [showModal, setShowModal] = useState(true);
   const sectionRefs = useRef([]);

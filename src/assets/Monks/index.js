@@ -1,4 +1,4 @@
-import ArtSengorn from './ArtSengorn.jpg';
+import ArtSengorn from './ArtSengorn.png';
 import DenSann from './DenSann.jpg';
 import masterHak from './MasterHak.jpg';
 import PhalPhai from './PhalPhai.jpg';
@@ -13,7 +13,6 @@ import Bunny from "./Bunny.JPG";
 import YuYiHak from './YuYiHak.JPG';
 import YanBunThoeun from './YanBunThoeun.jpg';
 import Phally from './Phally.jpg';
-import { Import } from 'lucide-react';
 // import  SoundKong from './SoundKong.jpg';
 export {
     ArtSengorn,

@@ -58,8 +58,8 @@ const ArticleDetail = () => {
                     <div className="p-8 md:p-12">
                         {/* YouTube Video Section */}
                         {article.videoUrl && (
-                            <div className="mb-8">
-                                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                            <div className="mb-8 overflow-hidden rounded-lg shadow-xl">
+                                <div className="relative w-full hover:scale-105 transition-transform duration-500" style={{ paddingBottom: '56.25%' }}>
                                     <iframe
                                         className="absolute top-0 left-0 w-full h-full rounded-lg"
                                         src={article.videoUrl}
