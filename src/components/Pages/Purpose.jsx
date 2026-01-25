@@ -193,14 +193,14 @@ const Purpose = () => {
                 <>
                   <span className="text-blue-700 font-bold">Initiated by</span> the committee in collaboration with
                   all levels of authorities in Sen Sok district,
-                  along with Buddhist devotees near and far. <span className="text-indigo-700 font-semibold">Led by Preah Sovannsoro Yu Yihak</span>
+                  along with Buddhist devotees near and far. <span className="text-indigo-700 font-semibold">Led by Preah Sovannsaro Yu Yihak</span>
                   <span className="text-purple-700 font-semibold block mt-2">Design plans by Bhikkhu Buddhivaro Tul Sokhman</span>
                 </>
               ) : (
                 <>
                   <span className="text-blue-700 font-bold">ផ្តួចផ្តើមកសាងដោយ</span> អាចារ្យគណៈកម្មការរួមជាមួយ
                   អជ្ញាធរគ្រប់លំដាប់ថ្នាក់ក្នុងខណ្ឌសែនសុខ
-                  ព្រមទាំងប្រជាពលរដ្ឋពុទ្ធបរិសទីជិតឆ្ងាយ <span className="text-indigo-700 font-semibold">ដឹកនាំគម្រោងដោយ ព្រះសុវណ្ណសោរោ យូ យីហាក់</span>
+                  ព្រមទាំងប្រជាពលរដ្ឋពុទ្ធបរិស័ទជិតឆ្ងាយ <span className="text-indigo-700 font-semibold">ដឹកនាំគម្រោងដោយ ព្រះសុវណ្ណសារោ យូ យីហាក់</span>
                   <span className="text-red-400 font-semibold block mt-2">សិក្សាប្លង់ដោយ ភិក្ខុពុទ្ធិវរោ តុល សុខមាន</span>
                 </>
               )}
@@ -214,7 +214,7 @@ const Purpose = () => {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed font-medium">
               {language === 'en'
                 ? 'To extend the lifespan of the old temple site for monks and poor students to reside and continue their scriptural studies.'
-                : 'បន្តអាយុកាលនៃជាទីស្ថាននៃវត្តអារាមចាស់សម្រាប់ភិក្ខុសង្ឃ និង និស្សិតក្រីក្រស្នាក់នៅដើម្បីបន្តការសិក្សារៀនសូត្រ'
+                : 'បន្តអាយុកាលទីស្ថាននៃវត្តអារាមចាស់សម្រាប់ភិក្ខុសង្ឃ និង និស្សិតក្រីក្រស្នាក់នៅដើម្បីបន្តការសិក្សារៀនសូត្រ'
               }
             </p>
           </div>

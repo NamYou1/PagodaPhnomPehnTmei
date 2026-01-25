@@ -109,7 +109,7 @@ const Activities = () => {
                                     )}
                                 </div>
                                 <p className="text-sm text-gray-500">
-                                    {language === 'en' ? description.slice(0, 100) : descriptionKm.slice(0, 97)}
+                                    {language === 'en' ? description : descriptionKm}
                                 </p>
                             </div>
                         </div>

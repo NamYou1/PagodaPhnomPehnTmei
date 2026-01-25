@@ -30,7 +30,7 @@ const ActivitiesDetail = () => {
      Pagination States
   ========================== */
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 30;
+  const itemsPerPage = 50;
 
   /* =========================
      Fetch Data (simulate async)
@@ -42,9 +42,9 @@ const ActivitiesDetail = () => {
       const found = initialData.find((item) => item.id == id);
       setData(found);
       setLoading(false);
-    }, 10000); // simulate API delay
+    }, 1000); // simulate API delay
   }, [id]);
-  
+
 
   // navigate to /activities if no data found
   const navigate = useNavigate();
@@ -74,7 +74,7 @@ const ActivitiesDetail = () => {
         <span className="loading loading-spinner loading-lg text-primary"></span>
         <div className="text-center">
           <p className="text-lg font-semibold">Loading...</p>
-          <p className="text-sm text-gray-600">Please wait 10 seconds ...</p>
+          <p className="text-sm text-gray-600">Please wait 1 seconds ...</p>
         </div>
       </div>
     );
@@ -212,9 +212,10 @@ const ActivitiesDetail = () => {
                     `${sanitizeFilename(currentTitle)}-${startIndex + index + 1}.jpg`
                   );
                 }}
-                className="absolute top-2 right-2 btn btn-circle btn-sm bg-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+                className="absolute top-2 right-2 btn btn-circle btn-sm bg-white/90 backdrop-blur-sm hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl tooltip tooltip-left"
+                data-tip="Download"
               >
-                <Download size={16} />
+                <Download size={16} className="text-primary" />
               </button>
             )}
           </div>
@@ -262,7 +263,7 @@ const ActivitiesDetail = () => {
       )}
 
       {/* ================= CONTROLS ================= */}
-   
+
       {/* ================= MODAL ================= */}
       {previewIndex !== null && (
         <div
