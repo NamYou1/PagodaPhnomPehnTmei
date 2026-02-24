@@ -27,8 +27,8 @@ const Article = () => {
     }
 
     return (
-        <div className="mt-10 min-h-screen bg-base-200 py-12 px-4">
-            <div className="max-w-7xl mx-auto">
+        <div className=" min-h-screen bg-base-200 px-4">
+            <div className=" mx-auto">
                 {/* Hero Section */}
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
@@ -62,7 +62,7 @@ const Article = () => {
                 </div>
 
                 {/* Articles Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid  md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {filteredArticles.map(article => (
                         <div
                             key={article.id}

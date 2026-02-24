@@ -50,8 +50,8 @@ const Activities = () => {
     }
 
     return (
-        <div className="mt-7 md:mt-20">
-            <h2 className="text-3xl font-bold text-center mb-4 text-primary animate-fadeIn">
+        <div className="mt-2 ">
+            <h2 className="text-3xl font-bold text-center text-primary animate-fadeIn">
                 {t('home.title')}
             </h2>
             <div className="flex justify-center items-center flex-wrap animate-fadeIn">
