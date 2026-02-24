@@ -22,7 +22,7 @@ const Carousel = () => {
             <img
               src={slide.imgUrl}
               alt={slide.title}
-              className="w-full h-full object-contain  rounded-lg"
+              className="w-full h-full object-cover  rounded-lg"
             />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:left-5 md:right-5 top-1/2">
               <a

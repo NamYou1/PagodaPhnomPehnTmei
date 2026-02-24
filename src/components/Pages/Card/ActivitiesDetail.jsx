@@ -42,7 +42,7 @@ const ActivitiesDetail = () => {
       const found = initialData.find((item) => item.id == id);
       setData(found);
       setLoading(false);
-    }, 1000); // simulate API delay
+    }, 10000); // simulate API delay
   }, [id]);
 
 
@@ -74,7 +74,7 @@ const ActivitiesDetail = () => {
         <span className="loading loading-spinner loading-lg text-primary"></span>
         <div className="text-center">
           <p className="text-lg font-semibold">Loading...</p>
-          <p className="text-sm text-gray-600">Please wait 1 seconds ...</p>
+          <p className="text-sm text-gray-600">Please wait 10 seconds ...</p>
         </div>
       </div>
     );
