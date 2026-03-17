@@ -151,7 +151,7 @@ const ActivitiesDetail = () => {
   return (
     <>
       {/* ================= HERO ================= */}
-      <div className="mt-20 mb-8 px-4 animate-fadeIn">
+      <div className="animate-fadeIn">
         <ImageCarousel
           images={[data.imgUrl, ...images]}
           title={currentTitle}
@@ -168,12 +168,7 @@ const ActivitiesDetail = () => {
           </div>
         </div>
       </div>
-      <button
-        onClick={() => navigate('/activities')}
-        className="btn  m-6 btn-primary transition-all"
-      >
-        ← {language === 'en' ? 'Back to Activities' : 'ត្រឡប់ក្រោយ'}
-      </button>
+
       {/* ================= IMAGE GRID ================= */}
       <div className="columns-2 md:columns-4 lg:columns-6 gap-2 px-2 pb-4">
         {currentChildren?.map((child, index) => (

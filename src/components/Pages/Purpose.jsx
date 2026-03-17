@@ -41,7 +41,7 @@ const dataPurpose = [
 ];
 
 const Purpose = () => {
-  const {language } = useTranslation();
+  const { language } = useTranslation();
   const [visibleSections, setVisibleSections] = useState([]);
   // const [showModal, setShowModal] = useState(true);
   const sectionRefs = useRef([]);
@@ -83,7 +83,7 @@ const Purpose = () => {
   return (
     <>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 mt-[50px] sm:mt-[60px] lg:mt-[70px]">
+      <div className="container   lg:px-8 py-6 sm:py-8 lg:py-12">
         <style>{`
                 @keyframes fadeInUp {
                     from {
@@ -182,7 +182,7 @@ const Purpose = () => {
                     }
                 }
             `}</style>
-        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold text-purple-800 mb-3 sm:mb-4">
+        <h3 className="text-lg sm:text-2xl md:text-2xl lg:text-3xl text-center font-bold text-purple-800 mb-3 sm:mb-4">
           {language === 'en' ? ' Construction Project Wat Phnom Penh Tmei ' : 'គម្រោងកសាង វត្តភ្នំពេញថ្មី'}
         </h3>
         {/* Introduction Section */}
@@ -269,7 +269,7 @@ const Purpose = () => {
           ))}
         </div>
 
-      
+
       </div>
     </>
   );

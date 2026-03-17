@@ -30,7 +30,7 @@ const Article = () => {
         <div className=" min-h-screen bg-base-200 px-4">
             <div className=" mx-auto">
                 {/* Hero Section */}
-                <div className="text-center mb-12">
+                <div className="text-center ">
                     <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         {language === 'en' ? 'Buddhist Articles' : 'អត្ថបទអំពីព្រះពុទ្ធសាសនា '}
                     </h1>
@@ -40,7 +40,7 @@ const Article = () => {
                 </div>
 
                 {/* Search and Filter */}
-                <div className="mb-8">
+                <div className="m-2">
                     <input
                         type="text"
                         placeholder={language === 'en' ? 'Search articles...' : 'ស្វែងរកអត្ថបទ...'}
