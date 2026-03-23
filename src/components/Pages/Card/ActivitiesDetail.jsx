@@ -42,7 +42,7 @@ const ActivitiesDetail = () => {
       const found = initialData.find((item) => item.id == id);
       setData(found);
       setLoading(false);
-    }, 10000); // simulate API delay
+    }, 2000); // simulate API delay
   }, [id]);
 
 

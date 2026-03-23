@@ -49,7 +49,7 @@ export const dataMonks = [
         titleKm: 'ភិក្ខុ',
         imgUrl: Phally,
         joinYear: 2018,
-        leftYear: 2020,
+        leftYear: 2019,
         bio: '',
         bioKm: '',
     },

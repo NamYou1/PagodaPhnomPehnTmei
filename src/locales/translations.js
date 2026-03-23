@@ -97,7 +97,7 @@ const translations = {
       cta: "Let's Build the Future Together",
     },
     structure: {
-      title: "The number of monks residing at Wat Phnom Thmey",
+      title: "The number of monks residing at Wat Phnom Pehn Tmei",
     },
     purpose: {
 
